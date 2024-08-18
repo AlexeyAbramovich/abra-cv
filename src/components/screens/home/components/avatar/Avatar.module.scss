@@ -1,0 +1,77 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+div:last-child {
+	.avatar {
+		position: relative;
+		.photo {
+			width: 400px;
+			height: 400px;
+			border-radius: 50%;
+			box-shadow: 0 0 10px 5px $main-color;
+
+			&:hover {
+				animation: photo-hover 4s linear infinite;
+			}
+		}
+
+		> img:not(:first-child) {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+		}
+
+		.js {
+			@include blink-animation('x');
+			top: -70px;
+			left: 50%;
+		}
+		.ts {
+			@include blink-animation('x');
+			bottom: -70px;
+			left: 50%;
+		}
+		.react {
+			@include blink-animation('y');
+			top: 50%;
+			left: -70px;
+		}
+		.vite {
+			@include blink-animation('y');
+			top: 50%;
+			right: -70px;
+		}
+		.html {
+			@include blink-animation();
+			top: -5px;
+			left: -5px;
+		}
+		.css {
+			@include blink-animation();
+			top: -5px;
+			right: -5px;
+		}
+		.scss {
+			@include blink-animation();
+			bottom: -5px;
+			right: -5px;
+		}
+		.redux {
+			@include blink-animation();
+			bottom: -5px;
+			left: -5px;
+		}
+	}
+}
+
+@keyframes photo-hover {
+	0% {
+		box-shadow: 0 0 5px 3px $main-color;
+	}
+	50% {
+		box-shadow: 0 0 10px 5px $main-color;
+	}
+	100% {
+		box-shadow: 0 0 5px 3px $main-color;
+	}
+}

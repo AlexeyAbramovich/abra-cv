@@ -1,0 +1,22 @@
+@import './normalize';
+@import './fonts';
+@import './variables';
+
+body {
+	height: 100vh;
+	font-family: 'Actay Wide';
+	font-size: $text-size;
+	font-weight: 500;
+	background-color: $bg;
+	color: $text-color;
+}
+
+#root {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.none {
+	display: none !important;
+}

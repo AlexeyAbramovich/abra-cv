@@ -1,0 +1,57 @@
+@import '/src/styles/variables';
+@import '/src/styles/fonts';
+
+.logo {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	margin-left: 30px;
+
+	> img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.neon {
+		font-family: 'Neon', monospace;
+		font-size: 25px;
+		letter-spacing: 0.2rem;
+		color: #fb4264;
+		text-shadow: 0 0 10px #f40a35;
+	}
+
+	.neon {
+		animation: neon 8s ease infinite;
+		-moz-animation: neon 8s ease infinite;
+		-webkit-animation: neon 8s ease infinite;
+	}
+
+	.neon:first-child {
+		font-size: 30px;
+		padding-bottom: 5px;
+	}
+}
+
+@keyframes neon {
+	0%,
+	100% {
+		text-shadow:
+			0 0 10px #fa1c16,
+			0 0 30px #fa1c16,
+			0 0 10px #fa1c16,
+			0 0 10px #fa1c16,
+			0 0 4px #fed128,
+			5px 3px 1px #806914;
+		color: #fed128;
+	}
+	50% {
+		text-shadow:
+			0 0 5px #800e0b,
+			0 0 15px #800e0b,
+			0 0 15px #800e0b,
+			0 0 15px #800e0b,
+			0 0 2px #800e0b,
+			5px 3px 1px #40340a;
+		color: #806914;
+	}
+}

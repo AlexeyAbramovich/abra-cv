@@ -1,0 +1,10 @@
+@import '/src/styles/variables';
+@import '/src/styles/fonts';
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	box-shadow: 0 0 5px $main-color;
+	backdrop-filter: blur(5px);
+}

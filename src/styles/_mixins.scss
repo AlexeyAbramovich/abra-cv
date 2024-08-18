@@ -1,0 +1,77 @@
+@import '/src/styles/variables';
+
+@mixin bg-element($width, $height, $type: 'default') {
+	position: absolute;
+	width: $width;
+	height: $height;
+	rotate: 45deg;
+	z-index: -1;
+
+	background: linear-gradient(
+		-45deg,
+		$main-color 46%,
+		$text-color 49%,
+		$text-color 50%,
+		$main-color 53%
+	);
+
+	background-size: 500% 500%;
+
+	@if ($type == 'default') {
+		animation: gradient 15s ease infinite;
+	} @else {
+		animation: gradient-reverse 15s ease infinite;
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	@keyframes gradient-reverse {
+		0% {
+			background-position: 100% 50%;
+		}
+		50% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 100% 50%;
+		}
+	}
+}
+
+@mixin blink-animation($type: 'default') {
+	@keyframes blink-#{$type} {
+		0% {
+			@include blink-animation-type($type);
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.2;
+		}
+		100% {
+			@include blink-animation-type($type, 360deg);
+			opacity: 1;
+		}
+	}
+
+	animation: blink-#{$type} 16s linear infinite;
+}
+
+@mixin blink-animation-type($type: 'default', $deg: 0deg) {
+	@if $type == 'x' {
+		transform: translateX(-50%) rotateY($deg);
+	} @else if $type == 'y' {
+		transform: translateY(-50%) rotateY($deg);
+	} @else {
+		transform: rotateY($deg);
+	}
+}

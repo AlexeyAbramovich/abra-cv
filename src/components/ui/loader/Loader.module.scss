@@ -1,0 +1,128 @@
+@import '/src/styles/variables';
+
+.loader {
+	position: absolute;
+	z-index: 2;
+	background-color: $bg;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 50px;
+
+		> img {
+			width: 150px;
+			height: 150px;
+			padding-bottom: 100px;
+		}
+
+		.warning {
+			position: absolute;
+			top: 60vh;
+			left: auto;
+			right: auto;
+			width: fit-content;
+			display: flex;
+			align-items: center;
+			padding: 20px 20px;
+			background-color: $bg-buttons;
+			border-radius: 10px;
+			box-shadow: 5px 5px 5px black;
+			column-gap: 20px;
+			animation: opacity 2s linear;
+
+			> img {
+				width: 70px;
+				height: 70px;
+			}
+
+			.warningText {
+				width: 300px;
+			}
+		}
+
+		> div:last-child {
+			position: absolute;
+			top: 60vh;
+			width: 400px;
+
+			.loader_progress {
+				width: 0;
+				height: 10px;
+				display: inline-block;
+				position: relative;
+				background: $main-color;
+				box-shadow: 0 0 10px rgba($main-color, 0.5);
+				box-sizing: border-box;
+				animation: animFw 2s linear infinite;
+
+				&::after,
+				&::before {
+					content: '';
+					width: 10px;
+					height: 1px;
+					background: $main-color;
+					position: absolute;
+					top: 9px;
+					right: -2px;
+					opacity: 0;
+					transform: rotate(-45deg) translateX(0px);
+					box-sizing: border-box;
+					animation: coli1 0.3s linear infinite;
+				}
+				&::before {
+					top: -4px;
+					transform: rotate(45deg);
+					animation: coli2 0.3s linear infinite;
+				}
+			}
+		}
+	}
+}
+
+@keyframes animFw {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes coli1 {
+	0% {
+		transform: rotate(-45deg) translateX(0px);
+		opacity: 0.7;
+	}
+	100% {
+		transform: rotate(-45deg) translateX(-45px);
+		opacity: 0;
+	}
+}
+
+@keyframes coli2 {
+	0% {
+		transform: rotate(45deg) translateX(0px);
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(45deg) translateX(-45px);
+		opacity: 0.7;
+	}
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

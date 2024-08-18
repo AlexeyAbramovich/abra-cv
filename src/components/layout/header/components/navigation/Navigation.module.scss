@@ -1,0 +1,48 @@
+@import '/src/styles/variables';
+
+.header_navigation {
+	display: flex;
+	column-gap: 100px;
+	margin-right: 100px;
+	align-items: center;
+	font-weight: 600;
+
+	> a {
+		text-decoration: none;
+		color: $text-color;
+		background-image: linear-gradient(
+			to right,
+			$main-color,
+			$main-color 50%,
+			$text-color 50%
+		);
+		background-size: 200% 100%;
+		background-position: -100%;
+		display: inline-block;
+		padding: 5px 0;
+		position: relative;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 0.3s ease-in-out;
+
+		&:before {
+			content: '';
+			background: $main-color;
+			display: block;
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			width: 0;
+			height: 3px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		&:hover {
+			background-position: 0;
+
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+}
