@@ -56,5 +56,21 @@ export const relaxPlaylist: Song[] = [
 		path: '/media/relax/massive-attack-teardrop.mp3',
 		cover: '/images/covers/relax.jpg',
 		visualizerColor: '#ff8800'
+	},
+	{
+		playlist: 'Relax',
+		name: "I Ain't worried",
+		artist: 'OneRepublic',
+		path: '/media/relax/one-republic-i-aint-worried.mp3',
+		cover: '/images/covers/relax.jpg',
+		visualizerColor: '#ff8800'
+	},
+	{
+		playlist: 'Relax',
+		name: 'Stressed Out',
+		artist: 'Twenty One Pilots',
+		path: '/media/relax/twenty-one-pilots-stressed-out.mp3',
+		cover: '/images/covers/relax.jpg',
+		visualizerColor: '#ff8800'
 	}
 ]

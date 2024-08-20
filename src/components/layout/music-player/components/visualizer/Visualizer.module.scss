@@ -1,0 +1,54 @@
+@import '/src/styles/variables';
+
+.coverWrapper {
+	position: relative;
+	margin-bottom: -10px;
+	.box {
+		display: flex;
+		margin-inline: auto;
+		justify-content: center;
+		align-items: center;
+		filter: blur(3px);
+		mix-blend-mode: screen;
+
+		.visualizer {
+			position: relative;
+			width: 120px;
+			height: 120px;
+			margin-inline: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			justify-self: center;
+			transform: rotateZ('180deg');
+
+			.element {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: inline-block;
+				width: 5px;
+				aspect-ratio: 1;
+				border-radius: 10px;
+				border-top: 40px solid $main-color;
+				border-right: 40px solid transparent;
+				border-left: 40px solid transparent;
+				transform-origin: top left;
+				transition: 0.05s;
+			}
+		}
+	}
+	.songImg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		box-shadow: 0 0 15px $bg-buttons;
+		z-index: 2;
+		transition: 0.2s;
+	}
+}

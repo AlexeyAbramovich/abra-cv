@@ -1,0 +1,30 @@
+@import '/src/styles/variables';
+
+.playlist {
+	box-sizing: border-box;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 12px;
+
+	> img {
+		width: 30px;
+		height: 30px;
+	}
+
+	&:hover {
+		background-color: $bg-buttons;
+	}
+
+	&.active {
+		border: 1px solid $main-color;
+		box-shadow: 0 0 2px $main-color;
+	}
+}

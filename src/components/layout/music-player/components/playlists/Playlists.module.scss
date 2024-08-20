@@ -15,6 +15,7 @@
 	padding: 10px 0px;
 	background: lighten($bg, 5%);
 
+	// hide scroll
 	overflow-y: scroll;
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
 	scrollbar-width: none;
@@ -22,48 +23,4 @@
 	&::-webkit-scrollbar {
 		display: none; /* Safari and Chrome */
 	}
-
-	.playlist {
-		box-sizing: border-box;
-		width: 60px;
-		height: 60px;
-		display: flex;
-		padding: 10px;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		row-gap: 4px;
-		border-radius: 4px;
-		cursor: pointer;
-		font-size: 12px;
-
-		> img {
-			width: 30px;
-			height: 30px;
-		}
-
-		&:hover {
-			background-color: $bg-buttons;
-		}
-
-		&.active {
-			border: 1px solid $main-color;
-			box-shadow: 0 0 2px $main-color;
-		}
-	}
 }
-
-// .playlist:hover {
-//   background-color: rgb(0, 0, 0, 0.2);
-// }
-
-// .playlist > img {
-//   width: 70px;
-//   aspect-ratio: 1;
-// }
-
-// .playlist.active {
-//   border: 1px solid orangered;
-
-//   box-shadow: 0 0 10px orangered;
-// }

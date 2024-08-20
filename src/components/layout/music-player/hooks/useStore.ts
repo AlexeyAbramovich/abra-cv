@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Song } from '../types'
 
 export const useStore = () => {
+	// state для проверки был ли создан визуализатор, если не был, то создается один раз, state меняется при нажатиях на кнопки след/предыдущий рандомный трек и
 	const [visualizerWasSet, setVisualizerWasSet] = useState(false)
 
 	// текущий плейлист, содержит треки из выбранного плейлиста
@@ -22,10 +23,17 @@ export const useStore = () => {
 	// массив уже проигранных треков, нужен, чтобы при переключении треков не было повторов и были проиграны все песни
 	const [playlistQueue, setPlaylistQueue] = useState<Song[]>([])
 
-	// state для проверки был ли создан визуализатор, если не был, то создается один раз, state меняется при нажатиях на кнопки след/предыдущий рандомный трек и
+	// state нужен для изменения цвета элементов при смене трека/плейлиста
 	const [needCheckVisualizer, setNeedCheckVisualizer] = useState(false)
 
+	// state для проверки активного плейлиста, чтобы повесить класс с выделением
 	const [activePlaylist, setActivePlaylist] = useState('Relax')
+
+	// state для показа/скрытия списка плейлистов
+	const [showPlaylists, setShowPlaylists] = useState(false)
+
+	// state для отслеживания проматывает ли юзер ползунок с прогрессом песни, нужен для отключения события ontimeupdate, чтобы не было бага с дёргающимся ползунком
+	const [stopUpdatingProgress, setStopUpdatingProgress] = useState(false)
 
 	return {
 		visualizerWasSet,
@@ -45,6 +53,10 @@ export const useStore = () => {
 		needCheckVisualizer,
 		setNeedCheckVisualizer,
 		activePlaylist,
-		setActivePlaylist
+		setActivePlaylist,
+		showPlaylists,
+		setShowPlaylists,
+		stopUpdatingProgress,
+		setStopUpdatingProgress
 	}
 }

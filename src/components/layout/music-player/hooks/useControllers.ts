@@ -15,7 +15,7 @@ export const useControllers = () => {
 	const songCurrentTime = useRef<HTMLSpanElement | null>(null)
 	const songEndTime = useRef<HTMLSpanElement | null>(null)
 	const visualizer = useRef<HTMLDivElement | null>(null)
-	const audioContext = useRef<AudioContext | null>(null)
+	const interval = useRef<number | null>(null)
 
 	return {
 		player,
@@ -32,6 +32,6 @@ export const useControllers = () => {
 		songCurrentTime,
 		songEndTime,
 		visualizer,
-		audioContext
+		interval
 	}
 }

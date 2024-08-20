@@ -22,6 +22,7 @@ export type Controllers = {
 	songCurrentTime: React.MutableRefObject<HTMLSpanElement | null>
 	songEndTime: React.MutableRefObject<HTMLSpanElement | null>
 	visualizer: React.MutableRefObject<HTMLDivElement | null>
+	interval: React.MutableRefObject<number | null>
 }
 
 export type Store = {
@@ -43,6 +44,10 @@ export type Store = {
 	setNeedCheckVisualizer: React.Dispatch<React.SetStateAction<boolean>>
 	activePlaylist: string
 	setActivePlaylist: React.Dispatch<React.SetStateAction<string>>
+	showPlaylists: boolean
+	setShowPlaylists: React.Dispatch<React.SetStateAction<boolean>>
+	stopUpdatingProgress: boolean
+	setStopUpdatingProgress: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export type Properties = Controllers & Store

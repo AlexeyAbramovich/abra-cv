@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import MusicPlayer from './components/layout/music-player/MusicPlayer'
 import MusicContextProvider from './components/layout/music-player/provider/MusicContextProvider'
@@ -10,7 +10,7 @@ function App() {
 	const [isLoading, setIsLoading] = useState(false)
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
 
-	document.body.addEventListener('click', (e) => {
+	const handleClick = (e: MouseEvent) => {
 		if (e.target instanceof Element) {
 			if (!e.target.closest('[data-class]')) {
 				setShowMusicPlayer(false)
@@ -18,7 +18,14 @@ function App() {
 		} else {
 			setShowMusicPlayer(false)
 		}
-	})
+	}
+
+	useEffect(() => {
+		document.body.addEventListener('click', handleClick)
+		return () => {
+			document.body.removeEventListener('click', handleClick)
+		}
+	}, [])
 
 	return (
 		<>
