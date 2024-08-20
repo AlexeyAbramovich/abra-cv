@@ -25,6 +25,8 @@ export const useStore = () => {
 	// state для проверки был ли создан визуализатор, если не был, то создается один раз, state меняется при нажатиях на кнопки след/предыдущий рандомный трек и
 	const [needCheckVisualizer, setNeedCheckVisualizer] = useState(false)
 
+	const [activePlaylist, setActivePlaylist] = useState('Relax')
+
 	return {
 		visualizerWasSet,
 		setVisualizerWasSet,
@@ -41,6 +43,8 @@ export const useStore = () => {
 		playlistQueue,
 		setPlaylistQueue,
 		needCheckVisualizer,
-		setNeedCheckVisualizer
+		setNeedCheckVisualizer,
+		activePlaylist,
+		setActivePlaylist
 	}
 }

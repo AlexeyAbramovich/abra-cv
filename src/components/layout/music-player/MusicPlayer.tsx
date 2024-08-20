@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import Playlists from './components/playlists/Playlists'
 import { useCheckVisualizer } from './hooks/useCheckVisualizer'
 import { useDefaultPlaylist } from './hooks/useDefaultPlaylist'
 import { useMusicContext } from './hooks/useMusicContext'
@@ -8,11 +9,17 @@ import { useVisualizer } from './hooks/useVisualizer'
 import styles from './MusicPlayer.module.scss'
 import { formatTime } from './utils/format-time.util'
 
-const MusicPlayer = () => {
+type Props = {
+	showMusicPlayer: boolean
+}
+
+const MusicPlayer = ({ showMusicPlayer }: Props) => {
+	const [showPlaylists, setShowPlaylists] = useState(false)
 	const interval = useRef<number | null>(null)
 
 	const {
 		player,
+		volume,
 		songImg,
 		songName,
 		songArtist,
@@ -32,6 +39,18 @@ const MusicPlayer = () => {
 		setNeedCheckVisualizer
 	} = useMusicContext()
 
+	useEffect(() => {
+		if (player.current) {
+			if (showMusicPlayer) {
+				player.current.style.opacity = '1'
+				player.current.style.zIndex = '1'
+			} else {
+				player.current.style.opacity = '0'
+				player.current.style.zIndex = '-1'
+			}
+		}
+	}, [player, showMusicPlayer])
+
 	useDefaultPlaylist()
 
 	useRandomSong()
@@ -44,8 +63,10 @@ const MusicPlayer = () => {
 
 	useEffect(() => {
 		if (
+			player.current &&
 			song.current &&
 			progress.current &&
+			volume.current &&
 			ctrlIcon.current &&
 			songCurrentTime.current &&
 			songEndTime.current
@@ -92,8 +113,21 @@ const MusicPlayer = () => {
 			progress.current.onchange = () => {
 				song.current!.currentTime = +progress.current!.value
 			}
+
+			volume.current.onchange = () => {
+				song.current!.volume = +volume.current!.value / 100
+			}
+			song.current.volume = 0.5
 		}
-	}, [song, progress, ctrlIcon, songCurrentTime, songEndTime])
+	}, [
+		player.current,
+		song.current,
+		progress.current,
+		volume.current,
+		ctrlIcon.current,
+		songCurrentTime.current,
+		songEndTime.current
+	])
 
 	function toggleLaunch() {
 		if (interval.current) {
@@ -135,22 +169,29 @@ const MusicPlayer = () => {
 
 	const setCoverShake = () => {
 		interval.current = setInterval(() => {
-			songImg.current!.style.width = `${Math.random() * 10 + 100}px`
+			songImg.current!.style.width = `${Math.random() * 5 + 100}px`
 		}, 100)
 	}
 
 	return (
-		<div ref={player} className={styles.musicPlayer}>
-			<div className={styles.playlistVolumeWrapper}>
-				<button>
+		<div ref={player} className={styles.musicPlayer} data-class='music'>
+			<div className={styles.playlistVolumeWrapper} data-class='music'>
+				<button
+					type='button'
+					data-class='music'
+					onClick={() => {
+						setShowPlaylists(!showPlaylists)
+					}}
+				>
 					<svg
 						viewBox='0 0 24 24'
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
+						data-class='music'
 					>
 						<path
-							fill-rule='evenodd'
-							clip-rule='evenodd'
+							fillRule='evenodd'
+							clipRule='evenodd'
 							d='M2.25 6C2.25 5.58579 2.58579 5.25 3 5.25H21C21.4142 5.25 21.75 5.58579 21.75 6C21.75 6.41421 21.4142 6.75 21 6.75H3C2.58579 6.75 2.25 6.41421 2.25 6ZM2.25 10C2.25 9.58579 2.58579 9.25 3 9.25H21C21.4142 9.25 21.75 9.58579 21.75 10C21.75 10.4142 21.4142 10.75 21 10.75H3C2.58579 10.75 2.25 10.4142 2.25 10ZM2.25 14C2.25 13.5858 2.58579 13.25 3 13.25H11C11.4142 13.25 11.75 13.5858 11.75 14C11.75 14.4142 11.4142 14.75 11 14.75H3C2.58579 14.75 2.25 14.4142 2.25 14ZM2.25 18C2.25 17.5858 2.58579 17.25 3 17.25H11C11.4142 17.25 11.75 17.5858 11.75 18C11.75 18.4142 11.4142 18.75 11 18.75H3C2.58579 18.75 2.25 18.4142 2.25 18Z'
 							fill='#ff8800'
 						/>
@@ -160,66 +201,109 @@ const MusicPlayer = () => {
 						/>
 					</svg>
 				</button>
-				<div className={styles.volumeWrapper}>
-					<input className={styles.volume} type='range' />
+				<div className={styles.volumeWrapper} data-class='music'>
+					<img src='/src/assets/icons/volume.svg' data-class='music' />
+					<input
+						ref={volume}
+						className={styles.volume}
+						type='range'
+						min={0}
+						max={100}
+						data-class='music'
+					/>
 				</div>
 			</div>
-			<div className={styles.coverWrapper}>
+			<div className={styles.coverWrapper} data-class='music'>
 				<img
 					ref={songImg}
 					className={styles.songImg}
 					src='/images/covers/sport/1.png'
+					data-class='music'
 				/>
-				<div className={styles.box}>
-					<div ref={visualizer} className={styles.visualizer}></div>
+				<div className={styles.box} data-class='music'>
+					<div
+						ref={visualizer}
+						className={styles.visualizer}
+						data-class='music'
+					></div>
 				</div>
 			</div>
-			<div className={styles.trackInfo}>
-				<span ref={songName}></span>
-				<span ref={songArtist}></span>
+			<div className={styles.trackInfo} data-class='music'>
+				<span ref={songName} data-class='music'></span>
+				<span ref={songArtist} data-class='music'></span>
 			</div>
-			<audio ref={song}>
-				<source id='audio-source' type='audio/mp3' />
+			<audio ref={song} data-class='music'>
+				<source type='audio/mp3' data-class='music' />
 			</audio>
-			<div className={styles.controlsWrapper}>
-				<div className={styles.progressWrapper}>
+			<div className={styles.controlsWrapper} data-class='music'>
+				<div className={styles.progressWrapper} data-class='music'>
 					<input
 						ref={progress}
 						className={styles.progress}
 						type='range'
-						// onChange={() => {
-						// 	song.current!.currentTime = +progress.current!.value
-						// }}
+						data-class='music'
 					/>
-					<div className={styles.songTime}>
-						<span ref={songCurrentTime}>00:00</span>
-						<span ref={songEndTime}>00:00</span>
+					<div className={styles.songTime} data-class='music'>
+						<span ref={songCurrentTime} data-class='music'>
+							00:00
+						</span>
+						<span ref={songEndTime} data-class='music'>
+							00:00
+						</span>
 					</div>
 				</div>
-				<div className={styles.controls}>
-					<button ref={prev} onClick={() => launchNextSong()}>
+				<div className={styles.controls} data-class='music'>
+					<button
+						type='button'
+						ref={prev}
+						onClick={(e) => {
+							e.stopPropagation()
+							launchNextSong()
+						}}
+						data-class='music'
+					>
 						<img
 							className={styles.prev}
 							src='/src/assets/icons/next-prev.svg'
 							alt='previous song'
+							data-class='music'
 						/>
 					</button>
-					<button ref={ctrlBtn} onClick={() => toggleLaunch()}>
+					<button
+						type='button'
+						ref={ctrlBtn}
+						onClick={(e) => {
+							e.stopPropagation()
+							toggleLaunch()
+						}}
+						data-class='music'
+					>
 						<img
 							ref={ctrlIcon}
 							src='/src/assets/icons/play.svg'
 							alt='play/pause song'
+							data-class='music'
 						/>
 					</button>
-					<button ref={next} onClick={() => launchNextSong()}>
+					<button
+						type='button'
+						ref={next}
+						onClick={(e) => {
+							e.stopPropagation()
+							launchNextSong()
+						}}
+						data-class='music'
+					>
 						<img
 							className={styles.next}
 							src='/src/assets/icons/next-prev.svg'
 							alt='next song'
+							data-class='music'
 						/>
 					</button>
 				</div>
 			</div>
+			{showPlaylists && <Playlists />}
 		</div>
 	)
 }

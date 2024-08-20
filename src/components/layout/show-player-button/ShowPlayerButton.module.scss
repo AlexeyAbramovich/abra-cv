@@ -1,0 +1,40 @@
+@import '/src/styles/variables';
+
+.showPlayerButton {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+
+	> svg {
+		position: relative;
+		padding: 5px;
+		width: 30px;
+		height: 30px;
+		background: $bg-buttons;
+		border-radius: 50%;
+		box-shadow: -3px -3px 0px black;
+
+		> path {
+			fill: $main-color;
+		}
+
+		&:hover {
+			background: $hover-bg;
+
+			> path {
+				fill: $hover-text-color;
+			}
+		}
+
+		&:active {
+			top: -3px;
+			left: -3px;
+			box-shadow: unset;
+		}
+	}
+}

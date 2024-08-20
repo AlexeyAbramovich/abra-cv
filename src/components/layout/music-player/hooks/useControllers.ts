@@ -2,6 +2,7 @@ import { useRef } from 'react'
 
 export const useControllers = () => {
 	const player = useRef<HTMLDivElement | null>(null)
+	const volume = useRef<HTMLInputElement | null>(null)
 	const songImg = useRef<HTMLImageElement | null>(null)
 	const songName = useRef<HTMLSpanElement | null>(null)
 	const songArtist = useRef<HTMLSpanElement | null>(null)
@@ -18,6 +19,7 @@ export const useControllers = () => {
 
 	return {
 		player,
+		volume,
 		songImg,
 		songName,
 		songArtist,

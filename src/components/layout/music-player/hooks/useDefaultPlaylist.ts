@@ -6,6 +6,6 @@ export const useDefaultPlaylist = () => {
 	const { setCurrentPlaylist } = useMusicContext()
 
 	useEffect(() => {
-		setCurrentPlaylist(music.filter((song) => song.playlist === 'Sport'))
+		setCurrentPlaylist(music.filter((song) => song.playlist === 'Relax'))
 	}, [])
 }

@@ -9,6 +9,7 @@ export type Song = {
 
 export type Controllers = {
 	player: React.MutableRefObject<HTMLDivElement | null>
+	volume: React.MutableRefObject<HTMLInputElement | null>
 	songImg: React.MutableRefObject<HTMLImageElement | null>
 	songName: React.MutableRefObject<HTMLSpanElement | null>
 	songArtist: React.MutableRefObject<HTMLSpanElement | null>
@@ -40,6 +41,8 @@ export type Store = {
 	setPlaylistQueue: React.Dispatch<React.SetStateAction<Song[]>>
 	needCheckVisualizer: boolean
 	setNeedCheckVisualizer: React.Dispatch<React.SetStateAction<boolean>>
+	activePlaylist: string
+	setActivePlaylist: React.Dispatch<React.SetStateAction<string>>
 }
 
 export type Properties = Controllers & Store
