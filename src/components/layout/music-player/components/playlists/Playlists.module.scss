@@ -17,10 +17,21 @@
 
 	// hide scroll
 	overflow-y: scroll;
-	-ms-overflow-style: none; /* Internet Explorer 10+ */
-	scrollbar-width: none;
 
 	&::-webkit-scrollbar {
-		display: none; /* Safari and Chrome */
+		width: 3px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $main-color;
+		border-radius: 2px;
+	}
+
+	&::-webkit-scrollbar-track-piece:end {
+		margin-bottom: 10px;
+	}
+
+	&::-webkit-scrollbar-track-piece:start {
+		margin-top: 10px;
 	}
 }

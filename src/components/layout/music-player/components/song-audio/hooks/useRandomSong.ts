@@ -32,7 +32,6 @@ export function useRandomSong() {
     (когда ни одна песня ещё не была проиграна)
   */
 			if (playlistQueue.length === currentPlaylist.length) {
-				// setPlaylistQueue([])
 				setPlaylistQueue([])
 			}
 

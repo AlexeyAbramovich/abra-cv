@@ -3,8 +3,6 @@ import Playlist from '../playlist/Playlist'
 import styles from './Playlists.module.scss'
 
 const Playlists = () => {
-	// useDefaultPlaylist()
-
 	return (
 		<div className={styles.playlists}>
 			{playlists.map((playlist) => (

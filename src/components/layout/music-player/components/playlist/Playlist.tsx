@@ -29,7 +29,7 @@ const Playlist = ({ playlist }: Props) => {
 				setNeedNewRandomSong(true)
 			}}
 		>
-			<img src={playlist.img} />
+			<img src={playlist.img} alt={playlist.title + 'playlist'} />
 			<span>{playlist.title}</span>
 		</div>
 	)

@@ -6,6 +6,7 @@ const PlaylistsButton = () => {
 
 	return (
 		<button
+			aria-label='Show or hide playlists'
 			type='button'
 			data-class='music'
 			onClick={() => {

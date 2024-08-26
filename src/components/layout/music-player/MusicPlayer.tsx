@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import ControlButtons from './components/control-buttons/ControlButtons'
 import MusicProgress from './components/music-progress/MusicProgress'
 import PlaylistsButton from './components/playlists-button/PlaylistsButton'
@@ -29,25 +30,25 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 
 	useDefaultPlaylist()
 
-	function toggleLaunch() {
+	const toggleLaunch = useCallback(() => {
 		if (isFirstLaunch) {
 			setIsFirstLaunch(false)
 		}
 
 		if (ctrlIcon.current!.src.includes('pause')) {
 			song.current!.pause()
-			ctrlIcon.current!.src = '/src/assets/icons/play.svg'
+			ctrlIcon.current!.src = '/icons/play.svg'
 			setCoverShake(false)
 		} else {
 			song.current!.play()
-			ctrlIcon.current!.src = '/src/assets/icons/pause.svg'
+			ctrlIcon.current!.src = '/icons/pause.svg'
 			setCoverShake(true)
 		}
 
 		setNeedCheckVisualizer(true)
-	}
+	}, [])
 
-	function launchNextSong() {
+	const launchNextSong = useCallback(() => {
 		if (isFirstLaunch) {
 			setIsFirstLaunch(false)
 		}
@@ -57,9 +58,9 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 		setNeedCheckVisualizer(true)
 
 		setCoverShake(true)
-	}
+	}, [])
 
-	const setCoverShake = (play: boolean) => {
+	const setCoverShake = useCallback((play: boolean) => {
 		if (interval.current) {
 			clearInterval(interval.current)
 			songImg.current!.style.width = `100px`
@@ -70,7 +71,7 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 				songImg.current!.style.width = `${Math.random() * 5 + 100}px`
 			}, 100)
 		}
-	}
+	}, [])
 
 	return (
 		<div ref={player} className={styles.musicPlayer} data-class='music'>

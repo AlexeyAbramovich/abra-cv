@@ -12,11 +12,14 @@ const Volume = () => {
 			}
 			song.current.volume = 0.5
 		}
-	}, [volume.current, song.current])
+	}, [])
 
 	return (
 		<div className={styles.volumeWrapper} data-class='music'>
-			<img src='/src/assets/icons/volume.svg' data-class='music' />
+			<img src='/icons/volume.svg' data-class='music' alt='' />
+			<label htmlFor={styles.volume} className='visually-hidden'>
+				Volume progress slider
+			</label>
 			<input
 				ref={volume}
 				className={styles.volume}

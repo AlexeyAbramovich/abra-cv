@@ -9,6 +9,7 @@ body {
 	font-weight: 500;
 	background-color: $bg;
 	color: $text-color;
+	cursor: url('/icons/cursor.svg'), default;
 }
 
 #root {
@@ -19,4 +20,50 @@ body {
 
 .none {
 	display: none !important;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+button,
+a,
+input {
+	cursor:
+		url('/icons/pointer.svg') 8 0,
+		pointer;
+}
+
+.hide {
+	animation: hide 2s linear;
+}
+
+.show {
+	animation: show 2s linear;
+}
+
+@keyframes hide {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

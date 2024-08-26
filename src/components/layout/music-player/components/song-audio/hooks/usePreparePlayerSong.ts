@@ -34,7 +34,7 @@ export const usePreparePlayerSong = () => {
 	useEffect(() => {
 		if (!isFirstLaunch) {
 			if (song.current && ctrlIcon.current && isSongLoaded) {
-				ctrlIcon.current.src = '/src/assets/icons/pause.svg'
+				ctrlIcon.current.src = '/icons/pause.svg'
 				song.current.play()
 				setIsSongLoaded(false)
 			}

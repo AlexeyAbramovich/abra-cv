@@ -18,5 +18,5 @@ export const useMusicProgressListeners = () => {
 				setStopUpdatingProgress(false)
 			}
 		}
-	}, [progress.current, song.current])
+	}, [])
 }

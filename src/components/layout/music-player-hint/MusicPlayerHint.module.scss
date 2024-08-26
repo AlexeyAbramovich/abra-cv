@@ -1,0 +1,36 @@
+@import '/src/styles/variables';
+
+.musicPlayerHint {
+	position: fixed;
+	bottom: 70px;
+	right: 70px;
+	display: flex;
+	background: $bg-buttons;
+	border-radius: 10px;
+	padding: 10px;
+	padding-right: 30px;
+	column-gap: 10px;
+	box-shadow: -5px -5px 0 black;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	opacity: 0;
+
+	> span:first-child {
+		width: 40px;
+		height: 40px;
+		background: no-repeat 52% 35%/200% url('/images/photo1.jpg');
+		border-radius: 50%;
+	}
+
+	> span:nth-child(2) {
+		width: 260px;
+	}
+
+	> img {
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		width: 30px;
+		height: 30px;
+	}
+}

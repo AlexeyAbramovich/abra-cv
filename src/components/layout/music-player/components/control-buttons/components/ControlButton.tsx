@@ -17,6 +17,7 @@ const ControlButton = ({
 }: Props) => {
 	return (
 		<button
+			aria-label={alt}
 			type='button'
 			ref={reference}
 			onClick={(e) => {
@@ -27,7 +28,7 @@ const ControlButton = ({
 		>
 			<img
 				ref={ctrlIcon}
-				src={`/src/assets/icons/${imgName}.svg`}
+				src={`/icons/${imgName}.svg`}
 				alt={alt}
 				data-class='music'
 			/>

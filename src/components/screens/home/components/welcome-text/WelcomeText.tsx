@@ -29,9 +29,9 @@ const WelcomeText = () => {
 				cursor={true}
 			/>
 
-			<img src='/src/assets/icons/development.svg' />
+			<img src='/icons/development.svg' alt='' />
 
-			<img src='/src/assets/icons/code-svgrepo-com.svg' />
+			<img src='/icons/code-svgrepo-com.svg' alt='' />
 		</div>
 	)
 }

@@ -13,12 +13,12 @@ const Loader = ({ setIsLoading }: Props) => {
 	return (
 		<article className={styles.loader}>
 			<div className={styles.wrapper}>
-				<img src='/src/assets/animated/react.gif' />
+				<img src='/animated/react.gif' alt='Loading icon' />
 
 				<div ref={warning} className={cn(styles.warning, 'none')}>
 					<img
 						ref={errorIcon}
-						src='/src/assets/icons/error.svg'
+						src='/icons/error.svg'
 						alt='Error loading site'
 					/>
 					<span ref={warningText} className={styles.warningText}>

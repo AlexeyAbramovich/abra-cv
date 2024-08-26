@@ -1,31 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+import MusicPlayerHint from './components/layout/music-player-hint/MusicPlayerHint'
 import MusicPlayer from './components/layout/music-player/MusicPlayer'
 import MusicContextProvider from './components/layout/music-player/provider/MusicContextProvider'
 import ShowPlayerButton from './components/layout/show-player-button/ShowPlayerButton'
 import Loader from './components/ui/loader/Loader'
+import { useCloseMusicPlayer } from './hooks/useCloseMusicPlayer'
+import { useMusicPlayerHint } from './hooks/useMusicPlayerHint'
 import Router from './router/Router'
 
 function App() {
 	const [isLoading, setIsLoading] = useState(false)
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
+	const { musicHintRef } = useMusicPlayerHint()
 
-	const handleClick = (e: MouseEvent) => {
-		if (e.target instanceof Element) {
-			if (!e.target.closest('[data-class]')) {
-				setShowMusicPlayer(false)
-			}
-		} else {
-			setShowMusicPlayer(false)
-		}
-	}
-
-	useEffect(() => {
-		document.body.addEventListener('click', handleClick)
-		return () => {
-			document.body.removeEventListener('click', handleClick)
-		}
-	}, [])
+	useCloseMusicPlayer(setShowMusicPlayer)
 
 	return (
 		<>
@@ -42,6 +31,9 @@ function App() {
 							setShowMusicPlayer(true)
 						}}
 					/>
+
+					<MusicPlayerHint reference={musicHintRef} />
+
 					<MusicContextProvider>
 						<MusicPlayer showMusicPlayer={showMusicPlayer} />
 					</MusicContextProvider>

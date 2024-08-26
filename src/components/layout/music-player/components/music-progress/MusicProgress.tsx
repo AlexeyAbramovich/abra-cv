@@ -9,6 +9,9 @@ const MusicProgress = () => {
 
 	return (
 		<div className={styles.progressWrapper} data-class='music'>
+			<label htmlFor={styles.progress} className='visually-hidden'>
+				Music progress slider
+			</label>
 			<input
 				ref={progress}
 				className={styles.progress}

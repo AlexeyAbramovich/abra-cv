@@ -13,10 +13,10 @@ export const music = relaxPlaylist
 	.concat(beatPlaylist)
 
 export const playlists = [
-	{ img: '/src/assets/icons/relax.svg', title: 'Relax' },
-	{ img: '/src/assets/icons/russian.svg', title: 'Russian' },
-	{ img: '/src/assets/icons/rock.svg', title: 'Rock' },
-	{ img: '/src/assets/icons/rap.svg', title: 'Rap' },
-	{ img: '/src/assets/icons/beat.svg', title: 'Beat' },
-	{ img: '/src/assets/icons/energy.svg', title: 'AC/DC' }
+	{ img: '/icons/relax.svg', title: 'Relax' },
+	{ img: '/icons/russian.svg', title: 'Russian' },
+	{ img: '/icons/rock.svg', title: 'Rock' },
+	{ img: '/icons/rap.svg', title: 'Rap' },
+	{ img: '/icons/beat.svg', title: 'Beat' },
+	{ img: '/icons/energy.svg', title: 'AC/DC' }
 ]
