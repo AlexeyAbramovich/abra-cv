@@ -12,19 +12,20 @@ export const useLoader = (
 		if (warning.current && warningText.current && errorIcon.current) {
 			setTimeout(() => {
 				warning.current!.classList.remove('none')
-				setTimeout(() => {
-					warningText.current!.textContent = '😊 ШУТКА)'
-					warningText.current!.style.width = 'fit-content'
-					errorIcon.current!.classList.add('none')
-					setTimeout(() => {
-						warning.current!.classList.add('none')
-						loaderProgress.current!.classList.remove('none')
-						setTimeout(() => {
-							setIsLoading(false)
-						}, 2000)
-					}, 2000)
-				}, 3000)
 			}, 3000)
+			setTimeout(() => {
+				warningText.current!.textContent = '😊 ШУТКА)'
+				warningText.current!.style.letterSpacing = '1.2px'
+				warningText.current!.style.width = 'fit-content'
+				errorIcon.current!.classList.add('none')
+			}, 6000)
+			setTimeout(() => {
+				warning.current!.classList.add('none')
+				loaderProgress.current!.classList.remove('none')
+			}, 8000)
+			setTimeout(() => {
+				setIsLoading(false)
+			}, 10000)
 		}
 	}, [warning, warningText, errorIcon, loaderProgress])
 

@@ -1,7 +1,7 @@
 import { TypeAnimation } from 'react-type-animation'
 import styles from './WelcomeText.module.scss'
 
-const CURSOR_CLASS_NAME = 'index-module_type__E-SaG'
+export const CURSOR_CLASS_NAME = 'index-module_type__E-SaG'
 
 const WelcomeText = () => {
 	return (

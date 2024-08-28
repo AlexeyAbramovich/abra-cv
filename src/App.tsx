@@ -1,20 +1,29 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import MusicPlayerHint from './components/layout/music-player-hint/MusicPlayerHint'
-import MusicPlayer from './components/layout/music-player/MusicPlayer'
-import MusicContextProvider from './components/layout/music-player/provider/MusicContextProvider'
-import ShowPlayerButton from './components/layout/show-player-button/ShowPlayerButton'
 import Loader from './components/ui/loader/Loader'
+import MusicPlayerHint from './components/ui/music-player-hint/MusicPlayerHint'
+import MusicPlayer from './components/ui/music-player/MusicPlayer'
+import MusicContextProvider from './components/ui/music-player/provider/MusicContextProvider'
+import ShowPlayerButton from './components/ui/show-player-button/ShowPlayerButton'
 import { useCloseMusicPlayer } from './hooks/useCloseMusicPlayer'
 import { useMusicPlayerHint } from './hooks/useMusicPlayerHint'
 import Router from './router/Router'
 
 function App() {
-	const [isLoading, setIsLoading] = useState(false)
+	const [isLoading, setIsLoading] = useState(true)
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
 	const { musicHintRef } = useMusicPlayerHint()
 
 	useCloseMusicPlayer(setShowMusicPlayer)
+
+	const router = useMemo(
+		() => (
+			<BrowserRouter>
+				<Router />
+			</BrowserRouter>
+		),
+		[]
+	)
 
 	return (
 		<>
@@ -22,9 +31,7 @@ function App() {
 				<Loader setIsLoading={setIsLoading} />
 			) : (
 				<>
-					<BrowserRouter>
-						<Router />
-					</BrowserRouter>
+					{router}
 
 					<ShowPlayerButton
 						onClick={() => {

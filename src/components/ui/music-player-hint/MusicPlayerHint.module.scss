@@ -4,11 +4,12 @@
 	position: fixed;
 	bottom: 70px;
 	right: 70px;
+	height: 55px;
 	display: flex;
 	background: $bg-buttons;
 	border-radius: 10px;
 	padding: 10px;
-	padding-right: 30px;
+	padding-right: 50px;
 	column-gap: 10px;
 	box-shadow: -5px -5px 0 black;
 	font-size: 12px;
@@ -23,7 +24,7 @@
 	}
 
 	> span:nth-child(2) {
-		width: 260px;
+		width: 264px;
 	}
 
 	> img {
