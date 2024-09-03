@@ -125,6 +125,24 @@ export const projects: Project[] = [
 		link: 'https://github.com/AlexeyAbramovich/game-store'
 	},
 	{
+		name: 'GTA 6 Preorder',
+		description: 'Форма для предзаказ ГТА 6',
+		technologies: [
+			'React',
+			'TypeScript',
+			'React Hook Form',
+			'TailwindCSS',
+			'HTML',
+			'Vite',
+			'Express',
+			'Prisma',
+			'PostgreSQL'
+		],
+		features: ['Данные из формы сохраняются в базу данных PostgreSQL'],
+		preview: ['/images/projects/gta-6/1.webp'],
+		link: 'https://github.com/AlexeyAbramovich/gta-6'
+	},
+	{
 		name: 'Crypto App',
 		description:
 			'Приложение для мониторинга криптоактивов и цен на криптовалюты',
@@ -143,7 +161,9 @@ export const projects: Project[] = [
 		],
 		preview: [
 			'/images/projects/crypto-app/1.webp',
-			'/images/projects/crypto-app/2.webp'
+			'/images/projects/crypto-app/2.webp',
+			'/images/projects/crypto-app/3.webp',
+			'/images/projects/crypto-app/4.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/react-crypto-app'
 	},
