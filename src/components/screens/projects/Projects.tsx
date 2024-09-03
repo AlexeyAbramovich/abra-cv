@@ -1,5 +1,18 @@
+import Layout from '../../layout/layout/Layout'
+import ProjectInfo from './components/project-info/ProjectInfo'
+import { projects } from './data/projects'
+import styles from './Projects.module.scss'
+
 const Projects = () => {
-	return <div>Projects</div>
+	return (
+		<Layout>
+			<article className={styles.projects}>
+				{projects.map((projectInfo) => (
+					<ProjectInfo key={projectInfo.name} projectInfo={projectInfo} />
+				))}
+			</article>
+		</Layout>
+	)
 }
 
 export default Projects

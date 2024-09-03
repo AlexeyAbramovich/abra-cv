@@ -6,13 +6,11 @@ import MusicPlayer from './components/ui/music-player/MusicPlayer'
 import MusicContextProvider from './components/ui/music-player/provider/MusicContextProvider'
 import ShowPlayerButton from './components/ui/show-player-button/ShowPlayerButton'
 import { useCloseMusicPlayer } from './hooks/useCloseMusicPlayer'
-import { useMusicPlayerHint } from './hooks/useMusicPlayerHint'
 import Router from './router/Router'
 
 function App() {
-	const [isLoading, setIsLoading] = useState(true)
+	const [isLoading, setIsLoading] = useState(false)
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
-	const { musicHintRef } = useMusicPlayerHint()
 
 	useCloseMusicPlayer(setShowMusicPlayer)
 
@@ -39,7 +37,7 @@ function App() {
 						}}
 					/>
 
-					<MusicPlayerHint reference={musicHintRef} />
+					<MusicPlayerHint />
 
 					<MusicContextProvider>
 						<MusicPlayer showMusicPlayer={showMusicPlayer} />

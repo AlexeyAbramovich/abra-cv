@@ -10,6 +10,17 @@ body {
 	background-color: $bg;
 	color: $text-color;
 	cursor: url('/icons/cursor.svg'), default;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $main-color;
+		border-radius: 3px;
+	}
 }
 
 #root {
@@ -33,6 +44,10 @@ body {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+pre {
+	font-family: inherit;
 }
 
 button,

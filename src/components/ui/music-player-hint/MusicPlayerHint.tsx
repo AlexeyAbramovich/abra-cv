@@ -1,15 +1,14 @@
 import { TypeAnimation } from 'react-type-animation'
+import { useMusicPlayerHint } from '../../../hooks/useMusicPlayerHint'
 import styles from './MusicPlayerHint.module.scss'
 
 const CURSOR_CLASS_NAME = 'index-module_type__E-SaG'
 
-type Props = {
-	reference: React.MutableRefObject<HTMLDivElement | null>
-}
+const MusicPlayerHint = () => {
+	const { musicHintRef } = useMusicPlayerHint()
 
-const MusicPlayerHint = ({ reference }: Props) => {
 	return (
-		<div ref={reference} className={styles.musicPlayerHint + ' none'}>
+		<div ref={musicHintRef} className={styles.musicPlayerHint + ' none'}>
 			<span />
 			<TypeAnimation
 				className={CURSOR_CLASS_NAME}
@@ -23,7 +22,7 @@ const MusicPlayerHint = ({ reference }: Props) => {
 				wrapper='span'
 				cursor={true}
 			/>
-			<img src='/icons/arrow-right.svg' />
+			<img src='/icons/arrow-down-right.svg' />
 		</div>
 	)
 }

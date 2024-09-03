@@ -48,5 +48,13 @@ export const rockPlaylist: Song[] = [
 		path: '/media/rock/the-donnas-take-it-off.mp3',
 		cover: '/images/covers/rock.jpg',
 		visualizerColor: '#ff8800'
+	},
+	{
+		playlist: 'Rock',
+		name: 'Raising Hell',
+		artist: 'Run DMC',
+		path: '/media/rock/run-dmc-raising-hell.mp3',
+		cover: '/images/covers/rock.jpg',
+		visualizerColor: '#ff8800'
 	}
 ]

@@ -16,7 +16,7 @@ export const projects: Project[] = [
 			'Для запросов используется fetch()',
 			'Данные о погоде берутся с сайта api.openweathermap.org'
 		],
-		preview: ['/images/projects/weather/1.png'],
+		preview: ['/images/projects/weather/1.webp'],
 		link: 'https://github.com/AlexeyAbramovich/weather'
 	},
 	{
@@ -28,8 +28,8 @@ export const projects: Project[] = [
 			'Данные по кораблям берутся с сайта swapi.dev'
 		],
 		preview: [
-			'/images/projects/star-wars/1.png',
-			'/images/projects/star-wars/2.png'
+			'/images/projects/star-wars/1.webp',
+			'/images/projects/star-wars/2.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/starwars'
 	},
@@ -41,7 +41,7 @@ export const projects: Project[] = [
 			'Фиксация цвета',
 			'Фиксированные цвета сохраняются при перезагрузке'
 		],
-		preview: ['/images/projects/colors/1.png'],
+		preview: ['/images/projects/colors/1.webp'],
 		link: 'https://github.com/AlexeyAbramovich/colors'
 	},
 	{
@@ -68,9 +68,9 @@ export const projects: Project[] = [
 			'Смена плейлиста'
 		],
 		preview: [
-			'/images/projects/music-player/1.png',
-			'/images/projects/music-player/2.png',
-			'/images/projects/music-player/3.png'
+			'/images/projects/music-player/1.webp',
+			'/images/projects/music-player/2.webp',
+			'/images/projects/music-player/3.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/music-player'
 	},
@@ -94,7 +94,7 @@ export const projects: Project[] = [
 			'Добавление рецепта в избранное',
 			'Поиск по рецептам'
 		],
-		preview: ['/images/projects/recipes/1.png'],
+		preview: ['/images/projects/recipes/1.webp'],
 		link: 'https://github.com/AlexeyAbramovich/recipes'
 	},
 	{
@@ -117,10 +117,10 @@ export const projects: Project[] = [
 			'Страница заказа'
 		],
 		preview: [
-			'/images/projects/game-store/1.png',
-			'/images/projects/game-store/2.png',
-			'/images/projects/game-store/3.png',
-			'/images/projects/game-store/4.png'
+			'/images/projects/game-store/1.webp',
+			'/images/projects/game-store/2.webp',
+			'/images/projects/game-store/3.webp',
+			'/images/projects/game-store/4.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/game-store'
 	},
@@ -142,8 +142,8 @@ export const projects: Project[] = [
 			'Получение актуальной информации о выбранной монете'
 		],
 		preview: [
-			'/images/projects/crypto-app/1.png',
-			'/images/projects/crypto-app/2.png'
+			'/images/projects/crypto-app/1.webp',
+			'/images/projects/crypto-app/2.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/react-crypto-app'
 	},
@@ -169,9 +169,9 @@ export const projects: Project[] = [
 			'Адаптивный дизайн'
 		],
 		preview: [
-			'/images/projects/resident-evil/1.png',
-			'/images/projects/resident-evil/2.png',
-			'/images/projects/resident-evil/3.png'
+			'/images/projects/resident-evil/1.webp',
+			'/images/projects/resident-evil/2.webp',
+			'/images/projects/resident-evil/3.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/resident-evil-shop'
 	},
@@ -190,7 +190,8 @@ export const projects: Project[] = [
 			'CSS',
 			'JavaScript',
 			'Express',
-			'Prisma'
+			'Prisma',
+			'SQLite'
 		],
 		features: [
 			'Авторизация пользователя с помощью токена JWT',
@@ -201,19 +202,19 @@ export const projects: Project[] = [
 			'Пользователь не может редактировать / удалять сотрудников других пользователей'
 		],
 		preview: [
-			'/images/projects/employees/1.png',
-			'/images/projects/employees/2.png',
-			'/images/projects/employees/3.png',
-			'/images/projects/employees/4.png',
-			'/images/projects/employees/5.png',
-			'/images/projects/employees/6.png'
+			'/images/projects/employees/1.webp',
+			'/images/projects/employees/2.webp',
+			'/images/projects/employees/3.webp',
+			'/images/projects/employees/4.webp',
+			'/images/projects/employees/5.webp',
+			'/images/projects/employees/6.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/react-employees'
 	},
 	{
 		name: 'ABRA Bank',
 		description:
-			'Имитация банковского приложения с возможностью вносить / переводить / снимать деньги с карты\n ***Приложение было разработано в ходе курса на htmllessons.io. Серверная часть была предоставлена автором этого курса и разработана с использованием Nest.js',
+			'Имитация банковского приложения с возможность вносить / переводить\n/ снимать деньги с карты \n* Приложение было разработано в ходе курса на htmllessons.io.\nСерверная часть была предоставлена автором этого курса\nи разработана с использованием Nest.js',
 		technologies: ['JavaScript', 'Webpack', 'HTML', 'CSS'],
 		features: [
 			'Авторизация пользователя с помощью токена',
@@ -223,9 +224,9 @@ export const projects: Project[] = [
 			'Разработаны пользовательские библиотеки для работы с элементами DOM и обработки запросов API'
 		],
 		preview: [
-			'/images/projects/abra-bank/1.png',
-			'/images/projects/abra-bank/2.png',
-			'/images/projects/abra-bank/3.png'
+			'/images/projects/abra-bank/1.webp',
+			'/images/projects/abra-bank/2.webp',
+			'/images/projects/abra-bank/3.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/abra-bank'
 	},
@@ -255,11 +256,11 @@ export const projects: Project[] = [
 			'Завершение выполнения упражнения / тренировки'
 		],
 		preview: [
-			'/images/projects/workout-app/1.png',
-			'/images/projects/workout-app/2.png',
-			'/images/projects/workout-app/3.png',
-			'/images/projects/workout-app/4.png',
-			'/images/projects/workout-app/5.png'
+			'/images/projects/workout-app/1.webp',
+			'/images/projects/workout-app/2.webp',
+			'/images/projects/workout-app/3.webp',
+			'/images/projects/workout-app/4.webp',
+			'/images/projects/workout-app/5.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/workout-app'
 	}
