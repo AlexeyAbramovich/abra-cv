@@ -30,7 +30,11 @@ const ProjectInfo = ({ projectInfo }: Props) => {
 						</div>
 					))}
 				</div>
-				<Link to={projectInfo.link} target='blank'>
+				<Link
+					aria-label='Open the project repository'
+					to={projectInfo.link}
+					target='blank'
+				>
 					<svg
 						viewBox='0 0 73 73'
 						version='1.1'

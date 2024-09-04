@@ -6,7 +6,7 @@ export const acDcPlaylist: Song[] = [
 		name: 'Thunderstruck',
 		artist: 'AC/DC',
 		path: '/media/ac-dc/ac-dc-thunderstruck.mp3',
-		cover: '/images/covers/ac-dc.jpg',
+		cover: '/images/covers/ac-dc.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -14,7 +14,7 @@ export const acDcPlaylist: Song[] = [
 		name: 'T.N.T.',
 		artist: 'AC/DC',
 		path: '/media/ac-dc/ac-dc-tnt.mp3',
-		cover: '/images/covers/ac-dc.jpg',
+		cover: '/images/covers/ac-dc.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -22,7 +22,7 @@ export const acDcPlaylist: Song[] = [
 		name: 'Highway To Hell',
 		artist: 'AC/DC',
 		path: '/media/ac-dc/ac-dc-highway-to-hell.mp3',
-		cover: '/images/covers/ac-dc.jpg',
+		cover: '/images/covers/ac-dc.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -30,7 +30,7 @@ export const acDcPlaylist: Song[] = [
 		name: 'Back In Black',
 		artist: 'AC/DC',
 		path: '/media/ac-dc/ac-dc-back-in-black.mp3',
-		cover: '/images/covers/ac-dc.jpg',
+		cover: '/images/covers/ac-dc.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -38,7 +38,7 @@ export const acDcPlaylist: Song[] = [
 		name: 'Are You Ready',
 		artist: 'AC/DC',
 		path: '/media//ac-dc/ac-dc-are-you-ready.mp3',
-		cover: '/images/covers/ac-dc.jpg',
+		cover: '/images/covers/ac-dc.webp',
 		visualizerColor: '#ff8800'
 	}
 ]

@@ -6,7 +6,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Space Between',
 		artist: 'Matt Lange',
 		path: '/media/relax/matt-lange-space-between.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -14,7 +14,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Desire (Hucci Remix)',
 		artist: 'Meg Myers',
 		path: '/media/relax/meg-myers-desire-hucci-remix.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -22,7 +22,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'My life be like',
 		artist: 'Grits',
 		path: '/media/relax/grits-my-life-be-like.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -30,7 +30,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Glitter Amp Gold',
 		artist: 'Barns Courtney',
 		path: '/media/relax/barns-courtney-glitter-amp-gold.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -38,7 +38,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Lift You Up',
 		artist: 'Sean Koch',
 		path: '/media/relax/sean-koch-lift-you-up.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -46,7 +46,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Pretty Lights',
 		artist: 'Chillout',
 		path: '/media/relax/pretty-lights-chillout.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -54,7 +54,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Teardrop',
 		artist: 'Massive Attack',
 		path: '/media/relax/massive-attack-teardrop.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -62,7 +62,7 @@ export const relaxPlaylist: Song[] = [
 		name: "I Ain't worried",
 		artist: 'OneRepublic',
 		path: '/media/relax/one-republic-i-aint-worried.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	},
 	{
@@ -70,7 +70,7 @@ export const relaxPlaylist: Song[] = [
 		name: 'Stressed Out',
 		artist: 'Twenty One Pilots',
 		path: '/media/relax/twenty-one-pilots-stressed-out.mp3',
-		cover: '/images/covers/relax.jpg',
+		cover: '/images/covers/relax.webp',
 		visualizerColor: '#ff8800'
 	}
 ]

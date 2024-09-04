@@ -21,17 +21,12 @@ export default function Carousel({ projectName, slides }: Props) {
 				style={{ transform: `translateX(-${curr * 100}%)` }}
 			>
 				{slides.map((img, i) => (
-					<img
-						key={`${projectName}_slide_${i}`}
-						src={img}
-						alt=''
-						loading='lazy'
-					/>
+					<img key={`${projectName}_slide_${i}`} src={img} alt='' />
 				))}
 			</div>
 			{slides.length > 1 && (
 				<div className={styles.buttons}>
-					<button onClick={prev}>
+					<button aria-label='Previous slide' onClick={prev}>
 						<svg
 							width='15px'
 							height='15px'
@@ -61,7 +56,7 @@ export default function Carousel({ projectName, slides }: Props) {
 							</g>
 						</svg>
 					</button>
-					<button onClick={next}>
+					<button aria-label='Next slide' onClick={next}>
 						<svg
 							width='15px'
 							height='15px'

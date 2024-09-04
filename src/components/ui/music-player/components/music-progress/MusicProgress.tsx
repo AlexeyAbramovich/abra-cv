@@ -9,14 +9,12 @@ const MusicProgress = () => {
 
 	return (
 		<div className={styles.progressWrapper} data-class='music'>
-			<label htmlFor={styles.progress} className='visually-hidden'>
-				Music progress slider
-			</label>
 			<input
 				ref={progress}
 				className={styles.progress}
 				type='range'
 				data-class='music'
+				aria-label='Music progress slider'
 			/>
 			<div className={styles.songTime} data-class='music'>
 				<span ref={songCurrentTime} data-class='music'>

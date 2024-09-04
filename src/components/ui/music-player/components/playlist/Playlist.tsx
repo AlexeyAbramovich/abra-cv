@@ -10,6 +10,7 @@ type Props = {
 const Playlist = ({ playlist }: Props) => {
 	const {
 		setCurrentPlaylist,
+		setPlaylistQueue,
 		setNeedNewRandomSong,
 		activePlaylist,
 		setActivePlaylist
@@ -26,6 +27,7 @@ const Playlist = ({ playlist }: Props) => {
 				setCurrentPlaylist(
 					music.filter((song) => song.playlist === playlist.title)
 				)
+				setPlaylistQueue([])
 				setNeedNewRandomSong(true)
 			}}
 		>

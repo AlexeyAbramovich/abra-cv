@@ -2,13 +2,14 @@
 @import '/src/styles/mixins';
 
 .home {
-	margin-top: 80px;
 	position: relative;
+	margin-top: 80px;
 	display: flex;
 	column-gap: 300px;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	flex: 1;
 	overflow: hidden;
 
 	.wrapper {

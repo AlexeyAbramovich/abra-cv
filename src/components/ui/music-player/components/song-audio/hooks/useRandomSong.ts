@@ -32,7 +32,11 @@ export function useRandomSong() {
     (когда ни одна песня ещё не была проиграна)
   */
 			if (playlistQueue.length === currentPlaylist.length) {
-				setPlaylistQueue([])
+				// код ниже исправляет баг, чтобы последня песня из очереди плейлиста не проигрывалась дважды при её очистке
+				newSong = playlistQueue.slice(1, -1)[
+					Math.floor(Math.random() * (currentPlaylist.length - 1))
+				]
+				setPlaylistQueue([newSong])
 			}
 
 			setCurrentSong(newSong)

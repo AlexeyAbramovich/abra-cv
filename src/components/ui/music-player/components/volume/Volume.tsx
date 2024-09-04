@@ -17,9 +17,6 @@ const Volume = () => {
 	return (
 		<div className={styles.volumeWrapper} data-class='music'>
 			<img src='/icons/volume.svg' data-class='music' alt='' />
-			<label htmlFor={styles.volume} className='visually-hidden'>
-				Volume progress slider
-			</label>
 			<input
 				ref={volume}
 				className={styles.volume}
@@ -27,6 +24,7 @@ const Volume = () => {
 				min={0}
 				max={100}
 				data-class='music'
+				aria-label='Volume progress slider'
 			/>
 		</div>
 	)

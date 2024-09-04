@@ -6,11 +6,14 @@ import MusicPlayer from './components/ui/music-player/MusicPlayer'
 import MusicContextProvider from './components/ui/music-player/provider/MusicContextProvider'
 import ShowPlayerButton from './components/ui/show-player-button/ShowPlayerButton'
 import { useCloseMusicPlayer } from './hooks/useCloseMusicPlayer'
+import { usePreloadFirstCarouselImage } from './hooks/usePreloadFirstCarouselImage'
 import Router from './router/Router'
 
 function App() {
 	const [isLoading, setIsLoading] = useState(false)
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
+
+	usePreloadFirstCarouselImage()
 
 	useCloseMusicPlayer(setShowMusicPlayer)
 
