@@ -64,5 +64,13 @@ export const rapPlaylist: Song[] = [
 		path: '/media/rap/pitbull-oye.mp3',
 		cover: '/images/covers/rap.webp',
 		visualizerColor: '#ff8800'
+	},
+	{
+		playlist: 'Rap',
+		name: 'Ride',
+		artist: 'Maurice Sinclair',
+		path: '/media/rap/maurice-sinclair-ride.mp3',
+		cover: '/images/covers/rap.webp',
+		visualizerColor: '#ff8800'
 	}
 ]

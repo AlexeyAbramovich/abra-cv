@@ -1,0 +1,9 @@
+.slides {
+	display: flex;
+	transition: transform 500ms ease-out;
+
+	> img {
+		width: 100%;
+		aspect-ratio: 16/9;
+	}
+}

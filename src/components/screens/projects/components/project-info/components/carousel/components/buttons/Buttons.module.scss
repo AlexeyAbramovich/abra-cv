@@ -1,0 +1,34 @@
+@import '/src//styles/variables';
+
+.buttons {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+
+	> button {
+		display: flex;
+		border: none;
+		background: $bg-buttons;
+		padding: 0;
+		width: 25px;
+		height: 25px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		box-shadow: 0 0 5px 2px black;
+
+		&:hover {
+			background-color: $hover-bg;
+
+			> svg > path {
+				fill: $hover-text-color;
+			}
+		}
+	}
+}
