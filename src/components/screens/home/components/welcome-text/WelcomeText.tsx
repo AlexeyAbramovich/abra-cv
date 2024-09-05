@@ -31,7 +31,7 @@ const WelcomeText = () => {
 
 			<img src='/icons/development.svg' alt='' />
 
-			<img src='/icons/code-svgrepo-com.svg' alt='' />
+			<img src='/icons/code.svg' alt='' />
 		</div>
 	)
 }

@@ -40,6 +40,10 @@ input {
 		pointer;
 }
 
+label {
+	cursor: inherit;
+}
+
 .hide {
 	animation: hide 2s linear;
 }

@@ -1,7 +1,7 @@
 @import '/src/styles/variables';
 @import '/src/styles/mixins';
 
-div:last-child {
+.avatarWrapper {
 	.avatar {
 		position: relative;
 		.photo {

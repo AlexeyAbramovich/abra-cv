@@ -3,7 +3,7 @@ import styles from './Avatar.module.scss'
 
 const Avatar = () => {
 	return (
-		<Tilt>
+		<Tilt className={styles.avatarWrapper}>
 			<div className={styles.avatar}>
 				<img
 					src='/images/photo.jpg'

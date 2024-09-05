@@ -1,0 +1,10 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+.githubLink_big {
+	@include github-link(40px, 40px, 'big');
+}
+
+.githubLink_small {
+	@include github-link(15px, 15px, 'small');
+}

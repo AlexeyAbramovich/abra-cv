@@ -1,3 +1,4 @@
+import Copyright from '../../ui/copyright/Copyright'
 import Avatar from './components/avatar/Avatar'
 import Buttons from './components/buttons/Buttons'
 import WelcomeText from './components/welcome-text/WelcomeText'
@@ -18,6 +19,8 @@ const Home = () => {
 			<span className={styles.bgTopElement2} />
 
 			<Avatar />
+
+			<Copyright type='absolute' />
 		</article>
 	)
 }

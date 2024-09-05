@@ -1,5 +1,56 @@
 @import '/src/styles/variables';
 
+@mixin copyright($type) {
+	@if ($type == 'absolute') {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-inline: auto;
+	}
+
+	display: flex;
+	align-items: center;
+	column-gap: 5px;
+	font-size: 11px;
+	letter-spacing: 1px;
+
+	> p {
+		margin-block: 3px 0px;
+	}
+
+	> img {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@mixin github-link($width, $height, $size) {
+	@if ($size == 'big') {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
+
+	width: $width;
+	height: $height;
+	> svg {
+		width: $width;
+		height: $height;
+	}
+
+	&:hover {
+		> svg rect {
+			stroke: $hover-bg;
+			fill: $hover-bg;
+		}
+
+		> svg path {
+			fill: black;
+		}
+	}
+}
+
 @mixin bg-element($width, $height, $type: 'default') {
 	position: absolute;
 	width: $width;

@@ -1,0 +1,9 @@
+@import '/src/styles/mixins';
+
+.copyright_absolute {
+	@include copyright('absolute');
+}
+
+.copyright_footer {
+	@include copyright('footer');
+}

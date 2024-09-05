@@ -1,5 +1,5 @@
+import GithubLink from '../../../../../../ui/github-link/GithubLink'
 import { Props } from '../../ProjectInfo'
-import GithubLink from './components/github-link/GithubLink'
 import Stack from './components/stack/Stack'
 import styles from './Info.module.scss'
 
@@ -17,7 +17,11 @@ const Info = ({ projectInfo }: Props) => {
 				projectName={projectInfo.name}
 				technologies={projectInfo.technologies}
 			/>
-			<GithubLink link={projectInfo.link} />
+			<GithubLink
+				link={projectInfo.link}
+				size='big'
+				label='Open the project repository on github'
+			/>
 		</div>
 	)
 }
