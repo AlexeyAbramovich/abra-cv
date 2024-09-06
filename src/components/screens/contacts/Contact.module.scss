@@ -1,4 +1,5 @@
 @import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 .contacts {
 	position: relative;
@@ -9,20 +10,28 @@
 	align-items: center;
 	row-gap: 20px;
 
-	.notification {
-		position: absolute;
-		top: 20px;
-		right: 0;
-		padding: 20px 10px;
-		animation: show-notification 1s ease-in;
-		background: $bg-buttons;
-		font-size: 13px;
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
+	.notification_success {
+		@include notification('success');
+	}
+
+	.notification_error {
+		@include notification('error');
 	}
 
 	> h2 {
+		position: relative;
 		color: $main-color;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 10px;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background: url('/icons/typing.svg');
+		}
 	}
 
 	> form {
@@ -52,6 +61,10 @@
 					color: $text-color;
 				}
 			}
+
+			// input:-webkit-autofill {
+			// 	background-color: transparent !important;
+			// }
 
 			> textarea {
 				letter-spacing: 1px;
@@ -118,16 +131,5 @@
 				box-shadow: unset;
 			}
 		}
-	}
-}
-
-@keyframes show-notification {
-	from {
-		opacity: 0;
-		transform: translateX(100%);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0%);
 	}
 }

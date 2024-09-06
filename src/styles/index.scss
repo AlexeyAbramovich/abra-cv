@@ -44,6 +44,14 @@ label {
 	cursor: inherit;
 }
 
+// remove input autofill bg-color
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+	transition:
+		background-color 0s 600000s,
+		color 0s 600000s !important;
+}
+
 .hide {
 	animation: hide 2s linear;
 }

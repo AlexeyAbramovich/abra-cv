@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Copyright from '../../ui/copyright/Copyright'
@@ -6,11 +7,12 @@ import styles from './Contact.module.scss'
 type FormInput = {
 	name: string
 	email: string
-	text: string
+	message: string
 }
 
 const Contacts = () => {
 	const [isDataSent, setIsDataSent] = useState(false)
+	const [isApiLimitReached, setIsApiLimitReached] = useState(false)
 
 	const {
 		register,
@@ -27,9 +29,36 @@ const Contacts = () => {
 		}
 	}, [isDataSent])
 
-	const onSubmit: SubmitHandler<FormInput> = (data) => {
-		setIsDataSent(true)
-		console.log(data)
+	useEffect(() => {
+		if (isApiLimitReached) {
+			setTimeout(() => {
+				setIsApiLimitReached(false)
+			}, 6000)
+		}
+	}, [isApiLimitReached])
+
+	const onSubmit: SubmitHandler<FormInput> = async (formData) => {
+		const json = JSON.stringify({
+			...formData,
+			access_key: '69c6fe38-8754-4972-b59b-ebe9510b9b4e'
+		})
+
+		const response = await fetch('https://api.web3forms.com/submit', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json'
+			},
+			body: json
+		})
+
+		const data = await response.json()
+
+		if (data.success) {
+			setIsDataSent(true)
+		} else {
+			setIsApiLimitReached(true)
+		}
 		reset()
 	}
 
@@ -37,12 +66,21 @@ const Contacts = () => {
 		<>
 			<article className={styles.contacts}>
 				{isDataSent && (
-					<span className={styles.notification}>
+					<span className={styles.notification_success}>
 						Сообщение отправлено успешно
 					</span>
 				)}
+				{isApiLimitReached && (
+					<span className={styles.notification_error}>
+						Достигнут лимит в 250 сообщений
+						<br />
+						в месяц на бесплатном api
+						<br />
+						web3forms.com для отправки Email
+					</span>
+				)}
 				<h2>Написать мне</h2>
-				<form onSubmit={handleSubmit(onSubmit)}>
+				<form action='' onSubmit={handleSubmit(onSubmit)}>
 					<label>
 						Ваше имя:
 						{errors?.name?.message && (
@@ -75,11 +113,11 @@ const Contacts = () => {
 					</label>
 					<label>
 						Текст сообщения:
-						{errors?.text?.message && (
-							<span className={styles.error}>{errors.text.message}</span>
+						{errors?.message?.message && (
+							<span className={styles.error}>{errors.message.message}</span>
 						)}
 						<textarea
-							{...register('text', {
+							{...register('message', {
 								required: '⚠ Поле является обязательным',
 								maxLength: {
 									value: 3000,
@@ -91,8 +129,6 @@ const Contacts = () => {
 					</label>
 					<button type='submit'>
 						<svg
-							width='800px'
-							height='800px'
 							viewBox='0 0 24 24'
 							version='1.1'
 							xmlns='http://www.w3.org/2000/svg'

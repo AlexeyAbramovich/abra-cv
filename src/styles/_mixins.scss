@@ -1,5 +1,61 @@
 @import '/src/styles/variables';
 
+@mixin notification($type) {
+	z-index: 5;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	padding: 20px 10px;
+	background: $bg-buttons;
+	font-size: 13px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	display: inline-flex;
+	align-items: center;
+	column-gap: 10px;
+	animation: show-notification 1s ease-in;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		@if ($type == 'success') {
+			background: url('/icons/success.svg');
+		} @else {
+			background: url('/icons/error-sending.svg');
+		}
+		animation: icon 0.5s ease-in;
+		animation-delay: 1s;
+	}
+
+	@keyframes show-notification {
+		from {
+			opacity: 0;
+			transform: translateX(100%);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0%);
+		}
+	}
+
+	@keyframes icon {
+		0% {
+			opacity: 0;
+			scale: 0.8;
+		}
+		80% {
+			opacity: 0.8;
+			scale: 1.2;
+		}
+		100% {
+			opacity: 1;
+			scale: 1;
+		}
+	}
+}
+
 @mixin copyright($type) {
 	@if ($type == 'absolute') {
 		position: absolute;

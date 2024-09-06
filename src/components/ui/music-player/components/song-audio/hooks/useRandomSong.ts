@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { useMusicContext } from '../../../hooks/useMusicContext'
 
 export function useRandomSong() {
@@ -12,7 +12,8 @@ export function useRandomSong() {
 		setPlaylistQueue
 	} = useMusicContext()
 
-	useEffect(() => {
+	// Тот самый случай, когда использование useLayoutEffect помогло исправить баг
+	useLayoutEffect(() => {
 		if (currentPlaylist && needNewRandomSong) {
 			let newSong =
 				currentPlaylist[Math.floor(Math.random() * currentPlaylist.length)]
