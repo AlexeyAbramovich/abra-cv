@@ -9,7 +9,7 @@ const Copyright = ({ type }: { type: string }) => {
 				type === 'footer' ? styles.copyright_footer : styles.copyright_absolute
 			)}
 		>
-			<img src='/icons/copyright.svg' />
+			<img src='/icons/copyright.svg' alt='Copyright' />
 			<p>Copyright А. Д. Абрамович, 2024</p>
 			<GithubLink
 				link='https://github.com/AlexeyAbramovich'
