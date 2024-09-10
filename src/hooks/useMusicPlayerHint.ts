@@ -26,5 +26,5 @@ export const useMusicPlayerHint = () => {
 		}
 	}, [])
 
-	return { musicHintRef }
+	return musicHintRef
 }

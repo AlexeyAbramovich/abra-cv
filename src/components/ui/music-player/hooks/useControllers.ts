@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 
 export const useControllers = () => {
 	const player = useRef<HTMLDivElement | null>(null)
@@ -17,21 +17,24 @@ export const useControllers = () => {
 	const visualizer = useRef<HTMLDivElement | null>(null)
 	const interval = useRef<number | null>(null)
 
-	return {
-		player,
-		volume,
-		songImg,
-		songName,
-		songArtist,
-		progress,
-		song,
-		ctrlBtn,
-		ctrlIcon,
-		prev,
-		next,
-		songCurrentTime,
-		songEndTime,
-		visualizer,
-		interval
-	}
+	return useMemo(
+		() => ({
+			player,
+			volume,
+			songImg,
+			songName,
+			songArtist,
+			progress,
+			song,
+			ctrlBtn,
+			ctrlIcon,
+			prev,
+			next,
+			songCurrentTime,
+			songEndTime,
+			visualizer,
+			interval
+		}),
+		[]
+	)
 }

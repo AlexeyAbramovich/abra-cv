@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { useMusicContext } from '../../../hooks/useMusicContext'
+import { useShallow } from 'zustand/react/shallow'
+import { useMusicStore } from '../../../hooks/useMusicStore'
 
 export function useRandomSong() {
 	const {
@@ -10,7 +11,17 @@ export function useRandomSong() {
 		setNeedNewRandomSong,
 		playlistQueue,
 		setPlaylistQueue
-	} = useMusicContext()
+	} = useMusicStore(
+		useShallow((state) => ({
+			currentPlaylist: state.currentPlaylist,
+			currentSong: state.currentSong,
+			setCurrentSong: state.setCurrentSong,
+			needNewRandomSong: state.needNewRandomSong,
+			setNeedNewRandomSong: state.setNeedNewRandomSong,
+			playlistQueue: state.playlistQueue,
+			setPlaylistQueue: state.setPlaylistQueue
+		}))
+	)
 
 	useEffect(() => {
 		if (currentPlaylist && needNewRandomSong) {

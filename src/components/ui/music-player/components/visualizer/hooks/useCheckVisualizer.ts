@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
-import { useMusicContext } from '../../../hooks/useMusicContext'
+import { useShallow } from 'zustand/react/shallow'
+import { useMusicStore } from '../../../hooks/useMusicStore'
 
 export const useCheckVisualizer = () => {
 	const {
@@ -7,7 +8,14 @@ export const useCheckVisualizer = () => {
 		setVisualizerWasSet,
 		needCheckVisualizer,
 		setNeedCheckVisualizer
-	} = useMusicContext()
+	} = useMusicStore(
+		useShallow((state) => ({
+			visualizerWasSet: state.visualizerWasSet,
+			setVisualizerWasSet: state.setVisualizerWasSet,
+			needCheckVisualizer: state.needCheckVisualizer,
+			setNeedCheckVisualizer: state.setNeedCheckVisualizer
+		}))
+	)
 
 	useEffect(() => {
 		if (needCheckVisualizer && !visualizerWasSet) {

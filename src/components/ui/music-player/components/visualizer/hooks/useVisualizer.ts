@@ -1,10 +1,19 @@
 import { useEffect } from 'react'
+import { useShallow } from 'zustand/react/shallow'
 import { AudioContextInstance } from '../../../AudioContextInstance'
 import { useMusicContext } from '../../../hooks/useMusicContext'
+import { useMusicStore } from '../../../hooks/useMusicStore'
 import styles from '../Visualizer.module.scss'
 
 export const useVisualizer = () => {
-	const { visualizer, song, currentSong, visualizerWasSet } = useMusicContext()
+	const { visualizer, song } = useMusicContext()
+
+	const { currentSong, visualizerWasSet } = useMusicStore(
+		useShallow((state) => ({
+			currentSong: state.currentSong,
+			visualizerWasSet: state.visualizerWasSet
+		}))
+	)
 
 	useEffect(() => {
 		if (visualizer && song && visualizerWasSet && currentSong) {

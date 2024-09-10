@@ -1,18 +1,20 @@
 import { useEffect } from 'react'
+import { useShallow } from 'zustand/react/shallow'
 import { useMusicContext } from '../../../hooks/useMusicContext'
+import { useMusicStore } from '../../../hooks/useMusicStore'
 
 export const usePreparePlayerSong = () => {
-	const {
-		song,
-		songImg,
-		songName,
-		songArtist,
-		ctrlIcon,
-		currentSong,
-		isFirstLaunch,
-		isSongLoaded,
-		setIsSongLoaded
-	} = useMusicContext()
+	const { song, songImg, songName, songArtist, ctrlIcon } = useMusicContext()
+
+	const { currentSong, isFirstLaunch, isSongLoaded, setIsSongLoaded } =
+		useMusicStore(
+			useShallow((state) => ({
+				currentSong: state.currentSong,
+				isFirstLaunch: state.isFirstLaunch,
+				isSongLoaded: state.isSongLoaded,
+				setIsSongLoaded: state.setIsSongLoaded
+			}))
+		)
 
 	useEffect(() => {
 		if (

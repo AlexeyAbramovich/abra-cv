@@ -5,7 +5,7 @@ import styles from './MusicPlayerHint.module.scss'
 const CURSOR_CLASS_NAME = 'index-module_type__E-SaG'
 
 const MusicPlayerHint = () => {
-	const { musicHintRef } = useMusicPlayerHint()
+	const musicHintRef = useMusicPlayerHint()
 
 	return (
 		<div ref={musicHintRef} className={styles.musicPlayerHint + ' none'}>

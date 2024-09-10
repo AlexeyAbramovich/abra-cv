@@ -1,15 +1,13 @@
 import { createContext, PropsWithChildren } from 'react'
 import { useControllers } from '../hooks/useControllers'
-import { useStore } from '../hooks/useStore'
-import { Properties } from '../types'
+import { Controllers } from '../types'
 
-export const MusicContext = createContext<Properties>({} as Properties)
+export const MusicContext = createContext<Controllers>({} as Controllers)
 
 const MusicContextProvider = ({ children }: PropsWithChildren) => {
 	const controllers = useControllers()
-	const store = useStore()
 	return (
-		<MusicContext.Provider value={{ ...controllers, ...store }}>
+		<MusicContext.Provider value={{ ...controllers }}>
 			{children}
 		</MusicContext.Provider>
 	)

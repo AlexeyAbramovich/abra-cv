@@ -1,8 +1,14 @@
-import { useMusicContext } from '../../hooks/useMusicContext'
+import { useShallow } from 'zustand/react/shallow'
+import { useMusicStore } from '../../hooks/useMusicStore'
 import PlaylistsSvg from './PlaylistsSvg'
 
 const PlaylistsButton = () => {
-	const { showPlaylists, setShowPlaylists } = useMusicContext()
+	const { showPlaylists, setShowPlaylists } = useMusicStore(
+		useShallow((state) => ({
+			showPlaylists: state.showPlaylists,
+			setShowPlaylists: state.setShowPlaylists
+		}))
+	)
 
 	return (
 		<button

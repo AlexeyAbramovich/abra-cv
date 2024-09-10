@@ -14,5 +14,5 @@ export const useShowMusicPlayer = (showMusicPlayer: boolean) => {
 				player.current.style.zIndex = '-1'
 			}
 		}
-	}, [player, showMusicPlayer])
+	}, [showMusicPlayer])
 }

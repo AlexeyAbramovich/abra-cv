@@ -1,4 +1,5 @@
 import { useCallback } from 'react'
+import { useShallow } from 'zustand/react/shallow'
 import ControlButtons from './components/control-buttons/ControlButtons'
 import MusicProgress from './components/music-progress/MusicProgress'
 import PlaylistsButton from './components/playlists-button/PlaylistsButton'
@@ -9,22 +10,26 @@ import Visualizer from './components/visualizer/Visualizer'
 import Volume from './components/volume/Volume'
 import { useDefaultPlaylist } from './hooks/useDefaultPlaylist'
 import { useMusicContext } from './hooks/useMusicContext'
+import { useMusicStore } from './hooks/useMusicStore'
 import { useShowMusicPlayer } from './hooks/useShowMusicPlayer'
 import styles from './MusicPlayer.module.scss'
 
 const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
+	const { player, songImg, song, ctrlIcon, interval } = useMusicContext()
+
 	const {
-		player,
-		songImg,
-		song,
-		ctrlIcon,
 		isFirstLaunch,
 		setIsFirstLaunch,
 		setNeedNewRandomSong,
-		setNeedCheckVisualizer,
-		showPlaylists,
-		interval
-	} = useMusicContext()
+		setNeedCheckVisualizer
+	} = useMusicStore(
+		useShallow((state) => ({
+			isFirstLaunch: state.isFirstLaunch,
+			setIsFirstLaunch: state.setIsFirstLaunch,
+			setNeedNewRandomSong: state.setNeedNewRandomSong,
+			setNeedCheckVisualizer: state.setNeedCheckVisualizer
+		}))
+	)
 
 	useShowMusicPlayer(showMusicPlayer)
 
@@ -92,7 +97,7 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 					launchNextSong={launchNextSong}
 				/>
 			</div>
-			{showPlaylists && <Playlists />}
+			<Playlists />
 		</div>
 	)
 }

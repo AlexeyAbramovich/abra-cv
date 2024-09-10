@@ -1,20 +1,16 @@
 import { useEffect } from 'react'
 import { useMusicContext } from '../../../hooks/useMusicContext'
+import { useMusicStore } from '../../../hooks/useMusicStore'
 import { formatTime } from '../../../utils/format-time.util'
 
 export const useSongAudioListeners = (
 	launchNextSong: () => void,
 	setCoverShake: (play: boolean) => void
 ) => {
-	const {
-		song,
-		progress,
-		songCurrentTime,
-		songEndTime,
-		songImg,
-		ctrlIcon,
-		setIsSongLoaded
-	} = useMusicContext()
+	const { song, progress, songCurrentTime, songEndTime, songImg, ctrlIcon } =
+		useMusicContext()
+
+	const setIsSongLoaded = useMusicStore((state) => state.setIsSongLoaded)
 
 	useEffect(() => {
 		if (

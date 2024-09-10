@@ -25,29 +25,51 @@ export type Controllers = {
 	interval: React.MutableRefObject<number | null>
 }
 
-export type Store = {
+export type State = {
+	// state для проверки был ли создан визуализатор, если не был, то создается один раз, state меняется при нажатиях на кнопки след/предыдущий рандомный трек и
 	visualizerWasSet: boolean
-	setVisualizerWasSet: React.Dispatch<React.SetStateAction<boolean>>
+
+	// текущий плейлист, содержит треки из выбранного плейлиста
 	currentPlaylist: Song[] | null
-	setCurrentPlaylist: React.Dispatch<React.SetStateAction<Song[] | null>>
+
+	// песня которая сейчас проигрывается или будет проигрываться
 	currentSong: Song | null
-	setCurrentSong: React.Dispatch<React.SetStateAction<Song | null>>
+
+	// state нужен для проверки на первый запуск, чтобы песня не запускалась без нажатия на кнопку
 	isFirstLaunch: boolean
-	setIsFirstLaunch: React.Dispatch<React.SetStateAction<boolean>>
+
+	// state нужен для проверки загрузилась ли песня, чтобы её воспроизводить
 	isSongLoaded: boolean
-	setIsSongLoaded: React.Dispatch<React.SetStateAction<boolean>>
+
+	// state для создания новой песни, на изменение этого state срабатывает useRandomSong
 	needNewRandomSong: boolean
-	setNeedNewRandomSong: React.Dispatch<React.SetStateAction<boolean>>
+
+	// массив уже проигранных треков, нужен, чтобы при переключении треков не было повторов и были проиграны все песни
 	playlistQueue: Song[]
-	setPlaylistQueue: React.Dispatch<React.SetStateAction<Song[]>>
+
+	// state нужен для изменения цвета элементов визуализатора при смене трека/плейлиста и их удаления, чтобы не было их переизбытка с каждым треком
 	needCheckVisualizer: boolean
-	setNeedCheckVisualizer: React.Dispatch<React.SetStateAction<boolean>>
+
+	// state для проверки активного плейлиста, чтобы повесить класс с выделением
 	activePlaylist: string
-	setActivePlaylist: React.Dispatch<React.SetStateAction<string>>
+
+	// state для показа/скрытия списка плейлистов
 	showPlaylists: boolean
-	setShowPlaylists: React.Dispatch<React.SetStateAction<boolean>>
+
+	// state для отслеживания проматывает ли юзер ползунок с прогрессом песни, нужен для отключения события ontimeupdate, чтобы не было бага с дёргающимся ползунком
 	stopUpdatingProgress: boolean
-	setStopUpdatingProgress: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export type Properties = Controllers & Store
+export type Actions = {
+	setVisualizerWasSet: (visualizerWasSet: boolean) => void
+	setCurrentPlaylist: (currentPlaylist: Song[] | null) => void
+	setCurrentSong: (currentSong: Song | null) => void
+	setIsFirstLaunch: (isFirstLaunch: boolean) => void
+	setIsSongLoaded: (isSongLoaded: boolean) => void
+	setNeedNewRandomSong: (needNewRandomSong: boolean) => void
+	setPlaylistQueue: (playlistQueue: Song[]) => void
+	setNeedCheckVisualizer: (needCheckVisualizer: boolean) => void
+	setActivePlaylist: (activePlaylist: string) => void
+	setShowPlaylists: (showPlaylists: boolean) => void
+	setStopUpdatingProgress: (stopUpdatingProgress: boolean) => void
+}
