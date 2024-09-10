@@ -1,34 +1,30 @@
-import copy from 'copy-to-clipboard'
 import { useEffect, useState } from 'react'
 import GithubLink from '../../../../ui/github-link/GithubLink'
+import Feedback from './components/Feedback'
+import InfoForCopy from './components/InfoForCopy'
 import LinkedInLink from './components/links/LinkedInLink'
 import TelegramLink from './components/links/TelegramLink'
+import Location from './components/Location'
 import styles from './ContactsInfo.module.scss'
+import { useCopy } from './hooks/useCopy'
+import { useCopyText } from './hooks/useCopyText'
 
 const ContactsInfo = () => {
-	const [copyText, setCopyText] = useState({
-		phone: false,
-		gmail: false,
-		skype: false
-	})
+	const { phone, gmail, skype, setCopyText } = useCopyText()
+
+	const [showFeedback, setShowFeedback] = useState(false)
 
 	useEffect(() => {
-		if (copyText.phone) {
-			setTimeout(() => setCopyText((prev) => ({ ...prev, phone: false })), 1000)
-		}
-	}, [copyText.phone])
+		setTimeout(() => {
+			setShowFeedback(true)
+		}, 2000)
+	}, [])
 
-	useEffect(() => {
-		if (copyText.gmail) {
-			setTimeout(() => setCopyText((prev) => ({ ...prev, gmail: false })), 1000)
-		}
-	}, [copyText.gmail])
+	useCopy(phone, 'phone', setCopyText)
 
-	useEffect(() => {
-		if (copyText.skype) {
-			setTimeout(() => setCopyText((prev) => ({ ...prev, skype: false })), 1000)
-		}
-	}, [copyText.skype])
+	useCopy(gmail, 'gmail', setCopyText)
+
+	useCopy(skype, 'skype', setCopyText)
 
 	return (
 		<div className={styles.contacts_info}>
@@ -41,63 +37,26 @@ const ContactsInfo = () => {
 					label='open the author github profile'
 				/>
 			</div>
-			<span className={styles.phone}>
-				<img src='/icons/contacts/phone.svg' />
-				<img src='/icons/contacts/whatsapp.svg' />
-				<span
-					onClick={() => {
-						copy('+375333216278')
-						setCopyText((prev) => ({ ...prev, phone: true }))
-					}}
-				>
-					+375(33)321-62-78
-				</span>
-				{copyText.phone && (
-					<div>
-						<img src='/icons/copy.svg' />
-						<span>Скопировано</span>
-					</div>
-				)}
-			</span>
-			<span className={styles.gmail}>
-				<img src='/icons/contacts/gmail.svg' />
-				<span
-					onClick={() => {
-						copy('alexabramovichwork@gmail.com')
-						setCopyText((prev) => ({ ...prev, gmail: true }))
-					}}
-				>
-					alexabramovichwork@gmail.com
-				</span>
-				{copyText.gmail && (
-					<div>
-						<img src='/icons/copy.svg' />
-						<span>Скопировано</span>
-					</div>
-				)}
-			</span>
-			<span className={styles.skype}>
-				<img src='/icons/contacts/skype.svg' />
-				<span
-					onClick={() => {
-						copy('live:.cid.acee360531dc3115')
-						setCopyText((prev) => ({ ...prev, skype: true }))
-					}}
-				>
-					live:.cid.acee360531dc3115
-				</span>
-				{copyText.skype && (
-					<div>
-						<img src='/icons/copy.svg' />
-						<span>Скопировано</span>
-					</div>
-				)}
-			</span>
-			<span className={styles.location}>
-				<img src='/icons/contacts/location.svg' />
-				<span>г. Гродно, Республика Беларусь</span>
-			</span>
-			<span>* Готов к переезду внутри РБ на время испытательного срока</span>
+			<InfoForCopy
+				type='phone'
+				flag={phone}
+				text='+375(33)321-62-78'
+				setCopyText={setCopyText}
+			/>
+			<InfoForCopy
+				type='gmail'
+				flag={gmail}
+				text='alexabramovichwork@gmail.com'
+				setCopyText={setCopyText}
+			/>
+			<InfoForCopy
+				type='skype'
+				flag={skype}
+				text='live:.cid.acee360531dc3115'
+				setCopyText={setCopyText}
+			/>
+			<Location />
+			{showFeedback && <Feedback />}
 		</div>
 	)
 }

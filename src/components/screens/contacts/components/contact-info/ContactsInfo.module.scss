@@ -47,9 +47,7 @@
 		}
 	}
 
-	.phone,
-	.gmail,
-	.skype,
+	.infoForCopy,
 	.location {
 		position: relative;
 		display: inline-flex;
@@ -66,9 +64,7 @@
 		}
 	}
 
-	.phone,
-	.gmail,
-	.skype {
+	.infoForCopy {
 		> span {
 			cursor:
 				url('/icons/pointer.svg') 8 0,
@@ -100,5 +96,14 @@
 
 	> span {
 		letter-spacing: 1.2px;
+	}
+
+	.feedback {
+		padding: 10px;
+		width: 100%;
+		display: flex;
+		letter-spacing: 1.2px;
+		background-color: $bg-buttons;
+		border-radius: 10px;
 	}
 }

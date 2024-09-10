@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { useErrorNotification } from '../../hooks/useErrorNotification'
-import { useSuccessNotification } from '../../hooks/useSuccessNotification'
 import Input from './components/Input'
 import Notifications from './components/Notifications'
 import SendButton from './components/SendButton'
 import TextArea from './components/TextArea'
 import styles from './ContactsForm.module.scss'
+import { useErrorNotification } from './hooks/useErrorNotification'
+import { useSuccessNotification } from './hooks/useSuccessNotification'
 
 export type FormInput = {
 	name: string
