@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "copy-to-clipboard": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-parallax-tilt": "^1.7.235",
     "react-router-dom": "^6.26.0",
     "react-type-animation": "^3.2.0",
-    "sass": "1.77.6",
-    "smtp-js-mailer": "^1.3.0"
+    "sass": "1.77.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",

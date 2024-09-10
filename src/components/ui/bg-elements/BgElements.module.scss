@@ -1,0 +1,25 @@
+@import '/src/styles/mixins';
+
+.bgBottomElement1 {
+	@include bg-element(400px, 50px);
+	bottom: 100px;
+	left: -80px;
+}
+
+.bgBottomElement2 {
+	@include bg-element(300px, 50px, 'reverse');
+	bottom: 10px;
+	left: -80px;
+}
+
+.bgTopElement1 {
+	@include bg-element(300px, 30px);
+	top: 40px;
+	right: -80px;
+}
+
+.bgTopElement2 {
+	@include bg-element(200px, 30px, 'reverse');
+	top: 10px;
+	right: -80px;
+}

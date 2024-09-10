@@ -19,7 +19,7 @@ const Info = ({ projectInfo }: Props) => {
 			/>
 			<GithubLink
 				link={projectInfo.link}
-				size='big'
+				size='absolute'
 				label='Open the project repository on github'
 			/>
 		</div>

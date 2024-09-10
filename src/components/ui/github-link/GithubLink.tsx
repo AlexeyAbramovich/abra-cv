@@ -13,7 +13,9 @@ const GithubLink = ({ link, size, label }: Props) => {
 	return (
 		<Link
 			className={cn(
-				size === 'big' ? styles.githubLink_big : styles.githubLink_small
+				size === 'absolute' && styles.githubLink_absolute,
+				size === 'big' && styles.githubLink_big,
+				size === 'small' && styles.githubLink_small
 			)}
 			aria-label={label}
 			to={link}

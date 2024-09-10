@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useMusicContext } from '../../hooks/useMusicContext'
 import ControlButton from './components/ControlButton'
 import styles from './ControlButtons.module.scss'
@@ -7,7 +8,10 @@ type Props = {
 	launchNextSong: () => void
 }
 
-const ControlButtons = ({ toggleLaunch, launchNextSong }: Props) => {
+const ControlButtons = memo(function ControlButtons({
+	toggleLaunch,
+	launchNextSong
+}: Props) {
 	const { prev, ctrlBtn, ctrlIcon, next } = useMusicContext()
 
 	return (
@@ -33,6 +37,6 @@ const ControlButtons = ({ toggleLaunch, launchNextSong }: Props) => {
 			/>
 		</div>
 	)
-}
+})
 
 export default ControlButtons

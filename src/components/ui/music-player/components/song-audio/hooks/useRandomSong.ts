@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { useMusicContext } from '../../../hooks/useMusicContext'
 
 export function useRandomSong() {
@@ -12,8 +12,7 @@ export function useRandomSong() {
 		setPlaylistQueue
 	} = useMusicContext()
 
-	// Тот самый случай, когда использование useLayoutEffect помогло исправить баг
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (currentPlaylist && needNewRandomSong) {
 			let newSong =
 				currentPlaylist[Math.floor(Math.random() * currentPlaylist.length)]
@@ -34,7 +33,7 @@ export function useRandomSong() {
   */
 			if (playlistQueue.length === currentPlaylist.length) {
 				// код ниже исправляет баг, чтобы последня песня из очереди плейлиста не проигрывалась дважды при её очистке
-				newSong = playlistQueue.slice(1, -1)[
+				newSong = playlistQueue.slice(0, -1)[
 					Math.floor(Math.random() * (currentPlaylist.length - 1))
 				]
 				setPlaylistQueue([newSong])

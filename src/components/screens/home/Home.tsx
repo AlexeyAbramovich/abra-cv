@@ -1,3 +1,4 @@
+import BgElements from '../../ui/bg-elements/BgElements'
 import Copyright from '../../ui/copyright/Copyright'
 import Avatar from './components/avatar/Avatar'
 import Buttons from './components/buttons/Buttons'
@@ -12,11 +13,7 @@ const Home = () => {
 				<Buttons />
 			</div>
 
-			<span className={styles.bgBottomElement1} />
-			<span className={styles.bgBottomElement2} />
-
-			<span className={styles.bgTopElement1} />
-			<span className={styles.bgTopElement2} />
+			<BgElements />
 
 			<Avatar />
 

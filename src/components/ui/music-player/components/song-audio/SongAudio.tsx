@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useMusicContext } from '../../hooks/useMusicContext'
 import { usePreparePlayerSong } from './hooks/usePreparePlayerSong'
 import { useRandomSong } from './hooks/useRandomSong'
@@ -9,7 +10,10 @@ type Props = {
 	setCoverShake: (play: boolean) => void
 }
 
-const SongAudio = ({ launchNextSong, setCoverShake }: Props) => {
+const SongAudio = memo(function SongAudio({
+	launchNextSong,
+	setCoverShake
+}: Props) {
 	const { song } = useMusicContext()
 
 	useSongAudioListeners(launchNextSong, setCoverShake)
@@ -25,6 +29,6 @@ const SongAudio = ({ launchNextSong, setCoverShake }: Props) => {
 			<source type='audio/mp3' data-class='music' />
 		</audio>
 	)
-}
+})
 
 export default SongAudio

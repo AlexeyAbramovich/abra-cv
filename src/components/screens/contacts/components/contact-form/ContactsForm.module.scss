@@ -1,0 +1,105 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+.notification_success {
+	@include notification('success');
+}
+
+.notification_error {
+	@include notification('error');
+}
+
+.contacts_form {
+	min-width: 40vw;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	font-size: 16px;
+
+	> label {
+		display: flex;
+		flex-direction: column;
+		row-gap: 2px;
+
+		> input,
+		> textarea {
+			letter-spacing: 1px;
+			font-size: 13px;
+			padding: 10px;
+			background: $bg-buttons;
+			border: 1px solid $main-color;
+			border-radius: 10px;
+			color: $text-color;
+			cursor: text;
+
+			&::placeholder {
+				color: $text-color;
+			}
+		}
+
+		> textarea {
+			letter-spacing: 1px;
+			resize: none;
+			height: 200px;
+
+			&::-webkit-scrollbar {
+				width: 6px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: $main-color;
+				border-radius: 3px;
+			}
+
+			&::-webkit-scrollbar-track-piece:end {
+				margin-bottom: 10px;
+			}
+
+			&::-webkit-scrollbar-track-piece:start {
+				margin-top: 10px;
+			}
+		}
+
+		.error {
+			font-size: 13px;
+			color: $main-color;
+		}
+	}
+	> button {
+		position: relative;
+		width: 50%;
+		margin-inline: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 20px;
+		border: none;
+		border-radius: 10px;
+		background-color: $bg-buttons;
+		padding-block: 10px;
+		color: $main-color;
+		box-shadow: -5px -5px black;
+		font-size: 20px;
+		letter-spacing: 1px;
+
+		> svg {
+			width: 40px;
+			height: 40px;
+		}
+
+		&:hover {
+			background-color: $hover-bg;
+			color: $hover-text-color;
+
+			> svg path[fill] {
+				fill: $hover-text-color;
+			}
+		}
+
+		&:active {
+			top: -5px;
+			left: -5px;
+			box-shadow: unset;
+		}
+	}
+}
