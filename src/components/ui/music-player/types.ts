@@ -22,7 +22,10 @@ export type Controllers = {
 	songCurrentTime: React.MutableRefObject<HTMLSpanElement | null>
 	songEndTime: React.MutableRefObject<HTMLSpanElement | null>
 	visualizer: React.MutableRefObject<HTMLDivElement | null>
+	// interval для сброса тряски обложки
 	interval: React.MutableRefObject<number | null>
+	// массив уже проигранных треков, нужен, чтобы при переключении треков не было повторов и были проиграны все песни
+	playlistQueue: React.MutableRefObject<Song[]>
 }
 
 export type State = {
@@ -44,9 +47,6 @@ export type State = {
 	// state для создания новой песни, на изменение этого state срабатывает useRandomSong
 	needNewRandomSong: boolean
 
-	// массив уже проигранных треков, нужен, чтобы при переключении треков не было повторов и были проиграны все песни
-	playlistQueue: Song[]
-
 	// state нужен для изменения цвета элементов визуализатора при смене трека/плейлиста и их удаления, чтобы не было их переизбытка с каждым треком
 	needCheckVisualizer: boolean
 
@@ -67,7 +67,6 @@ export type Actions = {
 	setIsFirstLaunch: (isFirstLaunch: boolean) => void
 	setIsSongLoaded: (isSongLoaded: boolean) => void
 	setNeedNewRandomSong: (needNewRandomSong: boolean) => void
-	setPlaylistQueue: (playlistQueue: Song[]) => void
 	setNeedCheckVisualizer: (needCheckVisualizer: boolean) => void
 	setActivePlaylist: (activePlaylist: string) => void
 	setShowPlaylists: (showPlaylists: boolean) => void

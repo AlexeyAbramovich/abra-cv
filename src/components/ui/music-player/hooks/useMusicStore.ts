@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Actions, Song, State } from '../types'
+import { Actions, State } from '../types'
 
 export const useMusicStore = create<State & Actions>((set) => ({
 	visualizerWasSet: false,
@@ -14,8 +14,6 @@ export const useMusicStore = create<State & Actions>((set) => ({
 	setIsSongLoaded: (isSongLoaded) => set({ isSongLoaded }),
 	needNewRandomSong: true,
 	setNeedNewRandomSong: (needNewRandomSong) => set({ needNewRandomSong }),
-	playlistQueue: [] as Song[],
-	setPlaylistQueue: (playlistQueue) => set({ playlistQueue }),
 	needCheckVisualizer: false,
 	setNeedCheckVisualizer: (needCheckVisualizer) => set({ needCheckVisualizer }),
 	activePlaylist: 'Relax',

@@ -1,6 +1,7 @@
 import cn from 'clsx'
 import { useShallow } from 'zustand/react/shallow'
 import { music } from '../../data/data'
+import { useMusicContext } from '../../hooks/useMusicContext'
 import { useMusicStore } from '../../hooks/useMusicStore'
 import styles from './Playlist.module.scss'
 
@@ -9,16 +10,16 @@ type Props = {
 }
 
 const Playlist = ({ playlist }: Props) => {
+	const { playlistQueue } = useMusicContext()
+
 	const {
 		setCurrentPlaylist,
-		setPlaylistQueue,
 		setNeedNewRandomSong,
 		activePlaylist,
 		setActivePlaylist
 	} = useMusicStore(
 		useShallow((state) => ({
 			setCurrentPlaylist: state.setCurrentPlaylist,
-			setPlaylistQueue: state.setPlaylistQueue,
 			setNeedNewRandomSong: state.setNeedNewRandomSong,
 			activePlaylist: state.activePlaylist,
 			setActivePlaylist: state.setActivePlaylist
@@ -36,7 +37,7 @@ const Playlist = ({ playlist }: Props) => {
 				setCurrentPlaylist(
 					music.filter((song) => song.playlist === playlist.title)
 				)
-				setPlaylistQueue([])
+				playlistQueue.current = []
 				setNeedNewRandomSong(true)
 			}}
 		>

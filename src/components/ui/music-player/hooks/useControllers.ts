@@ -1,4 +1,5 @@
 import { useMemo, useRef } from 'react'
+import { Song } from '../types'
 
 export const useControllers = () => {
 	const player = useRef<HTMLDivElement | null>(null)
@@ -16,6 +17,7 @@ export const useControllers = () => {
 	const songEndTime = useRef<HTMLSpanElement | null>(null)
 	const visualizer = useRef<HTMLDivElement | null>(null)
 	const interval = useRef<number | null>(null)
+	const playlistQueue = useRef<Song[]>([])
 
 	return useMemo(
 		() => ({
@@ -33,7 +35,8 @@ export const useControllers = () => {
 			songCurrentTime,
 			songEndTime,
 			visualizer,
-			interval
+			interval,
+			playlistQueue
 		}),
 		[]
 	)
