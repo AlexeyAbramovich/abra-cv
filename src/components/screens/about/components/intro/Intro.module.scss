@@ -1,0 +1,48 @@
+@import '/src/styles/variables';
+
+.intro {
+	margin-top: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 100px;
+
+	.avatar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 10px;
+
+		> img {
+			width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			box-shadow: 0 0 5px 2px $main-color;
+			animation: photo-hover 4s linear infinite;
+		}
+	}
+	.way_in_frontend {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 20px;
+
+		> p {
+			text-align: center;
+		}
+	}
+}
+
+@keyframes photo-hover {
+	0% {
+		box-shadow: 0 0 5px 2px $main-color;
+	}
+	50% {
+		box-shadow: 0 0 10px 4px $main-color;
+	}
+	100% {
+		box-shadow: 0 0 5px 2px $main-color;
+	}
+}

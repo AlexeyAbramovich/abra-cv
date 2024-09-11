@@ -23,7 +23,7 @@
 
 		> input,
 		> textarea {
-			letter-spacing: 1px;
+			letter-spacing: $l-spacing;
 			font-size: 13px;
 			padding: 10px;
 			background: $bg-buttons;
@@ -38,7 +38,7 @@
 		}
 
 		> textarea {
-			letter-spacing: 1px;
+			letter-spacing: $l-spacing;
 			resize: none;
 			height: 200px;
 
@@ -80,7 +80,7 @@
 		color: $main-color;
 		box-shadow: -5px -5px black;
 		font-size: 20px;
-		letter-spacing: 1px;
+		letter-spacing: $l-spacing;
 
 		> svg {
 			width: 40px;

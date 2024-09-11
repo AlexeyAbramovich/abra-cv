@@ -1,0 +1,16 @@
+import styles from '../Intro.module.scss'
+
+const Avatar = () => {
+	return (
+		<div className={styles.avatar}>
+			<img src='/images/photo1.jpg' alt='Author photo' />
+			<span style={{ color: 'white' }}>Алексей, 21 год.</span>
+			<span>
+				<span>React</span> <span style={{ color: 'white' }}>Frontend</span>{' '}
+				<span>Developer</span>
+			</span>
+		</div>
+	)
+}
+
+export default Avatar

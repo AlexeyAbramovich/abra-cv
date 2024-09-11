@@ -13,7 +13,7 @@
 	column-gap: 10px;
 	box-shadow: -5px -5px 0 black;
 	font-size: 12px;
-	letter-spacing: 1.2px;
+	letter-spacing: $l-spacing;
 	opacity: 0;
 
 	> span:first-child {
