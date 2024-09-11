@@ -1,0 +1,47 @@
+@import '/src/styles/variables';
+
+.hard_skills {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: center;
+
+	.technologies {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 120px);
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		gap: 20px;
+
+		.technology {
+			width: 100%;
+			aspect-ratio: 1;
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			align-items: center;
+			justify-content: center;
+			border-radius: 10px;
+			transition: all 0.2s ease-in;
+
+			> img {
+				width: 70px;
+				height: 70px;
+			}
+
+			> span {
+				color: $text-color;
+				text-align: center;
+				font-size: 13px;
+				letter-spacing: $l-spacing;
+			}
+
+			&:hover {
+				scale: 1.1;
+				background-color: $bg-buttons;
+			}
+		}
+	}
+}

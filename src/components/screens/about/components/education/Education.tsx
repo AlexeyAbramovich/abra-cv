@@ -1,3 +1,4 @@
+import { Fragment } from 'react/jsx-runtime'
 import { channels } from './channels'
 import Helpers from './components/Helpers'
 import YouTubeLink from './components/YouTubeLink'
@@ -21,9 +22,9 @@ const Education = () => {
 				<span className={styles.orange}>в основном YouTube</span> для практики и
 				теории, отдельно выделю такие каналы как{' '}
 				{channels.map((channel) => (
-					<>
+					<Fragment key={channel.name}>
 						<YouTubeLink link={channel.link} text={channel.name} />,{' '}
-					</>
+					</Fragment>
 				))}
 				у этих ребят я многому научился и учусь по сей день. Также в процессе
 				обучения мне{' '}

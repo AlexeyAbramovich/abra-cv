@@ -1,0 +1,40 @@
+export const hardSkills = [
+	'HTML',
+	'CSS',
+	'SCSS',
+	'TailwindCSS',
+	'Ant Design',
+	'JavaScript',
+	'TypeScript',
+	'React',
+	'React Router Dom',
+	'React Hook Form',
+	'Redux',
+	'Zustand',
+	'RTK Query',
+	'Tanstack Query',
+	'Axios',
+	'Vite',
+	'Webpack',
+	'Prisma',
+	'Express',
+	'PostgreSQL',
+	'npm',
+	'yarn'
+]
+
+export const hardSkillsAdditionally = [
+	'English B1',
+	'Vs Code',
+	'Git',
+	'Java',
+	'Kotlin',
+	'Python',
+	'Android Development',
+	'Photoshop',
+	'Figma',
+	'Postman',
+	'Insomnia',
+	'ChatGPT',
+	'Gemini'
+]
