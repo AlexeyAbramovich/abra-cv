@@ -23,7 +23,6 @@
 		}
 	}
 	.way_in_frontend {
-		width: 50%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -31,6 +30,42 @@
 
 		> p {
 			text-align: center;
+		}
+
+		> a {
+			position: relative;
+			display: inline-flex;
+			column-gap: 10px;
+			text-decoration: none;
+			justify-content: center;
+			color: $main-color;
+			background-color: $bg-buttons;
+			padding: 15px 20px;
+			border-radius: 10px;
+			box-shadow: -3px -3px 0px 1px black;
+
+			> svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			&:hover {
+				background-color: $hover-bg;
+
+				> span {
+					color: $hover-text-color;
+				}
+
+				> svg > path {
+					stroke: $hover-text-color;
+				}
+			}
+
+			&:active {
+				top: -3px;
+				left: -3px;
+				box-shadow: unset;
+			}
 		}
 	}
 }

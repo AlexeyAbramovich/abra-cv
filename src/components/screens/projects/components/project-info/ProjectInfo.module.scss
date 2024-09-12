@@ -1,13 +1,14 @@
 @import '/src/styles/variables';
+@import '/src/styles/mixins';
 
 .projectInfo {
+	@include border-animation(2000px);
 	position: relative;
 	display: flex;
 	column-gap: 40px;
 	height: 440px;
 	padding: 20px 10px;
 	align-items: center;
-	background-color: $bg-buttons;
 	border-radius: 10px;
 	box-shadow: 0 0 5px 2px black;
 	transition: scale 0.4s ease-in-out;

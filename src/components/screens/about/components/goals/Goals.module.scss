@@ -1,0 +1,46 @@
+@import '/src/styles/variables';
+
+.goals {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: center;
+
+	.illustration {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 60px;
+
+		.sign {
+			width: 30px;
+			height: 30px;
+		}
+
+		.fullstack_wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.fullstack {
+				display: flex;
+				column-gap: 20px;
+				align-items: center;
+			}
+		}
+
+		.development {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			> span {
+				color: $text-color;
+			}
+
+			> img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+}

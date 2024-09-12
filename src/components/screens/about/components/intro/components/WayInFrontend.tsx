@@ -1,4 +1,5 @@
 import styles from '../Intro.module.scss'
+import DownloadButton from './DownloadButton'
 
 const WayInFrontend = () => {
 	return (
@@ -17,6 +18,7 @@ const WayInFrontend = () => {
 				замотивировал сам процесс разработки и жизнь успешного программиста,
 				поэтому решил для себя, что хочу также.
 			</p>
+			<DownloadButton />
 		</div>
 	)
 }

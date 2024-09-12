@@ -1,0 +1,75 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+.gratitude {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: center;
+
+	> h2 {
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			width: 40px;
+			height: 40px;
+			background: url('/icons/medal.svg');
+		}
+
+		&::before {
+			left: 0;
+			transform: translate(-100%, -25%);
+		}
+
+		&::after {
+			right: 0;
+			transform: translate(100%, -25%);
+		}
+	}
+
+	.wrapper {
+		@include border-animation(1000px);
+		position: relative;
+		display: flex;
+		column-gap: 40px;
+		padding: 20px;
+		align-items: center;
+		border-radius: 10px;
+
+		.avatar {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			row-gap: 10px;
+
+			> img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				box-shadow: 0 0 3px 1px $main-color;
+				animation: photo-hover 4s linear infinite;
+			}
+
+			> span {
+				color: $text-color;
+			}
+		}
+	}
+}
+
+@keyframes photo-hover {
+	0% {
+		box-shadow: 0 0 3px 1px $main-color;
+	}
+	50% {
+		box-shadow: 0 0 7px 2px $main-color;
+	}
+	100% {
+		box-shadow: 0 0 3px 1px $main-color;
+	}
+}
