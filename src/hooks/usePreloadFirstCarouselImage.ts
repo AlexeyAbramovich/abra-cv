@@ -1,8 +1,8 @@
-import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { projects } from '../components/screens/projects/data/projects'
 
 export const usePreloadFirstCarouselImage = () => {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const links: HTMLLinkElement[] = []
 		projects.forEach((project) => {
 			const link = document.createElement('link')

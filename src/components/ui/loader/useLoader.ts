@@ -14,9 +14,10 @@ export const useLoader = (
 				warning.current!.classList.remove('none')
 			}, 3000)
 			setTimeout(() => {
-				warningText.current!.textContent = '😊 ШУТКА)'
+				warningText.current!.textContent = '😊 ШУЧУ 😊 '
 				warningText.current!.style.letterSpacing = '1.2px'
-				warningText.current!.style.width = 'fit-content'
+				warningText.current!.style.width = '120px'
+				warningText.current!.style.textAlign = 'center'
 				errorIcon.current!.classList.add('none')
 			}, 6000)
 			setTimeout(() => {
@@ -24,6 +25,7 @@ export const useLoader = (
 				loaderProgress.current!.classList.remove('none')
 			}, 8000)
 			setTimeout(() => {
+				sessionStorage.setItem('loading', 'false')
 				setIsLoading(false)
 			}, 10000)
 		}

@@ -8,5 +8,7 @@ export const getPageName = (path: string) => {
 			return 'Проекты'
 		case '/contacts':
 			return 'Контакты'
+		default:
+			return 'Not Found'
 	}
 }
