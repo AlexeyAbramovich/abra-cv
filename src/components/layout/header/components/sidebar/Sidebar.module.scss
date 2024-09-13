@@ -1,0 +1,12 @@
+@import '/src/styles/variables';
+
+.sidebar {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: -50px;
+	width: 250px;
+	height: 400px;
+	background: rgba($bg-buttons, 0.8);
+	border-bottom-left-radius: 10px;
+}
