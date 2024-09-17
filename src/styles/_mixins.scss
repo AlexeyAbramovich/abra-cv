@@ -1,5 +1,37 @@
 @import '/src/styles/variables';
 
+@mixin move-first-element($value) {
+	animation: move-top 2.5s linear infinite;
+
+	@keyframes move-top {
+		0% {
+			top: $value;
+		}
+		50% {
+			top: calc($value - 10px);
+		}
+		100% {
+			top: $value;
+		}
+	}
+}
+
+@mixin move-second-element($value) {
+	animation: move-bottom 2.5s linear infinite;
+
+	@keyframes move-bottom {
+		0% {
+			bottom: $value;
+		}
+		50% {
+			bottom: calc($value - 10px);
+		}
+		100% {
+			bottom: $value;
+		}
+	}
+}
+
 @mixin navigation($type) {
 	display: flex;
 	@if ($type == 'horizontal') {
@@ -110,6 +142,11 @@
 		} @else {
 			background: url('/icons/contacts.svg');
 		}
+
+		@media (min-width: 2000px) {
+			width: 50px;
+			height: 50px;
+		}
 	}
 }
 
@@ -119,8 +156,8 @@
 	top: 20px;
 	right: 0;
 	padding: 20px 10px;
-	background: $bg-buttons;
-	font-size: 13px;
+	background: $bg-dark;
+	font-size: $fs13;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	display: inline-flex;
@@ -181,7 +218,7 @@
 	display: flex;
 	align-items: center;
 	column-gap: 5px;
-	font-size: 11px;
+	font-size: $fs11;
 	letter-spacing: $l-spacing;
 
 	> p {
@@ -191,6 +228,15 @@
 	> img {
 		width: 15px;
 		height: 15px;
+
+		@media (min-width: 2000px) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	@media (min-width: 2000px) {
+		font-size: $fs14;
 	}
 }
 

@@ -3,12 +3,24 @@
 
 .githubLink_absolute {
 	@include github-link(40px, 40px, 'absolute');
+
+	@media (max-width: 760px) {
+		@include github-link(30px, 30px, 'absolute');
+	}
 }
 
 .githubLink_big {
 	@include github-link(36px, 36px, 'big');
+
+	@media (min-width: 2000px) {
+		@include github-link(46px, 46px, 'big');
+	}
 }
 
 .githubLink_small {
 	@include github-link(15px, 15px, 'small');
+
+	@media (min-width: 2000px) {
+		@include github-link(20px, 20px, 'small');
+	}
 }

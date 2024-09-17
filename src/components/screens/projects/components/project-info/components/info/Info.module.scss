@@ -9,16 +9,38 @@
 
 	> h2 {
 		margin: 0;
+		align-self: center;
+
+		@media (min-width: 2000px) {
+			font-size: $fs30;
+		}
 	}
 
 	p,
 	li {
-		font-size: 13px;
+		font-size: $fs13;
 		margin: 0;
 		letter-spacing: $l-spacing;
+
+		@media (min-width: 2000px) {
+			font-size: $fs16;
+		}
 	}
 
 	ul {
 		margin: 0;
+
+		@media (max-width: 760px) {
+			padding-left: 20px;
+		}
+	}
+
+	@media (max-width: 1180px) {
+		align-self: center;
+		width: 90%;
+	}
+
+	@media (max-width: 760px) {
+		width: 100%;
 	}
 }

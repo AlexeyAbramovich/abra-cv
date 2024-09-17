@@ -1,4 +1,12 @@
 .layout {
 	width: 80%;
 	margin-inline: auto;
+
+	@media (max-width: 1330px) {
+		width: 90%;
+	}
+
+	@media (max-width: 1180px) {
+		width: 100%;
+	}
 }

@@ -10,6 +10,11 @@
 	> svg {
 		width: 30px;
 		height: 30px;
+
+		@media (min-width: 2000px) {
+			width: 40px;
+			height: 40px;
+		}
 	}
 
 	&:hover {
@@ -20,5 +25,10 @@
 		> svg stop {
 			stop-color: $hover-bg;
 		}
+	}
+
+	@media (min-width: 2000px) {
+		bottom: 15px;
+		right: 15px;
 	}
 }

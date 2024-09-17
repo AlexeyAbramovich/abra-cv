@@ -2,15 +2,22 @@ import cn from 'clsx'
 import GithubLink from '../github-link/GithubLink'
 import styles from './Copyright.module.scss'
 
-const Copyright = ({ type }: { type: string }) => {
+const Copyright = ({
+	type,
+	onHomePage
+}: {
+	type: string
+	onHomePage?: boolean
+}) => {
 	return (
 		<div
 			className={cn(
-				type === 'footer' ? styles.copyright_footer : styles.copyright_absolute
+				type === 'footer' ? styles.copyright_footer : styles.copyright_absolute,
+				onHomePage && styles.copyright_absolute_home
 			)}
 		>
 			<img src='/icons/copyright.svg' alt='Copyright' />
-			<p>Copyright А. Д. Абрамович, 2024</p>
+			<p>Copyright&nbsp;А.&nbsp;Д.&nbsp;Абрамович,&nbsp;2024</p>
 			<GithubLink
 				link='https://github.com/AlexeyAbramovich'
 				size='small'

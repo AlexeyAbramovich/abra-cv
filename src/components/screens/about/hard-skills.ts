@@ -30,7 +30,7 @@ export const hardSkillsAdditionally = [
 	'Java',
 	'Kotlin',
 	'Python',
-	'Android Development',
+	'Android Dev',
 	'Photoshop',
 	'Figma',
 	'Postman',

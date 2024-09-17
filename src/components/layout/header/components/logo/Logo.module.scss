@@ -14,21 +14,38 @@
 
 	.neon {
 		font-family: 'Neon', monospace;
-		font-size: 25px;
+		font-size: $fs24;
 		letter-spacing: 0.2rem;
 		color: #fb4264;
 		text-shadow: 0 0 10px #f40a35;
-	}
-
-	.neon {
 		animation: neon 8s ease infinite;
 		-moz-animation: neon 8s ease infinite;
 		-webkit-animation: neon 8s ease infinite;
+
+		@media (min-width: 2000px) {
+			font-size: $fs30;
+		}
+
+		@media (max-width: 1000px) {
+			font-size: 20px;
+		}
 	}
 
 	.neon:first-child {
 		font-size: 30px;
 		padding-bottom: 5px;
+
+		@media (min-width: 2000px) {
+			font-size: $fs36;
+		}
+
+		@media (max-width: 1000px) {
+			font-size: $fs24;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		column-gap: 5px;
 	}
 }
 

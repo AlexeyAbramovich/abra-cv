@@ -10,6 +10,22 @@
 		column-gap: 40px;
 		> img {
 			width: 400px;
+
+			@media (min-width: 2000px) {
+				width: 500px;
+			}
+
+			@media (max-width: 570px) {
+				width: 300px;
+			}
+		}
+		@media (min-width: 2000px) {
+			column-gap: 100px;
+		}
+
+		@media (max-width: 1090px) {
+			flex-direction: column;
+			row-gap: 50px;
 		}
 	}
 }

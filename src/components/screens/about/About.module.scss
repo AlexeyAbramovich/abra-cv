@@ -4,6 +4,7 @@
 	margin-top: 80px;
 	margin-bottom: 40px;
 	width: 80%;
+	max-width: 1200px;
 	display: flex;
 	flex-direction: column;
 	row-gap: 100px;
@@ -19,5 +20,34 @@
 	h2,
 	span {
 		color: $main-color;
+	}
+
+	h2 {
+		@media (min-width: 2000px) {
+			font-size: $fs30;
+		}
+	}
+
+	@media (min-width: 2000px) {
+		h2 {
+			font-size: $fs30;
+		}
+
+		p,
+		span {
+			font-size: $fs20;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		width: 90%;
+	}
+
+	@media (max-width: 760px) {
+		font-size: $fs13;
+
+		h2 {
+			font-size: 20px;
+		}
 	}
 }

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import GithubLink from '../../../../ui/github-link/GithubLink'
 import Feedback from './components/Feedback'
 import InfoForCopy from './components/InfoForCopy'
@@ -11,14 +10,6 @@ import { useCopyText } from './hooks/useCopyText'
 
 const ContactsInfo = () => {
 	const { phone, gmail, skype, setCopyText } = useCopyText()
-
-	const [showFeedback, setShowFeedback] = useState(false)
-
-	useEffect(() => {
-		setTimeout(() => {
-			setShowFeedback(true)
-		}, 2000)
-	}, [])
 
 	useCopy(phone, 'phone', setCopyText)
 
@@ -56,7 +47,7 @@ const ContactsInfo = () => {
 				setCopyText={setCopyText}
 			/>
 			<Location />
-			{showFeedback && <Feedback />}
+			<Feedback />
 		</div>
 	)
 }

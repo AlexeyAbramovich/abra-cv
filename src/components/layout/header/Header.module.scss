@@ -11,13 +11,26 @@
 	height: 80px;
 	box-shadow: 0 0 5px $main-color;
 	backdrop-filter: blur(5px);
+
+	@media (min-width: 2000px) {
+		height: 100px;
+		box-shadow: 0 0 5px $main-color;
+		backdrop-filter: blur(5px);
+		background: unset;
+	}
+
+	@media (max-width: 1000px) {
+		height: 60px;
+		backdrop-filter: unset;
+		background-color: $bg;
+	}
 }
 
 .menu {
 	position: relative;
 	z-index: 200;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-color: transparent;
 	border: none;
 	display: none;
@@ -26,6 +39,11 @@
 
 	@media (max-width: 1000px) {
 		display: flex;
+	}
+
+	@media (max-width: 760px) {
+		width: 30px;
+		height: 30px;
 	}
 }
 .line {

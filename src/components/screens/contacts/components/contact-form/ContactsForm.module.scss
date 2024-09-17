@@ -10,11 +10,10 @@
 }
 
 .contacts_form {
-	min-width: 40vw;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	row-gap: 20px;
-	font-size: 16px;
 
 	> label {
 		display: flex;
@@ -24,9 +23,9 @@
 		> input,
 		> textarea {
 			letter-spacing: $l-spacing;
-			font-size: 13px;
-			padding: 10px;
-			background: $bg-buttons;
+			font-size: $fs13;
+			padding: 12px;
+			background: $bg-dark;
 			border: 1px solid $main-color;
 			border-radius: 10px;
 			color: $text-color;
@@ -34,6 +33,11 @@
 
 			&::placeholder {
 				color: $text-color;
+			}
+
+			@media (min-width: 2000px) {
+				font-size: $fs16;
+				padding: 15px;
 			}
 		}
 
@@ -61,8 +65,12 @@
 		}
 
 		.error {
-			font-size: 13px;
+			font-size: $fs13;
 			color: $main-color;
+
+			@media (min-width: 2000px) {
+				font-size: $fs16;
+			}
 		}
 	}
 	> button {
@@ -75,7 +83,7 @@
 		column-gap: 20px;
 		border: none;
 		border-radius: 10px;
-		background-color: $bg-buttons;
+		background-color: $bg-dark;
 		padding-block: 10px;
 		color: $main-color;
 		box-shadow: -5px -5px black;
@@ -85,6 +93,11 @@
 		> svg {
 			width: 40px;
 			height: 40px;
+
+			@media (max-width: 800px) {
+				width: 30px;
+				height: 30px;
+			}
 		}
 
 		&:hover {
@@ -100,6 +113,15 @@
 			top: -5px;
 			left: -5px;
 			box-shadow: unset;
+		}
+
+		@media (min-width: 2000px) {
+			font-size: $fs24;
+		}
+
+		@media (max-width: 800px) {
+			width: 60%;
+			font-size: $fs16;
 		}
 	}
 }

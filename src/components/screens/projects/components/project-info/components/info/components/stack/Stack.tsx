@@ -15,7 +15,7 @@ const Stack = ({
 						src={`/icons/technologies/${tech.toLowerCase().split(' ').join('-')}.svg`}
 						alt={tech}
 					/>
-					<p>{tech}</p>
+					<span>{tech}</span>
 				</div>
 			))}
 		</div>

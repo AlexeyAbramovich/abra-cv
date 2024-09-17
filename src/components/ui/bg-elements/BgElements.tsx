@@ -1,13 +1,34 @@
+import cn from 'clsx'
 import styles from './BgElements.module.scss'
 
-const BgElements = () => {
+const BgElements = ({ onContactPage }: { onContactPage?: boolean }) => {
 	return (
 		<>
-			<span className={styles.bgBottomElement1} />
-			<span className={styles.bgBottomElement2} />
+			<span
+				className={cn(
+					styles.bgBottomElement1,
+					onContactPage && styles.bgElement_none
+				)}
+			/>
+			<span
+				className={cn(
+					styles.bgBottomElement2,
+					onContactPage && styles.bgElement_none
+				)}
+			/>
 
-			<span className={styles.bgTopElement1} />
-			<span className={styles.bgTopElement2} />
+			<span
+				className={cn(
+					styles.bgTopElement1,
+					onContactPage && styles.bgElement_none
+				)}
+			/>
+			<span
+				className={cn(
+					styles.bgTopElement2,
+					onContactPage && styles.bgElement_none
+				)}
+			/>
 		</>
 	)
 }

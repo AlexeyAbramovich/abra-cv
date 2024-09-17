@@ -13,53 +13,109 @@
 			&:hover {
 				animation: photo-hover 4s linear infinite;
 			}
+
+			@media (min-width: 2000px) {
+				width: 500px;
+				height: 500px;
+			}
+
+			@media (max-width: 1439px) {
+				width: 300px;
+				height: 300px;
+			}
 		}
 
 		> img:not(:first-child) {
 			position: absolute;
 			width: 50px;
 			height: 50px;
+
+			@media (min-width: 2000px) {
+				width: 60px;
+				height: 60px;
+			}
+
+			@media (max-width: 1439px) {
+				width: 40px;
+				height: 40px;
+			}
 		}
 
 		.js {
 			@include blink-animation('x');
 			top: -70px;
 			left: 50%;
+
+			@media (min-width: 2000px) {
+				top: -90px;
+			}
 		}
 		.ts {
 			@include blink-animation('x');
 			bottom: -70px;
 			left: 50%;
+
+			@media (min-width: 2000px) {
+				bottom: -90px;
+			}
 		}
 		.react {
 			@include blink-animation('y');
 			top: 50%;
 			left: -70px;
+
+			@media (min-width: 2000px) {
+				left: -90px;
+			}
 		}
 		.vite {
 			@include blink-animation('y');
 			top: 50%;
 			right: -70px;
+
+			@media (min-width: 2000px) {
+				right: -90px;
+			}
 		}
 		.html {
 			@include blink-animation();
 			top: -5px;
 			left: -5px;
+
+			@media (min-width: 2000px) {
+				top: -10px;
+				left: -10px;
+			}
 		}
 		.css {
 			@include blink-animation();
 			top: -5px;
 			right: -5px;
+
+			@media (min-width: 2000px) {
+				top: -10px;
+				right: -10px;
+			}
 		}
 		.scss {
 			@include blink-animation();
 			bottom: -5px;
 			right: -5px;
+
+			@media (min-width: 2000px) {
+				bottom: -10px;
+				right: -10px;
+			}
 		}
 		.redux {
 			@include blink-animation();
 			bottom: -5px;
 			left: -5px;
+
+			@media (min-width: 2000px) {
+				bottom: -10px;
+				left: -10px;
+			}
 		}
 	}
 }

@@ -4,6 +4,14 @@
 	@include copyright('absolute');
 }
 
+.copyright_absolute_home {
+	@media (max-width: 1000px) {
+		position: static;
+		transform: unset;
+		padding-bottom: 20px;
+	}
+}
+
 .copyright_footer {
 	@include copyright('footer');
 }

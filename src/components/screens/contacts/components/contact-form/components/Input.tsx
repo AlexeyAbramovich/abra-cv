@@ -30,7 +30,7 @@ const Input = ({
 					required: '⚠ Поле является обязательным',
 					maxLength: {
 						value: maxLength,
-						message: `⚠ Email не может быть длиннее ${maxLength} символов`
+						message: `⚠ ${placeholder} не может быть длиннее ${maxLength} символов`
 					}
 				})}
 				placeholder={`${placeholder}...`}

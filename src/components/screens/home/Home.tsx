@@ -17,7 +17,7 @@ const Home = () => {
 
 			<Avatar />
 
-			<Copyright type='absolute' />
+			<Copyright type='absolute' onHomePage={true} />
 		</article>
 	)
 }
