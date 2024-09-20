@@ -2,6 +2,7 @@ type Instance = {
 	analyser: AnalyserNode
 }
 
+// реальный пример замыкания
 export const AudioContextInstance = (function () {
 	let instance: Instance
 

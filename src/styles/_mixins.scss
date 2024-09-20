@@ -243,8 +243,8 @@
 @mixin github-link($width, $height, $size) {
 	@if ($size == 'absolute') {
 		position: absolute;
-		bottom: 10px;
-		right: 10px;
+		bottom: 5px;
+		right: 5px;
 	}
 
 	width: $width;
