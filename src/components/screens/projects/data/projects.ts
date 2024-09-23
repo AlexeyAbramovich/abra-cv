@@ -9,17 +9,6 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
-		name: 'Weather',
-		description: 'Прогноз погоды для выбранного города',
-		technologies: ['JavaScript', 'HTML', 'CSS'],
-		features: [
-			'Для запросов используется fetch()',
-			'Данные о погоде берутся с сайта api.openweathermap.org'
-		],
-		preview: ['/images/projects/weather/1.webp'],
-		link: 'https://github.com/AlexeyAbramovich/weather'
-	},
-	{
 		name: 'Star Wars',
 		description: 'Симуляция полёта кораблей из звездных войн',
 		technologies: ['JavaScript', 'HTML', 'CSS'],
@@ -32,17 +21,6 @@ export const projects: Project[] = [
 			'/images/projects/star-wars/2.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/starwars'
-	},
-	{
-		name: 'Colors',
-		description: 'Генератор случайных цветов',
-		technologies: ['JavaScript', 'Chroma.js', 'HTML', 'CSS'],
-		features: [
-			'Фиксация цвета',
-			'Фиксированные цвета сохраняются при перезагрузке'
-		],
-		preview: ['/images/projects/colors/1.webp'],
-		link: 'https://github.com/AlexeyAbramovich/colors'
 	},
 	{
 		name: 'Tic tac toe',
