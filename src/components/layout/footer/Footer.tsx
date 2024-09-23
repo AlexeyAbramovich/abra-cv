@@ -1,4 +1,4 @@
-import Copyright from '../../ui/copyright/Copyright'
+import Copyright from '$ui/copyright/Copyright'
 import styles from './Footer.module.scss'
 
 const Footer = () => {

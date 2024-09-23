@@ -1,4 +1,4 @@
-import GithubLink from '../../../../../../ui/github-link/GithubLink'
+import GithubLink from '$ui/github-link/GithubLink'
 import { Props } from '../../ProjectInfo'
 import Stack from './components/stack/Stack'
 import styles from './Info.module.scss'

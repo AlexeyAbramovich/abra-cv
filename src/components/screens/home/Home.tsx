@@ -1,5 +1,5 @@
-import BgElements from '../../ui/bg-elements/BgElements'
-import Copyright from '../../ui/copyright/Copyright'
+import BgElements from '$ui/bg-elements/BgElements'
+import Copyright from '$ui/copyright/Copyright'
 import Avatar from './components/avatar/Avatar'
 import Buttons from './components/buttons/Buttons'
 import WelcomeText from './components/welcome-text/WelcomeText'

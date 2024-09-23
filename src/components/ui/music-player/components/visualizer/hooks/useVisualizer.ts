@@ -1,8 +1,8 @@
+import { useMusicContext } from '$hooks/useMusicContext'
+import { useMusicStore } from '$hooks/useMusicStore'
 import { useEffect } from 'react'
 import { useShallow } from 'zustand/react/shallow'
 import { AudioContextInstance } from '../../../AudioContextInstance'
-import { useMusicContext } from '../../../hooks/useMusicContext'
-import { useMusicStore } from '../../../hooks/useMusicStore'
 import styles from '../Visualizer.module.scss'
 
 export const useVisualizer = () => {

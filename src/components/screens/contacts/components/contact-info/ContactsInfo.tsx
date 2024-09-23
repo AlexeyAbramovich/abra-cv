@@ -1,5 +1,5 @@
-import GithubLink from '../../../../ui/github-link/GithubLink'
-import Feedback from './components/Feedback'
+import Feedback from '$ui/feedback/Feedback'
+import GithubLink from '$ui/github-link/GithubLink'
 import InfoForCopy from './components/InfoForCopy'
 import LinkedInLink from './components/links/LinkedInLink'
 import TelegramLink from './components/links/TelegramLink'
@@ -47,7 +47,7 @@ const ContactsInfo = () => {
 				setCopyText={setCopyText}
 			/>
 			<Location />
-			<Feedback />
+			<Feedback type='desktop' />
 		</div>
 	)
 }

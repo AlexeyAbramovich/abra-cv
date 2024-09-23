@@ -126,24 +126,6 @@
 		letter-spacing: $l-spacing;
 	}
 
-	.feedback {
-		padding: 10px;
-		width: 96%;
-		display: flex;
-		letter-spacing: $l-spacing;
-		background-color: $bg-dark;
-		border-radius: 10px;
-		font-size: $fs13;
-
-		@media (min-width: 2000px) {
-			font-size: $fs16;
-		}
-
-		@media (max-width: 1180px) {
-			display: none;
-		}
-	}
-
 	@media (min-width: 2000px) {
 		font-size: $fs16;
 	}

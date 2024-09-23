@@ -8,7 +8,7 @@
 	"arrowParents": "avoid",
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
-		"/ui/",
+		"$ui",
 		"/hooks/",
 		"/screens/",
 		"/components/",

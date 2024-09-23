@@ -1,9 +1,9 @@
+import BgElements from '$ui/bg-elements/BgElements'
+import Copyright from '$ui/copyright/Copyright'
+import Feedback from '$ui/feedback/Feedback'
 import Layout from '../../layout/layout/Layout'
-import BgElements from '../../ui/bg-elements/BgElements'
-import Copyright from '../../ui/copyright/Copyright'
 import ContactsForm from './components/contact-form/ContactsForm'
 import ContactsInfo from './components/contact-info/ContactsInfo'
-import Feedback from './components/feedback/Feedback'
 import styles from './Contacts.module.scss'
 
 const Contacts = () => {
@@ -11,7 +11,7 @@ const Contacts = () => {
 		<div className={styles.contacts_wrapper}>
 			<Layout>
 				<article className={styles.contacts}>
-					<Feedback />
+					<Feedback type='mobile' />
 					<section className={styles.contactsForm_wrapper}>
 						<h2>Написать мне</h2>
 						<ContactsForm />

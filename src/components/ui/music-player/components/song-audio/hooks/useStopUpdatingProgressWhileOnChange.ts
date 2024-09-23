@@ -1,6 +1,6 @@
+import { useMusicContext } from '$hooks/useMusicContext'
+import { useMusicStore } from '$hooks/useMusicStore'
 import { useEffect } from 'react'
-import { useMusicContext } from '../../../hooks/useMusicContext'
-import { useMusicStore } from '../../../hooks/useMusicStore'
 import { formatTime } from '../../../utils/format-time.util'
 
 export const useStopUpdatingProgressWhileOnChange = () => {

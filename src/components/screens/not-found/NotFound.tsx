@@ -1,5 +1,5 @@
-import BgElements from '../../ui/bg-elements/BgElements'
-import Copyright from '../../ui/copyright/Copyright'
+import BgElements from '$ui/bg-elements/BgElements'
+import Copyright from '$ui/copyright/Copyright'
 import styles from './NotFound.module.scss'
 
 const NotFound = () => {

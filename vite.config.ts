@@ -3,5 +3,11 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()]
+	plugins: [react()],
+	resolve: {
+		alias: {
+			$ui: '/src/components/ui/',
+			$hooks: '/src/components/ui/music-player/hooks/'
+		}
+	}
 })

@@ -1,7 +1,7 @@
+import { useMusicContext } from '$hooks/useMusicContext'
+import { useMusicStore } from '$hooks/useMusicStore'
 import { useEffect } from 'react'
 import { useShallow } from 'zustand/react/shallow'
-import { useMusicContext } from '../../../hooks/useMusicContext'
-import { useMusicStore } from '../../../hooks/useMusicStore'
 
 export function useRandomSong() {
 	const { playlistQueue } = useMusicContext()
