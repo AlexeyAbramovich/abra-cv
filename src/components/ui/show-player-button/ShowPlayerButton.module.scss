@@ -36,5 +36,19 @@
 			left: -3px;
 			box-shadow: unset;
 		}
+
+		@media (min-width: 2000px) {
+			padding: 15px;
+			width: 40px;
+			height: 40px;
+			box-shadow: -4px -4px 0px black;
+		}
+	}
+
+	@media (min-width: 2000px) {
+		bottom: 30px;
+		right: 30px;
+		width: 60px;
+		height: 60px;
 	}
 }

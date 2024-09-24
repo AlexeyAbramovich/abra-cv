@@ -13,7 +13,7 @@ const MusicPlayerHint = () => {
 			<TypeAnimation
 				className={CURSOR_CLASS_NAME}
 				sequence={[
-					16000,
+					6000,
 					'Дорогой Гость, для вашего комфорта, предлагаю включить музыку на фоне, надеюсь она придётся вам по вкусу🎶🎧',
 					500,
 					(el) => el?.classList.remove(CURSOR_CLASS_NAME) // remove cursor after 2s

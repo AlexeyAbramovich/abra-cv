@@ -4,27 +4,45 @@
 	position: fixed;
 	bottom: 70px;
 	right: 70px;
-	height: 55px;
+	height: 60px;
 	display: flex;
 	background: $bg-dark;
 	border-radius: 10px;
 	padding: 10px;
-	padding-right: 50px;
+	padding-right: 30px;
 	column-gap: 10px;
 	box-shadow: -5px -5px 0 black;
-	font-size: 12px;
+	font-size: $fs13;
 	letter-spacing: $l-spacing;
 	opacity: 0;
 
 	> span:first-child {
-		width: 40px;
-		height: 40px;
+		width: 50px;
+		height: 50px;
 		background: no-repeat 52% 35%/200% url('/images/photo1.jpg');
 		border-radius: 50%;
+
+		@media (min-width: 2000px) {
+			width: 60px;
+			height: 60px;
+		}
+
+		@media (max-width: 550px) {
+			width: 40px;
+			height: 40px;
+		}
 	}
 
 	> span:nth-child(2) {
-		width: 264px;
+		width: 300px;
+
+		@media (min-width: 2000px) {
+			width: 350px;
+		}
+
+		@media (max-width: 550px) {
+			width: 250px;
+		}
 	}
 
 	> img {
@@ -33,5 +51,32 @@
 		right: 5px;
 		width: 30px;
 		height: 30px;
+
+		@media (min-width: 2000px) {
+			width: 40px;
+			height: 40px;
+		}
+
+		@media (max-width: 550px) {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	@media (min-width: 2000px) {
+		column-gap: 20px;
+		font-size: $fs16;
+		height: 80px;
+		padding: 15px;
+		padding-right: 60px;
+		bottom: 100px;
+		right: 100px;
+	}
+
+	@media (max-width: 550px) {
+		font-size: $fs11;
+		height: 50px;
+		padding: 5px;
+		padding-right: 40px;
 	}
 }

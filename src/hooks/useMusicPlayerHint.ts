@@ -8,21 +8,21 @@ export const useMusicPlayerHint = () => {
 			setTimeout(() => {
 				musicHintRef.current!.classList.remove('none')
 				musicHintRef.current!.classList.add('show')
-			}, 16000)
+			}, 6000)
 
 			setTimeout(() => {
 				musicHintRef.current!.style.opacity = '1'
-			}, 18000)
+			}, 8000)
 
 			setTimeout(() => {
 				musicHintRef.current!.classList.add('hide')
 				musicHintRef.current!.classList.remove('show')
-			}, 26000)
+			}, 16000)
 
 			setTimeout(() => {
 				musicHintRef.current!.classList.remove('hide')
 				musicHintRef.current!.classList.add('none')
-			}, 28000)
+			}, 18000)
 		}
 	}, [])
 

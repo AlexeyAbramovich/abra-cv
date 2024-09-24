@@ -3,7 +3,11 @@ import styles from './Avatar.module.scss'
 
 const Avatar = () => {
 	return (
-		<Tilt className={styles.avatarWrapper}>
+		<Tilt
+			className={styles.avatarWrapper}
+			transitionSpeed={500}
+			transitionEasing='cubic-bezier(0,0,1,1)'
+		>
 			<div className={styles.avatar}>
 				<img
 					src='/images/photo.jpg'
