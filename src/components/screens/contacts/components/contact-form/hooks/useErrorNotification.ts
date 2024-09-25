@@ -8,7 +8,7 @@ export const useErrorNotification = (
 		if (isApiLimitReached) {
 			setTimeout(() => {
 				setIsApiLimitReached(false)
-			}, 6000)
+			}, 3000)
 		}
 	}, [isApiLimitReached])
 }

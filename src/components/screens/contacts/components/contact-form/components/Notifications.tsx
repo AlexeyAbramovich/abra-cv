@@ -2,10 +2,10 @@ import styles from '../ContactsForm.module.scss'
 
 const Notifications = ({
 	isDataSent,
-	isApiLimitReached
+	isError
 }: {
 	isDataSent: boolean
-	isApiLimitReached: boolean
+	isError: boolean
 }) => {
 	return (
 		<>
@@ -14,13 +14,9 @@ const Notifications = ({
 					Сообщение отправлено успешно
 				</span>
 			)}
-			{isApiLimitReached && (
+			{isError && (
 				<span className={styles.notification_error}>
-					Достигнут лимит в 250 сообщений
-					<br />
-					в месяц на бесплатном api
-					<br />
-					web3forms.com для отправки Email
+					Ошибка при отправке сообщения
 				</span>
 			)}
 		</>

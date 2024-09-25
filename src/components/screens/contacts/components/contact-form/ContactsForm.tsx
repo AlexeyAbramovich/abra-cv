@@ -8,6 +8,8 @@ import styles from './ContactsForm.module.scss'
 import { useErrorNotification } from './hooks/useErrorNotification'
 import { useSuccessNotification } from './hooks/useSuccessNotification'
 
+const BASE_URL = `https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/`
+
 export type FormInput = {
 	name: string
 	email: string
@@ -16,7 +18,7 @@ export type FormInput = {
 
 const ContactsForm = () => {
 	const [isDataSent, setIsDataSent] = useState(false)
-	const [isApiLimitReached, setIsApiLimitReached] = useState(false)
+	const [isError, setIsError] = useState(false)
 
 	const {
 		register,
@@ -27,39 +29,26 @@ const ContactsForm = () => {
 
 	useSuccessNotification(isDataSent, setIsDataSent)
 
-	useErrorNotification(isApiLimitReached, setIsApiLimitReached)
+	useErrorNotification(isError, setIsError)
 
 	const onSubmit: SubmitHandler<FormInput> = async (formData) => {
-		const json = JSON.stringify({
-			...formData,
-			access_key: '69c6fe38-8754-4972-b59b-ebe9510b9b4e'
-		})
+		const message = `Имя: ${formData.name}%0A%0Aemail|tg: ${formData.email}%0A%0AТекст: ${formData.message}`
 
-		const response = await fetch('https://api.web3forms.com/submit', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json'
-			},
-			body: json
-		})
+		const response = await fetch(
+			`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID}&text=${message}`
+		)
 
-		const data = await response.json()
-
-		if (data.success) {
+		if (response.ok) {
 			setIsDataSent(true)
 		} else {
-			setIsApiLimitReached(true)
+			setIsError(true)
 		}
 		reset()
 	}
 
 	return (
 		<>
-			<Notifications
-				isDataSent={isDataSent}
-				isApiLimitReached={isApiLimitReached}
-			/>
+			<Notifications isDataSent={isDataSent} isError={isError} />
 			<form
 				className={styles.contacts_form}
 				action=''

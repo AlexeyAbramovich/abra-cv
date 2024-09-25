@@ -152,8 +152,8 @@
 
 @mixin notification($type) {
 	z-index: 5;
-	position: absolute;
-	top: 20px;
+	position: fixed;
+	top: 120px;
 	right: 0;
 	padding: 20px 10px;
 	background: $bg-dark;
