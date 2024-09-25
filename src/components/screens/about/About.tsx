@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Footer from '../../layout/footer/Footer'
 import Layout from '../../layout/layout/Layout'
 import styles from './About.module.scss'
@@ -11,7 +12,11 @@ import { hardSkills, hardSkillsAdditionally } from './hard-skills'
 
 const About = () => {
 	return (
-		<>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1, transition: { duration: 0.5 } }}
+			exit={{ opacity: 1 }}
+		>
 			<Layout>
 				<article className={styles.about_me}>
 					<Intro />
@@ -24,7 +29,7 @@ const About = () => {
 				</article>
 			</Layout>
 			<Footer />
-		</>
+		</motion.div>
 	)
 }
 

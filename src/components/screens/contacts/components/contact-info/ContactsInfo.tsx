@@ -31,7 +31,7 @@ const ContactsInfo = () => {
 			<InfoForCopy
 				type='phone'
 				flag={phone}
-				text='+375(33)321-62-78'
+				text='+375 (33) 321-62-78'
 				setCopyText={setCopyText}
 			/>
 			<InfoForCopy

@@ -13,7 +13,12 @@ const Slides = ({ curr, projectName, slides }: Props) => {
 			style={{ transform: `translateX(-${curr * 100}%)` }}
 		>
 			{slides.map((img, i) => (
-				<img key={`${projectName}_slide_${i}`} src={img} alt='' />
+				<img
+					key={`${projectName}_slide_${i}`}
+					src={img}
+					alt=''
+					loading='lazy'
+				/>
 			))}
 		</div>
 	)

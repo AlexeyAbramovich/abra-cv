@@ -14,6 +14,7 @@ const Stack = ({
 					<img
 						src={`/icons/technologies/${tech.toLowerCase().split(' ').join('-')}.svg`}
 						alt={tech}
+						loading='lazy'
 					/>
 					<span>{tech}</span>
 				</div>
