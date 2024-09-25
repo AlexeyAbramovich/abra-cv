@@ -24,7 +24,7 @@ const Input = ({
 	return (
 		<label>
 			{title}
-			{error && <ErrorMessage message={error} />}
+			<ErrorMessage message={error} />
 			<input
 				{...register(registerName, {
 					required: '⚠ Поле является обязательным',

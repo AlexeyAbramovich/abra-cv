@@ -84,6 +84,14 @@
 				left: -3px;
 				box-shadow: unset;
 			}
+
+			@media (max-width: 760px) {
+				padding: 10px 15px;
+
+				> span {
+					margin-top: 2px;
+				}
+			}
 		}
 	}
 

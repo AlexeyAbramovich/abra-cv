@@ -14,7 +14,7 @@ const DownloadButton = () => {
 					strokeLinejoin='round'
 				/>
 			</svg>
-			<span>pdf резюме</span>
+			<span>полное резюме pdf</span>
 		</a>
 	)
 }

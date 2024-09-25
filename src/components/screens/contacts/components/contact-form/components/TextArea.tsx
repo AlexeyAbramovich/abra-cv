@@ -11,7 +11,7 @@ const TextArea = ({ register, error }: TextAreaProps) => {
 	return (
 		<label>
 			Текст сообщения:
-			{error && <ErrorMessage message={error} />}
+			<ErrorMessage message={error} />
 			<textarea
 				{...register('message', {
 					required: '⚠ Поле является обязательным',

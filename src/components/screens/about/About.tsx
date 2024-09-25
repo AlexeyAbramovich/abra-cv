@@ -3,11 +3,11 @@ import Footer from '../../layout/footer/Footer'
 import Layout from '../../layout/layout/Layout'
 import styles from './About.module.scss'
 import Education from './components/education/Education'
-import Experience from './components/experience/Experience'
 import Goals from './components/goals/Goals'
 import Gratitude from './components/gratitude/Gratitude'
 import HardSkills from './components/hard-skills/HardSkills'
 import Intro from './components/intro/Intro'
+import WhyProgramming from './components/why-programming/WhyProgramming'
 import { hardSkills, hardSkillsAdditionally } from './hard-skills'
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
 			<Layout>
 				<article className={styles.about_me}>
 					<Intro />
-					<Experience />
+					<WhyProgramming />
 					<Education />
 					<Goals />
 					<HardSkills skills={hardSkills} title='Что Могю' />

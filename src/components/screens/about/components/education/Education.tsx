@@ -7,10 +7,10 @@ import styles from './Education.module.scss'
 const Education = () => {
 	return (
 		<section className={styles.education}>
-			<h2 className={styles.orange}>Как обучаюсь</h2>
+			<h2>Как обучаюсь</h2>
 			<p>
 				Периодически{' '}
-				<span className={styles.orange}>
+				<span>
 					приезжал к Илье, чтобы обговорить свои успехи, скорректировать
 					дальнейший путь обучения
 				</span>
@@ -18,8 +18,7 @@ const Education = () => {
 				творения.
 			</p>
 			<p>
-				Для обучения использую{' '}
-				<span className={styles.orange}>в основном YouTube</span> для практики и
+				Для обучения использую <span>в основном YouTube</span> для практики и
 				теории, отдельно выделю такие каналы как{' '}
 				{channels.map((channel) => (
 					<Fragment key={channel.name}>
@@ -27,11 +26,8 @@ const Education = () => {
 					</Fragment>
 				))}
 				у этих ребят я многому научился и учусь по сей день. Также в процессе
-				обучения мне{' '}
-				<span className={styles.orange}>
-					нереально круто помогает ИИ Gemini
-				</span>{' '}
-				при работе с документацией или кодом.
+				обучения мне <span>нереально круто помогает ИИ Gemini</span> при работе
+				с документацией или кодом.
 			</p>
 			<Helpers />
 		</section>

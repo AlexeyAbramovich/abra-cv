@@ -44,7 +44,7 @@
 		> textarea {
 			letter-spacing: $l-spacing;
 			resize: none;
-			height: 200px;
+			height: 150px;
 
 			&::-webkit-scrollbar {
 				width: 6px;
@@ -67,6 +67,11 @@
 		.error {
 			font-size: $fs13;
 			color: $main-color;
+			opacity: 0;
+
+			&_show {
+				opacity: 1;
+			}
 
 			@media (min-width: 2000px) {
 				font-size: $fs16;
@@ -113,10 +118,6 @@
 			top: -5px;
 			left: -5px;
 			box-shadow: unset;
-		}
-
-		@media (min-width: 2000px) {
-			font-size: $fs24;
 		}
 
 		@media (max-width: 800px) {

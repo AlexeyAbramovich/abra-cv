@@ -64,13 +64,13 @@ const ContactsForm = () => {
 					maxLength={50}
 				/>
 				<Input
-					title='Ваш Email:'
+					title='Ваш Email или Telegram:'
 					register={register}
 					registerName={'email'}
-					placeholder='Email'
+					placeholder='Email или @TelegramNickname'
 					error={errors.email?.message}
-					type='email'
-					maxLength={100}
+					type='text'
+					maxLength={50}
 				/>
 				<TextArea error={errors?.message?.message} register={register} />
 				<SendButton />
