@@ -9,11 +9,11 @@ import { useResetScroll } from '../hooks/useResetScroll'
 import { useUpdateDocumentTitle } from '../hooks/useUpdateDocumentTitle'
 
 const AnimatedRoutes = () => {
-	const location = useLocation()
+	const path = useLocation()
 
-	useResetScroll(location)
+	useResetScroll(path)
 
-	useUpdateDocumentTitle(location)
+	useUpdateDocumentTitle(path)
 
 	return (
 		<AnimatePresence>

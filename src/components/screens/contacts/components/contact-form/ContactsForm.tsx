@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Input from './components/Input'
 import Notifications from './components/Notifications'
@@ -19,6 +19,7 @@ export type FormInput = {
 const ContactsForm = () => {
 	const [isDataSent, setIsDataSent] = useState(false)
 	const [isError, setIsError] = useState(false)
+	const throttleInProgress = useRef(false)
 
 	const {
 		register,
@@ -32,18 +33,25 @@ const ContactsForm = () => {
 	useErrorNotification(isError, setIsError)
 
 	const onSubmit: SubmitHandler<FormInput> = async (formData) => {
-		const message = `Имя: ${formData.name}%0A%0Aemail|tg: ${formData.email}%0A%0AТекст: ${formData.message}`
+		if (throttleInProgress.current) return
 
-		const response = await fetch(
-			`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID}&text=${message}`
-		)
+		throttleInProgress.current = true
+		setTimeout(async () => {
+			const message = `Имя: ${formData.name}%0A%0Aemail|tg: ${formData.email}%0A%0AТекст: ${formData.message}`
 
-		if (response.ok) {
-			setIsDataSent(true)
-		} else {
-			setIsError(true)
-		}
-		reset()
+			const response = await fetch(
+				`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID}&text=${message}`
+			)
+
+			if (response.ok) {
+				setIsDataSent(true)
+			} else {
+				setIsError(true)
+			}
+
+			reset()
+			throttleInProgress.current = false
+		}, 100)
 	}
 
 	return (
