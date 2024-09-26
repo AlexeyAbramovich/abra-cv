@@ -18,12 +18,22 @@ const Goals = () => {
 			</p>
 			<div className={styles.illustration}>
 				<Development dev='Frontend' />
-				<img className={styles.sign} src='/icons/arrow-right-long.svg' alt='' />
+				<img
+					className={styles.sign}
+					src='/icons/arrow-right-long.svg'
+					alt=''
+					loading='lazy'
+				/>
 				<div className={styles.fullstack_wrapper}>
 					<h3>Fullstack developer</h3>
 					<div className={styles.fullstack}>
 						<Development dev='Frontend' />
-						<img className={styles.sign} src='/icons/plus.svg' alt='' />
+						<img
+							className={styles.sign}
+							src='/icons/plus.svg'
+							alt=''
+							loading='lazy'
+						/>
 						<Development dev='Backend' />
 					</div>
 				</div>

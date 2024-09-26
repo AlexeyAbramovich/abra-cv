@@ -39,13 +39,17 @@ const ContactsForm = () => {
 		setTimeout(async () => {
 			const message = `Имя: ${formData.name}%0A%0Aemail|tg: ${formData.email}%0A%0AТекст: ${formData.message}`
 
-			const response = await fetch(
-				`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID}&text=${message}`
-			)
+			try {
+				const response = await fetch(
+					`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID}&text=${message}`
+				)
 
-			if (response.ok) {
-				setIsDataSent(true)
-			} else {
+				if (response.ok) {
+					setIsDataSent(true)
+				} else {
+					setIsError(true)
+				}
+			} catch {
 				setIsError(true)
 			}
 

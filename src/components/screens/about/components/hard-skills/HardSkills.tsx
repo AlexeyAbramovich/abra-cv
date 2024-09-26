@@ -10,6 +10,7 @@ const HardSkills = ({ skills, title }: { skills: string[]; title: string }) => {
 						<img
 							src={`/icons/technologies/${technology.toLowerCase().split(' ').join('-')}.svg`}
 							alt={`${technology} icon`}
+							loading='lazy'
 						/>
 						<span>{technology}</span>
 					</div>

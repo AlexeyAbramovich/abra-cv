@@ -6,6 +6,7 @@ const Development = ({ dev }: { dev: string }) => {
 			<img
 				src={`/icons/${dev.toLowerCase()}.svg`}
 				alt={`${dev} Illustration`}
+				loading='lazy'
 			/>
 			<span>{dev}</span>
 		</div>
