@@ -8,11 +8,7 @@
 			width: 400px;
 			height: 400px;
 			border-radius: 50%;
-			box-shadow: 0 0 10px 5px $main-color;
-
-			&:hover {
-				animation: photo-hover 4s linear infinite;
-			}
+			animation: photo-hover 4s linear infinite;
 
 			@media (min-width: 2000px) {
 				width: 500px;
