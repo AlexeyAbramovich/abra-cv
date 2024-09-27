@@ -9,7 +9,7 @@ const Warning = () => {
 		<div className={cn(styles.warning, hideWarning && 'none')}>
 			<img
 				className={cn(isJoke && 'none')}
-				src='/icons/error.svg'
+				src='/abra-cv/icons/error.svg'
 				alt='Error loading site'
 			/>
 			<span

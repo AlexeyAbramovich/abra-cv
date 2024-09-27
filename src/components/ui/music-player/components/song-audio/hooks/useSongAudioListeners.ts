@@ -35,12 +35,12 @@ export const useSongAudioListeners = (
 			}
 
 			song.current.onplay = () => {
-				ctrlIcon.current!.src = '/icons/pause.svg'
+				ctrlIcon.current!.src = '/abra-cv/icons/pause.svg'
 				setCoverShake(true)
 			}
 
 			song.current.onpause = () => {
-				ctrlIcon.current!.src = '/icons/play.svg'
+				ctrlIcon.current!.src = '/abra-cv/icons/play.svg'
 				setCoverShake(false)
 			}
 		}

@@ -42,11 +42,11 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 
 		if (ctrlIcon.current!.src.includes('pause')) {
 			song.current!.pause()
-			ctrlIcon.current!.src = '/icons/play.svg'
+			ctrlIcon.current!.src = '/abra-cv/icons/play.svg'
 			setCoverShake(false)
 		} else {
 			song.current!.play()
-			ctrlIcon.current!.src = '/icons/pause.svg'
+			ctrlIcon.current!.src = '/abra-cv/icons/pause.svg'
 			setCoverShake(true)
 		}
 

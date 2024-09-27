@@ -1,7 +1,7 @@
 const DownloadButton = () => {
 	return (
 		<a
-			href='/cv/CV_React_Frontend_Developer_Alexey_Abramovich.pdf'
+			href='/abra-cv/cv/CV_React_Frontend_Developer_Alexey_Abramovich.pdf'
 			download
 			aria-label='Download PDF version of resume'
 		>

@@ -16,7 +16,7 @@ const Copyright = ({
 				onHomePage && styles.copyright_absolute_home
 			)}
 		>
-			<img src='/icons/copyright.svg' alt='Copyright' />
+			<img src='/abra-cv/icons/copyright.svg' alt='Copyright' />
 			<p>Copyright&nbsp;А.&nbsp;Д.&nbsp;Абрамович,&nbsp;2024</p>
 			<GithubLink
 				link='https://github.com/AlexeyAbramovich'

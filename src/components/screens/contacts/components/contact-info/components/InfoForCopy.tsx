@@ -12,9 +12,9 @@ type Props = {
 const InfoForCopy = ({ type, flag, text, setCopyText }: Props) => {
 	return (
 		<span className={styles.infoForCopy}>
-			<img src={`/icons/contacts/${type}.svg`} alt={type} />
+			<img src={`/abra-cv/icons/contacts/${type}.svg`} alt={type} />
 			{type === 'phone' && (
-				<img src='/icons/contacts/whatsapp.svg' alt='whatsapp' />
+				<img src='/abra-cv/icons/contacts/whatsapp.svg' alt='whatsapp' />
 			)}
 			<span
 				onClick={() => {
@@ -26,7 +26,7 @@ const InfoForCopy = ({ type, flag, text, setCopyText }: Props) => {
 			</span>
 			{flag && (
 				<div>
-					<img src='/icons/copy.svg' />
+					<img src='/abra-cv/icons/copy.svg' />
 					<span>Скопировано</span>
 				</div>
 			)}

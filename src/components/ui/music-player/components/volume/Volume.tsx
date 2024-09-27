@@ -16,7 +16,7 @@ const Volume = () => {
 
 	return (
 		<div className={styles.volumeWrapper} data-class='music'>
-			<img src='/icons/volume.svg' data-class='music' alt='' />
+			<img src='/abra-cv/icons/volume.svg' data-class='music' alt='' />
 			<input
 				ref={volume}
 				className={styles.volume}

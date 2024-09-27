@@ -12,7 +12,7 @@ const Stack = ({
 			{technologies.map((tech) => (
 				<div key={`${projectName}_technology_${tech}`}>
 					<img
-						src={`/icons/technologies/${tech.toLowerCase().split(' ').join('-')}.svg`}
+						src={`/abra-cv/icons/technologies/${tech.toLowerCase().split(' ').join('-')}.svg`}
 						alt={tech}
 						loading='lazy'
 					/>

@@ -17,8 +17,8 @@ export const projects: Project[] = [
 			'Данные по кораблям берутся с сайта swapi.dev'
 		],
 		preview: [
-			'/images/projects/star-wars/1.webp',
-			'/images/projects/star-wars/2.webp'
+			'/abra-cv/images/projects/star-wars/1.webp',
+			'/abra-cv/images/projects/star-wars/2.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/starwars'
 	},
@@ -28,8 +28,8 @@ export const projects: Project[] = [
 		technologies: ['React', 'JavaScript', 'Vite', 'HTML', 'CSS'],
 		features: ['Просмотр предыдущих ходов', 'Отматывание ходов'],
 		preview: [
-			'/images/projects/tic-tac-toe/1.png',
-			'/images/projects/tic-tac-toe/2.png'
+			'/abra-cv/images/projects/tic-tac-toe/1.png',
+			'/abra-cv/images/projects/tic-tac-toe/2.png'
 		],
 		link: 'https://github.com/AlexeyAbramovich/tic-tac-toe'
 	},
@@ -46,9 +46,9 @@ export const projects: Project[] = [
 			'Смена плейлиста'
 		],
 		preview: [
-			'/images/projects/music-player/1.webp',
-			'/images/projects/music-player/2.webp',
-			'/images/projects/music-player/3.webp'
+			'/abra-cv/images/projects/music-player/1.webp',
+			'/abra-cv/images/projects/music-player/2.webp',
+			'/abra-cv/images/projects/music-player/3.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/music-player'
 	},
@@ -72,7 +72,7 @@ export const projects: Project[] = [
 			'Добавление рецепта в избранное',
 			'Поиск по рецептам'
 		],
-		preview: ['/images/projects/recipes/1.webp'],
+		preview: ['/abra-cv/images/projects/recipes/1.webp'],
 		link: 'https://github.com/AlexeyAbramovich/recipes'
 	},
 	{
@@ -95,10 +95,10 @@ export const projects: Project[] = [
 			'Страница заказа'
 		],
 		preview: [
-			'/images/projects/game-store/1.webp',
-			'/images/projects/game-store/2.webp',
-			'/images/projects/game-store/3.webp',
-			'/images/projects/game-store/4.webp'
+			'/abra-cv/images/projects/game-store/1.webp',
+			'/abra-cv/images/projects/game-store/2.webp',
+			'/abra-cv/images/projects/game-store/3.webp',
+			'/abra-cv/images/projects/game-store/4.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/game-store'
 	},
@@ -117,7 +117,7 @@ export const projects: Project[] = [
 			'PostgreSQL'
 		],
 		features: ['Данные из формы сохраняются в базу данных PostgreSQL'],
-		preview: ['/images/projects/gta-6/1.webp'],
+		preview: ['/abra-cv/images/projects/gta-6/1.webp'],
 		link: 'https://github.com/AlexeyAbramovich/gta-6'
 	},
 	{
@@ -138,10 +138,10 @@ export const projects: Project[] = [
 			'Получение актуальной информации о выбранной монете'
 		],
 		preview: [
-			'/images/projects/crypto-app/1.webp',
-			'/images/projects/crypto-app/2.webp',
-			'/images/projects/crypto-app/3.webp',
-			'/images/projects/crypto-app/4.webp'
+			'/abra-cv/images/projects/crypto-app/1.webp',
+			'/abra-cv/images/projects/crypto-app/2.webp',
+			'/abra-cv/images/projects/crypto-app/3.webp',
+			'/abra-cv/images/projects/crypto-app/4.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/react-crypto-app'
 	},
@@ -167,9 +167,9 @@ export const projects: Project[] = [
 			'Адаптивный дизайн'
 		],
 		preview: [
-			'/images/projects/resident-evil/1.webp',
-			'/images/projects/resident-evil/2.webp',
-			'/images/projects/resident-evil/3.webp'
+			'/abra-cv/images/projects/resident-evil/1.webp',
+			'/abra-cv/images/projects/resident-evil/2.webp',
+			'/abra-cv/images/projects/resident-evil/3.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/resident-evil-shop'
 	},
@@ -200,12 +200,12 @@ export const projects: Project[] = [
 			'Пользователь не может редактировать / удалять сотрудников других пользователей'
 		],
 		preview: [
-			'/images/projects/employees/1.webp',
-			'/images/projects/employees/2.webp',
-			'/images/projects/employees/3.webp',
-			'/images/projects/employees/4.webp',
-			'/images/projects/employees/5.webp',
-			'/images/projects/employees/6.webp'
+			'/abra-cv/images/projects/employees/1.webp',
+			'/abra-cv/images/projects/employees/2.webp',
+			'/abra-cv/images/projects/employees/3.webp',
+			'/abra-cv/images/projects/employees/4.webp',
+			'/abra-cv/images/projects/employees/5.webp',
+			'/abra-cv/images/projects/employees/6.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/react-employees'
 	},
@@ -222,9 +222,9 @@ export const projects: Project[] = [
 			'Разработаны пользовательские библиотеки для работы с элементами DOM и обработки запросов API'
 		],
 		preview: [
-			'/images/projects/abra-bank/1.webp',
-			'/images/projects/abra-bank/2.webp',
-			'/images/projects/abra-bank/3.webp'
+			'/abra-cv/images/projects/abra-bank/1.webp',
+			'/abra-cv/images/projects/abra-bank/2.webp',
+			'/abra-cv/images/projects/abra-bank/3.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/abra-bank'
 	},
@@ -254,11 +254,11 @@ export const projects: Project[] = [
 			'Завершение выполнения упражнения / тренировки'
 		],
 		preview: [
-			'/images/projects/workout-app/1.webp',
-			'/images/projects/workout-app/2.webp',
-			'/images/projects/workout-app/3.webp',
-			'/images/projects/workout-app/4.webp',
-			'/images/projects/workout-app/5.webp'
+			'/abra-cv/images/projects/workout-app/1.webp',
+			'/abra-cv/images/projects/workout-app/2.webp',
+			'/abra-cv/images/projects/workout-app/3.webp',
+			'/abra-cv/images/projects/workout-app/4.webp',
+			'/abra-cv/images/projects/workout-app/5.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/workout-app'
 	}

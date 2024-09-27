@@ -10,48 +10,48 @@ const Avatar = () => {
 		>
 			<div className={styles.avatar}>
 				<img
-					src={import.meta.env.BASE_URL + '/images/photo.jpg'}
+					src='/abra-cv/images/photo.jpg'
 					className={styles.photo}
 					alt='Photo of Alexey Abramovich, the author of this cv-site'
 				/>
 				<img
 					className={styles.js}
-					src={import.meta.env.BASE_URL + '/icons/technologies/javascript.svg'}
+					src='/abra-cv/icons/technologies/javascript.svg'
 					alt='JavaScript icon'
 				/>
 				<img
 					className={styles.ts}
-					src={import.meta.env.BASE_URL + '/icons/technologies/typescript.svg'}
+					src='/abra-cv/icons/technologies/typescript.svg'
 					alt='TypeScript icon'
 				/>
 				<img
 					className={styles.react}
-					src={import.meta.env.BASE_URL + '/icons/technologies/react.svg'}
+					src='/abra-cv/icons/technologies/react.svg'
 					alt='React Icon'
 				/>
 				<img
 					className={styles.vite}
-					src={import.meta.env.BASE_URL + '/icons/technologies/vite.svg'}
+					src='/abra-cv/icons/technologies/vite.svg'
 					alt='Vite icon'
 				/>
 				<img
 					className={styles.html}
-					src={import.meta.env.BASE_URL + '/icons/technologies/html.svg'}
+					src='/abra-cv/icons/technologies/html.svg'
 					alt='Html icon'
 				/>
 				<img
 					className={styles.css}
-					src={import.meta.env.BASE_URL + '/icons/technologies/css.svg'}
+					src='/abra-cv/icons/technologies/css.svg'
 					alt='Css icon'
 				/>
 				<img
 					className={styles.scss}
-					src={import.meta.env.BASE_URL + '/icons/technologies/scss.svg'}
+					src='/abra-cv/icons/technologies/scss.svg'
 					alt='Scss icon'
 				/>
 				<img
 					className={styles.redux}
-					src={import.meta.env.BASE_URL + '/icons/technologies/redux.svg'}
+					src='/abra-cv/icons/technologies/redux.svg'
 					alt='Redux icon'
 				/>
 			</div>

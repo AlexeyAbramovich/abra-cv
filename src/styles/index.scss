@@ -9,7 +9,7 @@ body {
 	font-weight: 500;
 	background-color: $bg;
 	color: $text-color;
-	cursor: url('/icons/cursor.svg'), default;
+	cursor: url('/abra-cv/icons/cursor.svg'), default;
 	overflow-x: hidden;
 	overflow-y: scroll;
 
@@ -36,7 +36,7 @@ button,
 a,
 input {
 	cursor:
-		url('/icons/pointer.svg') 8 0,
+		url('/abra-cv/icons/pointer.svg') 8 0,
 		pointer;
 }
 

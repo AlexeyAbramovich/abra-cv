@@ -28,7 +28,7 @@ const ControlButton = ({
 		>
 			<img
 				ref={ctrlIcon}
-				src={`/icons/${imgName}.svg`}
+				src={`/abra-cv/icons/${imgName}.svg`}
 				alt={alt}
 				data-class='music'
 			/>

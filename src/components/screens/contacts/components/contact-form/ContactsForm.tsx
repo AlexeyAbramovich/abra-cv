@@ -41,7 +41,8 @@ const ContactsForm = () => {
 
 			try {
 				const response = await fetch(
-					`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID}&text=${message}`
+					`${BASE_URL}sendMessage?chat_id=-${import.meta.env.VITE_CHAT_ID
+					}&text=${message}`
 				)
 
 				if (response.ok) {

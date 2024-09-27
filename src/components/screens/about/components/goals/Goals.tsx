@@ -20,7 +20,7 @@ const Goals = () => {
 				<Development dev='Frontend' />
 				<img
 					className={styles.sign}
-					src='/icons/arrow-right-long.svg'
+					src='/abra-cv/icons/arrow-right-long.svg'
 					alt=''
 					loading='lazy'
 				/>
@@ -30,7 +30,7 @@ const Goals = () => {
 						<Development dev='Frontend' />
 						<img
 							className={styles.sign}
-							src='/icons/plus.svg'
+							src='/abra-cv/icons/plus.svg'
 							alt=''
 							loading='lazy'
 						/>

@@ -8,7 +8,7 @@ const HardSkills = ({ skills, title }: { skills: string[]; title: string }) => {
 				{skills.map((technology) => (
 					<div key={technology} className={styles.technology}>
 						<img
-							src={`/icons/technologies/${technology.toLowerCase().split(' ').join('-')}.svg`}
+							src={`/abra-cv/icons/technologies/${technology.toLowerCase().split(' ').join('-')}.svg`}
 							alt={`${technology} icon`}
 							loading='lazy'
 						/>
