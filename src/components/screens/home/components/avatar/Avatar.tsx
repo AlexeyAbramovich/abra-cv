@@ -10,48 +10,48 @@ const Avatar = () => {
 		>
 			<div className={styles.avatar}>
 				<img
-					src='/images/photo.jpg'
+					src={import.meta.env.BASE_URL + '/images/photo.jpg'}
 					className={styles.photo}
 					alt='Photo of Alexey Abramovich, the author of this cv-site'
 				/>
 				<img
 					className={styles.js}
-					src='/icons/technologies/javascript.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/javascript.svg'}
 					alt='JavaScript icon'
 				/>
 				<img
 					className={styles.ts}
-					src='/icons/technologies/typescript.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/typescript.svg'}
 					alt='TypeScript icon'
 				/>
 				<img
 					className={styles.react}
-					src='/icons/technologies/react.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/react.svg'}
 					alt='React Icon'
 				/>
 				<img
 					className={styles.vite}
-					src='/icons/technologies/vite.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/vite.svg'}
 					alt='Vite icon'
 				/>
 				<img
 					className={styles.html}
-					src='/icons/technologies/html.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/html.svg'}
 					alt='Html icon'
 				/>
 				<img
 					className={styles.css}
-					src='/icons/technologies/css.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/css.svg'}
 					alt='Css icon'
 				/>
 				<img
 					className={styles.scss}
-					src='/icons/technologies/scss.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/scss.svg'}
 					alt='Scss icon'
 				/>
 				<img
 					className={styles.redux}
-					src='/icons/technologies/redux.svg'
+					src={import.meta.env.BASE_URL + '/icons/technologies/redux.svg'}
 					alt='Redux icon'
 				/>
 			</div>

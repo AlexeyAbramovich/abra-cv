@@ -21,7 +21,7 @@ function App() {
 
 	const router = useMemo(
 		() => (
-			<BrowserRouter>
+			<BrowserRouter basename={import.meta.env.BASE_URL}>
 				<Router />
 			</BrowserRouter>
 		),

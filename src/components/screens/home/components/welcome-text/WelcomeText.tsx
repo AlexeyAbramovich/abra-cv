@@ -29,9 +29,9 @@ const WelcomeText = () => {
 				cursor={true}
 			/>
 
-			<img src='/icons/development.svg' alt='' />
+			<img src={import.meta.env.BASE_URL + '/icons/development.svg'} alt='' />
 
-			<img src='/icons/code.svg' alt='' />
+			<img src={import.meta.env.BASE_URL + '/icons/code.svg'} alt='' />
 		</div>
 	)
 }
