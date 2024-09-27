@@ -7,7 +7,7 @@ const Gratitude = () => {
 			<h2>Благодарность</h2>
 			<div className={styles.wrapper}>
 				<div className={styles.avatar}>
-					<img src='abra-cv/images/ilya.webp' alt='Photo of Ilya' loading='lazy' />
+					<img src='/abra-cv/images/ilya.webp' alt='Photo of Ilya' loading='lazy' />
 					<span>Илья</span>
 				</div>
 				<p>
