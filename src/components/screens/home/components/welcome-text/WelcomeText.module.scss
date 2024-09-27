@@ -23,7 +23,11 @@
 		}
 
 		@media (max-width: 1439px) {
-			font-size: 24px;
+			font-size: $fs24;
+		}
+
+		@media (max-width: 479px) {
+			font-size: $fs20;
 		}
 	}
 
@@ -35,7 +39,11 @@
 		}
 
 		@media (max-width: 1439px) {
-			font-size: 24px;
+			font-size: $fs24;
+		}
+
+		@media (max-width: 479px) {
+			font-size: $fs20;
 		}
 	}
 
@@ -106,5 +114,10 @@
 		font-size: $fs16;
 		height: 101px;
 		width: 360px;
+	}
+
+	@media (max-width: 479px) {
+		font-size: $fs11;
+		width: 300px;
 	}
 }

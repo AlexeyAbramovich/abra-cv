@@ -7,6 +7,10 @@
 	@media (max-width: 760px) {
 		@include github-link(30px, 30px, 'absolute');
 	}
+
+	@media (max-width: 760px) {
+		@include github-link(20px, 20px, 'absolute');
+	}
 }
 
 .githubLink_big {

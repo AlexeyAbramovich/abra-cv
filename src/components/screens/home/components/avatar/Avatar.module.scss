@@ -19,6 +19,12 @@
 				width: 300px;
 				height: 300px;
 			}
+
+			@media (max-width: 479px) {
+				width: 240px;
+				height: 240px;
+				animation: photo-hover-mobile 4s linear infinite;
+			}
 		}
 
 		> img:not(:first-child) {
@@ -35,6 +41,11 @@
 				width: 40px;
 				height: 40px;
 			}
+
+			@media (max-width: 479px) {
+				width: 30px;
+				height: 30px;
+			}
 		}
 
 		.js {
@@ -45,6 +56,10 @@
 			@media (min-width: 2000px) {
 				top: -90px;
 			}
+
+			@media (max-width: 479px) {
+				top: -45px;
+			}
 		}
 		.ts {
 			@include blink-animation('x');
@@ -53,6 +68,10 @@
 
 			@media (min-width: 2000px) {
 				bottom: -90px;
+			}
+
+			@media (max-width: 479px) {
+				bottom: -45px;
 			}
 		}
 		.react {
@@ -63,6 +82,10 @@
 			@media (min-width: 2000px) {
 				left: -90px;
 			}
+
+			@media (max-width: 479px) {
+				left: -45px;
+			}
 		}
 		.vite {
 			@include blink-animation('y');
@@ -71,6 +94,10 @@
 
 			@media (min-width: 2000px) {
 				right: -90px;
+			}
+
+			@media (max-width: 479px) {
+				right: -45px;
 			}
 		}
 		.html {
@@ -125,5 +152,17 @@
 	}
 	100% {
 		box-shadow: 0 0 5px 3px $main-color;
+	}
+}
+
+@keyframes photo-hover-mobile {
+	0% {
+		box-shadow: 0 0 2px 1px $main-color;
+	}
+	50% {
+		box-shadow: 0 0 6px 2px $main-color;
+	}
+	100% {
+		box-shadow: 0 0 2px 1px $main-color;
 	}
 }

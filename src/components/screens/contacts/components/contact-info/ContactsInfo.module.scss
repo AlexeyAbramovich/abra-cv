@@ -119,6 +119,10 @@
 			@media (max-width: 500px) {
 				transform: translate(80%, -100%);
 			}
+
+			@media (max-width: 479px) {
+				transform: translate(40%, -110%);
+			}
 		}
 	}
 
@@ -128,5 +132,9 @@
 
 	@media (min-width: 2000px) {
 		font-size: $fs16;
+	}
+
+	@media (max-width: 479px) {
+		font-size: $fs11;
 	}
 }

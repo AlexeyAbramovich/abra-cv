@@ -22,17 +22,26 @@
 				width: 50px;
 				height: 50px;
 			}
+
+			@media (max-width: 479px) {
+				width: 30px;
+				height: 30px;
+			}
 		}
 
 		> span {
-			font-size: 11px;
+			font-size: $fs11;
 			letter-spacing: unset;
 			margin: 0;
 			text-align: center;
 			letter-spacing: $l-spacing;
 
 			@media (min-width: 2000px) {
-				font-size: 14px;
+				font-size: $fs14;
+			}
+
+			@media (max-width: 479px) {
+				font-size: $fs9;
 			}
 		}
 	}
@@ -40,5 +49,10 @@
 	@media (min-width: 2000px) {
 		grid-template-columns: repeat(auto-fit, 130px);
 		gap: 20px;
+	}
+
+	@media (max-width: 479px) {
+		grid-template-columns: repeat(auto-fit, 80px);
+		gap: 10px;
 	}
 }

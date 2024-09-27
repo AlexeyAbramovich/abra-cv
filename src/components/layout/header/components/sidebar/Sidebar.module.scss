@@ -13,4 +13,10 @@
 	@media (min-width: 1001px) {
 		display: none !important;
 	}
+
+	@media (max-width: 479px) {
+		font-size: $fs11;
+		width: 200px;
+		height: 220px;
+	}
 }

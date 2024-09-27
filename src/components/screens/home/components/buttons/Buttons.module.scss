@@ -59,6 +59,13 @@
 			border-radius: 10px;
 			column-gap: 5px;
 		}
+
+		@media (max-width: 479px) {
+			font-size: $fs13;
+			padding: 10px 15px;
+			border-radius: 5px;
+			box-shadow: -2px -2px 0px 1px black;
+		}
 	}
 
 	@media (max-width: 1439px) {

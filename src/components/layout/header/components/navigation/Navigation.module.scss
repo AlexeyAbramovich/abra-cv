@@ -29,4 +29,10 @@
 	@media (min-width: 2000px) {
 		font-size: $fs20;
 	}
+
+	@media (max-width: 479px) {
+		font-size: $fs11;
+		margin-left: 20px;
+		row-gap: 10px;
+	}
 }
