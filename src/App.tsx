@@ -9,9 +9,6 @@ import { usePreloadFirstCarouselImage } from './hooks/usePreloadFirstCarouselIma
 import Router from './router/Router'
 
 function App() {
-	// const [isLoading, setIsLoading] = useState(
-	// 	sessionStorage.getItem('loading') ? false : true
-	// )
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
 
 	usePreloadFirstCarouselImage()

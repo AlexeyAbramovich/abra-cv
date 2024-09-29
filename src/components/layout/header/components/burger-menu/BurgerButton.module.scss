@@ -1,0 +1,70 @@
+@import '/src/styles/variables';
+@import '/src/styles/mixins';
+
+.burger_btn {
+	display: none;
+	z-index: 200;
+	position: relative;
+	width: 30px;
+	height: 20px;
+	margin-right: 20px;
+	transition-duration: 0.5s;
+	background: transparent;
+	border: none;
+	padding: 0;
+
+	span {
+		background-color: $main-color;
+		position: absolute;
+		border-radius: 2px;
+		transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+		width: 30px;
+		height: 4px;
+		transition-duration: 500ms;
+	}
+	span:nth-child(1) {
+		top: 0px;
+		left: 0px;
+	}
+	span:nth-child(2) {
+		top: 8px;
+		left: 0px;
+		opacity: 1;
+	}
+	span:nth-child(3) {
+		bottom: 0px;
+		left: 0px;
+	}
+
+	@media (max-width: 1000px) {
+		display: inline-block;
+	}
+}
+
+.open {
+	span:nth-child(1) {
+		transform: rotate(45deg);
+		top: 8px;
+	}
+	span:nth-child(2) {
+		opacity: 0;
+	}
+	span:nth-child(3) {
+		transform: rotate(-45deg);
+		top: 8px;
+	}
+}
+
+.hover {
+	&:hover {
+		span:nth-child(1) {
+			transform: rotate(-3deg) scaleY(1.1);
+		}
+		span:nth-child(2) {
+			transform: rotate(3deg) scaleY(1.1);
+		}
+		span:nth-child(3) {
+			transform: rotate(-4deg) scaleY(1.1);
+		}
+	}
+}
