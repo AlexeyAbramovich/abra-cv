@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
-import styles from '../Header.module.scss'
 
 export const useShowSidebar = (
-	btnRef: React.MutableRefObject<HTMLButtonElement | null>,
 	showSidebar: boolean,
 	setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
@@ -12,13 +10,11 @@ export const useShowSidebar = (
 				if (!e.target.closest('[data-nav]')) {
 					if (showSidebar) {
 						setShowSidebar(false)
-						btnRef.current!!.classList.remove(`${styles.opened}`)
 					}
 				}
 			} else {
 				if (showSidebar) {
 					setShowSidebar(false)
-					btnRef.current!!.classList.remove(`${styles.opened}`)
 				}
 			}
 		}

@@ -9,10 +9,9 @@ import { useSidebarAnimation } from './hooks/useSidebarAnimation'
 
 const Header = () => {
 	const [showSidebar, setShowSidebar] = useState(false)
-	const btnRef = useRef<HTMLButtonElement | null>(null)
 	const sidebarRef = useRef<HTMLBaseElement | null>(null)
 
-	useShowSidebar(btnRef, showSidebar, setShowSidebar)
+	useShowSidebar(showSidebar, setShowSidebar)
 
 	useSidebarAnimation(showSidebar, sidebarRef)
 
@@ -20,11 +19,7 @@ const Header = () => {
 		<header className={styles.header}>
 			<Logo />
 			<Navigation type='header_navigation' />
-			<BurgerButton
-				btnRef={btnRef}
-				showSidebar={showSidebar}
-				setShowSidebar={setShowSidebar}
-			/>
+			<BurgerButton showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
 			<Sidebar sidebarRef={sidebarRef} />
 		</header>
 	)
