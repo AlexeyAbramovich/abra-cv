@@ -1,23 +1,11 @@
-import LoaderProgress from './components/LoaderProgress'
-import Warning from './components/warning/Warning'
 import styles from './Loader.module.scss'
-import { useLoader } from './useLoader'
 
-type Props = {
-	setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-const Loader = ({ setIsLoading }: Props) => {
-	const error = useLoader(setIsLoading)
-
+const Loader = () => {
 	return (
-		<article className={styles.loader}>
-			<div className={styles.wrapper}>
-				<img src='/abra-cv/animated/react.gif' alt='Loading icon' />
-				{error && <Warning />}
-				{error && <LoaderProgress />}
-			</div>
-		</article>
+		<div className={styles.loader}>
+			<img src='/abra-cv/animated/react.gif' />
+			<span className={styles.loader_text}></span>
+		</div>
 	)
 }
 

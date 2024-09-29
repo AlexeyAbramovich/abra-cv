@@ -1,4 +1,11 @@
+import Loader from '$ui/loader/Loader.tsx'
+import { lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
 
-createRoot(document.getElementById('root')!).render(<App />)
+const App = lazy(() => import('./App'))
+
+createRoot(document.getElementById('root')!).render(
+	<Suspense fallback={<Loader />}>
+		<App />
+	</Suspense>
+)

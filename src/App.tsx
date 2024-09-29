@@ -1,4 +1,3 @@
-import Loader from '$ui/loader/Loader'
 import MusicPlayerHint from '$ui/music-player-hint/MusicPlayerHint'
 import MusicPlayer from '$ui/music-player/MusicPlayer'
 import MusicContextProvider from '$ui/music-player/provider/MusicContextProvider'
@@ -10,9 +9,9 @@ import { usePreloadFirstCarouselImage } from './hooks/usePreloadFirstCarouselIma
 import Router from './router/Router'
 
 function App() {
-	const [isLoading, setIsLoading] = useState(
-		sessionStorage.getItem('loading') ? false : true
-	)
+	// const [isLoading, setIsLoading] = useState(
+	// 	sessionStorage.getItem('loading') ? false : true
+	// )
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
 
 	usePreloadFirstCarouselImage()
@@ -30,25 +29,19 @@ function App() {
 
 	return (
 		<>
-			{isLoading ? (
-				<Loader setIsLoading={setIsLoading} />
-			) : (
-				<>
-					{router}
+			{router}
 
-					<ShowPlayerButton
-						onClick={() => {
-							setShowMusicPlayer(true)
-						}}
-					/>
+			<ShowPlayerButton
+				onClick={() => {
+					setShowMusicPlayer(true)
+				}}
+			/>
 
-					<MusicPlayerHint />
+			<MusicPlayerHint />
 
-					<MusicContextProvider>
-						<MusicPlayer showMusicPlayer={showMusicPlayer} />
-					</MusicContextProvider>
-				</>
-			)}
+			<MusicContextProvider>
+				<MusicPlayer showMusicPlayer={showMusicPlayer} />
+			</MusicContextProvider>
 		</>
 	)
 }

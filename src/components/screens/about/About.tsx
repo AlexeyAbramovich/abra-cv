@@ -23,7 +23,7 @@ const About = () => {
 					<WhyProgramming />
 					<Education />
 					<Goals />
-					<HardSkills skills={hardSkills} title='Что Могю' />
+					<HardSkills skills={hardSkills} title='Навыки' />
 					<HardSkills skills={hardSkillsAdditionally} title='Дополнительно' />
 					<Gratitude />
 				</article>
