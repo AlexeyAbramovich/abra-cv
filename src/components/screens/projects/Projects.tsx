@@ -13,11 +13,11 @@ const Projects = () => {
 			exit={{ opacity: 1 }}
 		>
 			<Layout>
-				<article className={styles.projects}>
+				<main className={styles.projects}>
 					{projects.map((projectInfo) => (
 						<ProjectInfo key={projectInfo.name} projectInfo={projectInfo} />
 					))}
-				</article>
+				</main>
 			</Layout>
 			<Footer />
 		</motion.div>

@@ -16,7 +16,7 @@ const Contacts = () => {
 			exit={{ opacity: 1 }}
 		>
 			<Layout>
-				<article className={styles.contacts}>
+				<main className={styles.contacts}>
 					<Feedback type='mobile' />
 					<section className={styles.contactsForm_wrapper}>
 						<h2>Написать мне</h2>
@@ -26,7 +26,7 @@ const Contacts = () => {
 						<h2>Контакты</h2>
 						<ContactsInfo />
 					</section>
-				</article>
+				</main>
 			</Layout>
 
 			<BgElements onContactPage={true} />

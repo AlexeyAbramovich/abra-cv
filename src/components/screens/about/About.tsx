@@ -18,7 +18,7 @@ const About = () => {
 			exit={{ opacity: 1 }}
 		>
 			<Layout>
-				<article className={styles.about_me}>
+				<main className={styles.about_me}>
 					<Intro />
 					<WhyProgramming />
 					<Education />
@@ -26,7 +26,7 @@ const About = () => {
 					<HardSkills skills={hardSkills} title='Навыки' />
 					<HardSkills skills={hardSkillsAdditionally} title='Дополнительно' />
 					<Gratitude />
-				</article>
+				</main>
 			</Layout>
 			<Footer />
 		</motion.div>

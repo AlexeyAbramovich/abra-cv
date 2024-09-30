@@ -8,23 +8,23 @@ import styles from './Home.module.scss'
 
 const Home = () => {
 	return (
-		<motion.article
+		<motion.main
 			className={styles.home}
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1, transition: { duration: 0.5 } }}
 			exit={{ opacity: 1 }}
 		>
-			<div className={styles.wrapper}>
+			<article className={styles.wrapper}>
 				<WelcomeText />
 				<Buttons />
-			</div>
+			</article>
 
 			<BgElements />
 
 			<Avatar />
 
 			<Copyright type='absolute' onHomePage={true} />
-		</motion.article>
+		</motion.main>
 	)
 }
 

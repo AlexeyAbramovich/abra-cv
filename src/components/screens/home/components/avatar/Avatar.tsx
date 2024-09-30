@@ -8,7 +8,7 @@ const Avatar = () => {
 			transitionSpeed={500}
 			transitionEasing='cubic-bezier(0,0,1,1)'
 		>
-			<div className={styles.avatar}>
+			<article className={styles.avatar}>
 				<img
 					src='/abra-cv/images/photo.jpg'
 					className={styles.photo}
@@ -54,7 +54,7 @@ const Avatar = () => {
 					src='/abra-cv/icons/technologies/redux.svg'
 					alt='Redux icon'
 				/>
-			</div>
+			</article>
 		</Tilt>
 	)
 }
