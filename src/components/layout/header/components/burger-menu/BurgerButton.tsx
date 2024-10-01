@@ -13,10 +13,7 @@ const BurgerButton = ({ showSidebar, setShowSidebar }: Props) => {
 
 	return (
 		<button
-			className={cn(
-				styles.burger_btn,
-				showSidebar ? styles.open : styles.hover
-			)}
+			className={cn(styles.burger_btn, showSidebar && styles.open)}
 			onClick={() => handleClick()}
 			data-nav='nav'
 		>
