@@ -103,6 +103,20 @@ export const projects: Project[] = [
 		link: 'https://github.com/AlexeyAbramovich/game-store'
 	},
 	{
+		name: 'Обновление остатков CSV',
+		description:
+			'Приложение для автоматического обновления остатков товара в файле .csv с интернет-магазина на InSales, через файл остатков на складе из системы учета товаров так же формата .csv',
+		technologies: ['React', 'JavaScript', 'Vite', 'HTML', 'CSS'],
+		features: [
+			'Парсинг содержимого двух файлов формата .csv через Papaparse',
+			'Программное обновление остатков только необходимых позиций',
+			'Вывод в логи обновленных позиций(было-стало)',
+			'Экспорт файла .csv'
+		],
+		preview: ['/abra-cv/images/projects/balloon-csv-comparator/1.webp'],
+		link: 'https://github.com/AlexeyAbramovich/balloons-csv-comparator'
+	},
+	{
 		name: 'GTA 6 Preorder',
 		description: 'Форма для предзаказ ГТА 6',
 		technologies: [
