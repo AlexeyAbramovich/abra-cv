@@ -16,6 +16,7 @@ export const hardSkills = [
 	'Axios',
 	'Vite',
 	'Webpack',
+	'Node.js',
 	'Prisma',
 	'Express',
 	'PostgreSQL',

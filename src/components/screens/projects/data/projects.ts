@@ -127,6 +127,7 @@ export const projects: Project[] = [
 			'TailwindCSS',
 			'HTML',
 			'Vite',
+			'Node.js',
 			'Express',
 			'Prisma',
 			'PostgreSQL'
@@ -202,6 +203,7 @@ export const projects: Project[] = [
 			'HTML',
 			'CSS',
 			'JavaScript',
+			'Node.js',
 			'Express',
 			'Prisma',
 			'SQLite'
@@ -256,6 +258,7 @@ export const projects: Project[] = [
 			'React Router Dom',
 			'React Hook Form',
 			'React Select',
+			'Node.js',
 			'Express',
 			'Prisma',
 			'Postgresql'
