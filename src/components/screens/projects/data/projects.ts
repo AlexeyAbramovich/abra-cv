@@ -9,20 +9,6 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
-		name: 'Star Wars',
-		description: 'Симуляция полёта кораблей из звездных войн',
-		technologies: ['JavaScript', 'HTML', 'CSS'],
-		features: [
-			'Для запросов используется fetch()',
-			'Данные по кораблям берутся с сайта swapi.dev'
-		],
-		preview: [
-			'/abra-cv/images/projects/star-wars/1.webp',
-			'/abra-cv/images/projects/star-wars/2.webp'
-		],
-		link: 'https://github.com/AlexeyAbramovich/starwars'
-	},
-	{
 		name: 'Tic tac toe',
 		description: 'Игра крестики-нолики',
 		technologies: ['React', 'JavaScript', 'Vite', 'HTML', 'CSS'],
@@ -116,25 +102,6 @@ export const projects: Project[] = [
 		],
 		preview: ['/abra-cv/images/projects/balloon-csv-comparator/1.webp'],
 		link: 'https://github.com/AlexeyAbramovich/balloons-csv-comparator'
-	},
-	{
-		name: 'GTA 6 Preorder',
-		description: 'Форма для предзаказ ГТА 6',
-		technologies: [
-			'React',
-			'TypeScript',
-			'React Hook Form',
-			'TailwindCSS',
-			'HTML',
-			'Vite',
-			'Node.js',
-			'Express',
-			'Prisma',
-			'PostgreSQL'
-		],
-		features: ['Данные из формы сохраняются в базу данных PostgreSQL'],
-		preview: ['/abra-cv/images/projects/gta-6/1.webp'],
-		link: 'https://github.com/AlexeyAbramovich/gta-6'
 	},
 	{
 		name: 'Crypto App',

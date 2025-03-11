@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import Footer from '../../layout/footer/Footer'
 import Layout from '../../layout/layout/Layout'
 import styles from './About.module.scss'
-import Education from './components/education/Education'
 import Goals from './components/goals/Goals'
 import Gratitude from './components/gratitude/Gratitude'
 import HardSkills from './components/hard-skills/HardSkills'
@@ -21,7 +20,6 @@ const About = () => {
 				<main className={styles.about_me}>
 					<Intro />
 					<WhyProgramming />
-					<Education />
 					<Goals />
 					<HardSkills skills={hardSkills} title='Навыки' />
 					<HardSkills skills={hardSkillsAdditionally} title='Дополнительно' />
