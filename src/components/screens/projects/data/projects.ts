@@ -247,4 +247,4 @@ export const projects: Project[] = [
 		],
 		link: 'https://github.com/AlexeyAbramovich/workout-app'
 	}
-]
+].reverse()
