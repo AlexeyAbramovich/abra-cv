@@ -1,33 +1,33 @@
 @import '/src/styles/variables';
 
-@mixin move-first-element($value) {
+@mixin move-first-element {
 	animation: move-top 2.5s linear infinite;
 
 	@keyframes move-top {
 		0% {
-			top: $value;
+			transform: translateY(0%);
 		}
 		50% {
-			top: calc($value - 10px);
+			transform: translateY(10%);
 		}
 		100% {
-			top: $value;
+			transform: translateY(0%);
 		}
 	}
 }
 
-@mixin move-second-element($value) {
+@mixin move-second-element {
 	animation: move-bottom 2.5s linear infinite;
 
 	@keyframes move-bottom {
 		0% {
-			bottom: $value;
+			transform: translateY(0%);
 		}
 		50% {
-			bottom: calc($value - 10px);
+			transform: translateY(-10%);
 		}
 		100% {
-			bottom: $value;
+			transform: translateY(0%);
 		}
 	}
 }

@@ -64,7 +64,7 @@
 	}
 
 	> img:nth-child(4) {
-		@include move-first-element(-120px);
+		@include move-first-element;
 		top: -120px;
 		left: -120px;
 
@@ -74,7 +74,6 @@
 		}
 
 		@media (max-width: 1439px) {
-			@include move-first-element(-70px);
 			top: -80px;
 			left: -80px;
 		}
@@ -84,7 +83,7 @@
 		}
 	}
 	> img:last-child {
-		@include move-second-element(-200px);
+		@include move-second-element;
 		bottom: -200px;
 		right: -100px;
 
@@ -94,7 +93,6 @@
 		}
 
 		@media (max-width: 1439px) {
-			@include move-second-element(-160px);
 			bottom: -160px;
 			right: -60px;
 		}
