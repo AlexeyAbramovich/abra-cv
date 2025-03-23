@@ -9,9 +9,11 @@ export type Props = {
 
 const ProjectInfo = ({ projectInfo }: Props) => {
 	return (
-		<div className={styles.projectInfo}>
-			<Carousel projectName={projectInfo.name} slides={projectInfo.preview} />
-			<Info projectInfo={projectInfo} />
+		<div className={styles.borderAnimationWrapper}>
+			<div className={styles.projectInfo}>
+				<Carousel projectName={projectInfo.name} slides={projectInfo.preview} />
+				<Info projectInfo={projectInfo} />
+			</div>
 		</div>
 	)
 }

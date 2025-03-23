@@ -1,9 +1,7 @@
 @import '/src/styles/variables';
-@import '/src/styles/mixins';
+@import '/src/styles/animations';
 
 .projectInfo {
-	@include border-animation(2500px);
-	width: 100%;
 	min-height: 36vh;
 	position: relative;
 	display: flex;
@@ -11,17 +9,42 @@
 	padding: 20px 10px;
 	align-items: center;
 	border-radius: 10px;
-	box-shadow: 0 0 5px 2px black;
+	background: $bg;
+
+	@media (max-width: 1180px) {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+}
+
+.borderAnimationWrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 2px;
+	border-radius: 10px;
 	transition: scale 0.4s ease-in-out;
+	box-shadow: 0 0 5px 2px black;
+	background: $bg;
 
 	&:hover {
 		scale: 1.1;
 	}
 
+	&::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: $main-color;
+		transform-origin: center;
+		animation: wave-border 12s linear infinite;
+	}
+
 	@media (max-width: 1180px) {
-		width: 80%;
-		flex-direction: column;
-		row-gap: 20px;
+		width: 90%;
 
 		&:hover {
 			scale: 1.05;

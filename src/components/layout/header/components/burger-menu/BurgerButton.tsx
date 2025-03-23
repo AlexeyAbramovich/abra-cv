@@ -16,6 +16,7 @@ const BurgerButton = ({ showSidebar, setShowSidebar }: Props) => {
 			className={cn(styles.burger_btn, showSidebar && styles.open)}
 			onClick={() => handleClick()}
 			data-nav='nav'
+			aria-label='Menu button'
 		>
 			<span></span>
 			<span></span>
