@@ -2,6 +2,7 @@ export const hardSkills = [
 	'HTML',
 	'CSS',
 	'SCSS',
+	'Tailwind',
 	'Ant Design',
 	'JavaScript',
 	'TypeScript',
