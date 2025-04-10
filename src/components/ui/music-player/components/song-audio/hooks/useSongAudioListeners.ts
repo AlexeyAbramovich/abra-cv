@@ -14,35 +14,45 @@ export const useSongAudioListeners = (
 
 	useEffect(() => {
 		if (
-			song.current &&
-			progress.current &&
-			songCurrentTime.current &&
-			songEndTime.current &&
-			songImg.current
+			![
+				song.current,
+				progress.current,
+				songCurrentTime.current,
+				songEndTime.current,
+				songImg.current
+			].every(Boolean)
 		) {
-			song.current.addEventListener('loadedmetadata', function () {
-				progress.current!.max = `${song.current!.duration}`
-				progress.current!.value = `${song.current!.currentTime}`
-				songEndTime.current!.textContent = formatTime(song.current!.duration)
-				songCurrentTime.current!.textContent = formatTime(
-					song.current!.currentTime
-				)
-				setIsSongLoaded(true)
-			})
+			return
+		}
 
-			song.current.onended = () => {
-				launchNextSong()
-			}
+		const handleLoadingMetadata = () => {
+			progress.current!.max = `${song.current!.duration}`
+			progress.current!.value = `${song.current!.currentTime}`
+			songEndTime.current!.textContent = formatTime(song.current!.duration)
+			songCurrentTime.current!.textContent = formatTime(
+				song.current!.currentTime
+			)
+			setIsSongLoaded(true)
+		}
 
-			song.current.onplay = () => {
-				ctrlIcon.current!.src = '/abra-cv/icons/pause.svg'
-				setCoverShake(true)
-			}
+		song!.current!.addEventListener('loadedmetadata', handleLoadingMetadata)
 
-			song.current.onpause = () => {
-				ctrlIcon.current!.src = '/abra-cv/icons/play.svg'
-				setCoverShake(false)
-			}
+		song!.current!.onended = () => {
+			launchNextSong()
+		}
+
+		song!.current!.onplay = () => {
+			ctrlIcon.current!.src = '/abra-cv/icons/pause.svg'
+			setCoverShake(true)
+		}
+
+		song!.current!.onpause = () => {
+			ctrlIcon.current!.src = '/abra-cv/icons/play.svg'
+			setCoverShake(false)
+		}
+
+		return () => {
+			song.current?.removeEventListener('loadedmetadata', handleLoadingMetadata)
 		}
 	}, [])
 }

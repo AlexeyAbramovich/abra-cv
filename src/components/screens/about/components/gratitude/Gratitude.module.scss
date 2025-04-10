@@ -32,25 +32,6 @@
 		}
 	}
 
-	.borderAnimationWrapper {
-		position: relative;
-		overflow: hidden;
-		padding: 2px;
-		border-radius: 10px;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: -50%;
-			left: -50%;
-			width: 200%;
-			height: 200%;
-			background-color: $main-color;
-			animation: wave-border 12s linear infinite;
-			transform-origin: center;
-		}
-	}
-
 	.wrapper {
 		position: relative;
 		display: flex;
@@ -59,6 +40,8 @@
 		align-items: center;
 		border-radius: 10px;
 		background: $bg-dark;
+		border: 1px solid $main-color;
+		box-shadow: 0 0 5px 1px black;
 
 		.avatar {
 			display: flex;

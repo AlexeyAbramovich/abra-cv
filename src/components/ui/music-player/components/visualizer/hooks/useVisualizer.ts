@@ -1,6 +1,6 @@
 import { useMusicContext } from '$hooks/useMusicContext'
 import { useMusicStore } from '$hooks/useMusicStore'
-import { useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { useShallow } from 'zustand/react/shallow'
 import { AudioContextInstance } from '../../../AudioContextInstance'
 import styles from '../Visualizer.module.scss'
@@ -15,7 +15,7 @@ export const useVisualizer = () => {
 		}))
 	)
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (visualizer && song && visualizerWasSet && currentSong) {
 			const { analyser } = AudioContextInstance.getInstance(song.current!)
 

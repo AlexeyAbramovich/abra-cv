@@ -22,8 +22,8 @@ export type Controllers = {
 	songCurrentTime: React.MutableRefObject<HTMLSpanElement | null>
 	songEndTime: React.MutableRefObject<HTMLSpanElement | null>
 	visualizer: React.MutableRefObject<HTMLDivElement | null>
-	// interval для сброса тряски обложки
-	interval: React.MutableRefObject<number | null>
+	// animationFrame для сброса тряски обложки
+	animationFrame: React.MutableRefObject<number | null>
 	// массив уже проигранных треков, нужен, чтобы при переключении треков не было повторов и были проиграны все песни
 	playlistQueue: React.MutableRefObject<Song[]>
 }

@@ -10,45 +10,17 @@
 	align-items: center;
 	border-radius: 10px;
 	background: $bg-dark;
-
-	@media (max-width: 1180px) {
-		flex-direction: column;
-		row-gap: 20px;
-	}
-}
-
-.borderAnimationWrapper {
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	padding: 2px;
-	border-radius: 10px;
-	transition: scale 0.4s ease-in-out;
 	box-shadow: 0 0 5px 2px black;
-	background: $bg-dark;
+	transition: scale 0.4s ease-in-out;
 
 	&:hover {
 		scale: 1.1;
 	}
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: -50%;
-		left: -50%;
-		width: 200%;
-		height: 200%;
-		background-color: $main-color;
-		transform-origin: center;
-		animation: wave-border 12s linear infinite;
-
-		@media (max-width: 1180px) {
-			animation: none;
-		}
-	}
-
 	@media (max-width: 1180px) {
-		width: 90%;
+		width: 80%;
+		flex-direction: column;
+		row-gap: 20px;
 
 		&:hover {
 			scale: 1.05;
