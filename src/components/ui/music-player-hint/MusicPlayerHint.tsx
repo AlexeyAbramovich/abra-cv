@@ -22,7 +22,7 @@ const MusicPlayerHint = () => {
 				wrapper='span'
 				cursor={true}
 			/>
-			<img src='/abra-cv/icons/arrow-down-right.svg' />
+			<img src='/abra-cv/icons/arrow-down-right.svg' alt='' />
 		</div>
 	)
 }
