@@ -3,10 +3,7 @@ import { useMusicStore } from '$hooks/useMusicStore'
 import { useEffect } from 'react'
 import { formatTime } from '../../../utils/format-time.util'
 
-export const useSongAudioListeners = (
-	launchNextSong: () => void,
-	setCoverShake: (play: boolean) => void
-) => {
+export const useSongAudioListeners = (launchNextSong: () => void) => {
 	const { song, progress, songCurrentTime, songEndTime, songImg, ctrlIcon } =
 		useMusicContext()
 
@@ -43,12 +40,10 @@ export const useSongAudioListeners = (
 
 		song!.current!.onplay = () => {
 			ctrlIcon.current!.src = '/abra-cv/icons/pause.svg'
-			setCoverShake(true)
 		}
 
 		song!.current!.onpause = () => {
 			ctrlIcon.current!.src = '/abra-cv/icons/play.svg'
-			setCoverShake(false)
 		}
 
 		return () => {

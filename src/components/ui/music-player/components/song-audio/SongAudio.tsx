@@ -7,16 +7,12 @@ import { useStopUpdatingProgressWhileOnChange } from './hooks/useStopUpdatingPro
 
 type Props = {
 	launchNextSong: () => void
-	setCoverShake: (play: boolean) => void
 }
 
-const SongAudio = memo(function SongAudio({
-	launchNextSong,
-	setCoverShake
-}: Props) {
+const SongAudio = memo(function SongAudio({ launchNextSong }: Props) {
 	const { song } = useMusicContext()
 
-	useSongAudioListeners(launchNextSong, setCoverShake)
+	useSongAudioListeners(launchNextSong)
 
 	useStopUpdatingProgressWhileOnChange()
 

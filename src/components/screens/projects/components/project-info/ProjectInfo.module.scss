@@ -2,6 +2,7 @@
 @import '/src/styles/animations';
 
 .projectInfo {
+	width: 90%;
 	min-height: 36vh;
 	position: relative;
 	display: flex;
@@ -19,6 +20,7 @@
 
 	@media (max-width: 1180px) {
 		width: 80%;
+		min-height: 50vh;
 		flex-direction: column;
 		row-gap: 20px;
 

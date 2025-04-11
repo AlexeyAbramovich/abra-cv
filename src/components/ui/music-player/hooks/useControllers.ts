@@ -16,7 +16,6 @@ export const useControllers = () => {
 	const songCurrentTime = useRef<HTMLSpanElement | null>(null)
 	const songEndTime = useRef<HTMLSpanElement | null>(null)
 	const visualizer = useRef<HTMLDivElement | null>(null)
-	const animationFrame = useRef<number | null>(null)
 	const playlistQueue = useRef<Song[]>([])
 
 	return {
@@ -34,7 +33,6 @@ export const useControllers = () => {
 		songCurrentTime,
 		songEndTime,
 		visualizer,
-		animationFrame,
 		playlistQueue
 	}
 }

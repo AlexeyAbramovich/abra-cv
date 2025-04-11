@@ -15,7 +15,7 @@ import { useShowMusicPlayer } from './hooks/useShowMusicPlayer'
 import styles from './MusicPlayer.module.scss'
 
 const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
-	const { player, songImg, song, ctrlIcon, animationFrame } = useMusicContext()
+	const { player, song, ctrlIcon } = useMusicContext()
 
 	const {
 		isFirstLaunch,
@@ -43,11 +43,9 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 		if (ctrlIcon.current!.src.includes('pause')) {
 			song.current!.pause()
 			ctrlIcon.current!.src = '/abra-cv/icons/play.svg'
-			setCoverShake(false)
 		} else {
 			song.current!.play()
 			ctrlIcon.current!.src = '/abra-cv/icons/pause.svg'
-			setCoverShake(true)
 		}
 
 		setNeedCheckVisualizer(true)
@@ -61,56 +59,7 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 		setNeedNewRandomSong(true)
 
 		setNeedCheckVisualizer(true)
-
-		setCoverShake(true)
 	}, [])
-
-	const setCoverShake = useCallback((play: boolean) => {
-		if (animationFrame.current) {
-			cancelAnimationFrame(animationFrame.current) // Останавливаем предыдущую анимацию
-			songImg.current!.style.transform = 'translate(-50%, -50%) scale(1)' // Сбрасываем масштаб до исходного
-		}
-
-		if (play) {
-			let startTime: number | null = null
-
-			const animate = (timestamp: number) => {
-				if (!startTime) startTime = timestamp // Инициализация времени начала анимации
-				const elapsedTime = timestamp - startTime
-
-				// Генерация случайного значения для масштабирования
-				const randomScale = Math.random() * 0.2 + 0.9 // Масштаб от 1 до 1.05
-
-				// Применяем масштабирование
-				songImg.current!.style.transform = `translate(-50%, -50%) scale(${randomScale})`
-
-				// Повторяем анимацию каждые 100 мс
-				if (elapsedTime < 100) {
-					animationFrame.current = requestAnimationFrame(animate)
-				} else {
-					// После 100 мс начинаем новую итерацию
-					startTime = null
-					animationFrame.current = requestAnimationFrame(animate)
-				}
-			}
-
-			// Запускаем анимацию
-			animationFrame.current = requestAnimationFrame(animate)
-		}
-	}, [])
-
-	// const setCoverShake = useCallback((play: boolean) => {
-	// 	if (interval.current) {
-	// 		clearInterval(interval.current)
-	// 		songImg.current!.style.width = `100px`
-	// 	}
-
-	// 	if (play) {
-	// 		interval.current = setInterval(() => {
-	// 			songImg.current!.style.width = `${Math.random() * 5 + 100}px`
-	// 		}, 100)
-	// 	}
-	// }, [])
 
 	return (
 		<div ref={player} className={styles.musicPlayer} data-class='music'>
@@ -120,10 +69,7 @@ const MusicPlayer = ({ showMusicPlayer }: { showMusicPlayer: boolean }) => {
 			</div>
 			<Visualizer />
 			<TrackInfo />
-			<SongAudio
-				launchNextSong={launchNextSong}
-				setCoverShake={setCoverShake}
-			/>
+			<SongAudio launchNextSong={launchNextSong} />
 			<div className={styles.controlsWrapper} data-class='music'>
 				<MusicProgress />
 				<ControlButtons
