@@ -17,11 +17,13 @@ const Info = ({ projectInfo }: Props) => {
 				projectName={projectInfo.name}
 				technologies={projectInfo.technologies}
 			/>
-			<GithubLink
-				link={projectInfo.link}
-				size='absolute'
-				label='Open the project repository on github'
-			/>
+			{projectInfo.link && (
+				<GithubLink
+					link={projectInfo.link}
+					size='absolute'
+					label='Open the project repository on github'
+				/>
+			)}
 		</div>
 	)
 }

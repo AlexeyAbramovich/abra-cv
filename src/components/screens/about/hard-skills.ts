@@ -12,24 +12,30 @@ export const hardSkills = [
 	'Redux',
 	'Zustand',
 	'RTK Query',
-	'Tanstack Query',
+	'TanStack Query',
 	'Axios',
-	'Vite',
+	'Vite.js',
 	'Webpack',
 	'Next.js',
 	'Node.js',
-	'Express',
+	'Express.js',
 	'Nest.js',
 	'Prisma',
 	'PostgreSQL',
+	'Swagger',
+	'Docker',
+	'Git',
 	'npm',
 	'yarn'
 ]
 
 export const hardSkillsAdditionally = [
 	'English B1',
+	'Qwen',
+	'DeepSeek',
+	'ChatGPT',
+	'Gemini',
 	'Vs Code',
-	'Git',
 	'Java',
 	'Kotlin',
 	'Python',
@@ -37,7 +43,5 @@ export const hardSkillsAdditionally = [
 	'Photoshop',
 	'Figma',
 	'Postman',
-	'Insomnia',
-	'ChatGPT',
-	'Gemini'
+	'Insomnia'
 ]

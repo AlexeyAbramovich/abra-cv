@@ -4,21 +4,10 @@ export type Project = {
 	features: string[]
 	technologies: string[]
 	preview: string[]
-	link: string
+	link?: string
 }
 
 export const projects: Project[] = [
-	{
-		name: 'Tic tac toe',
-		description: 'Игра крестики-нолики',
-		technologies: ['React', 'JavaScript', 'Vite', 'HTML', 'CSS'],
-		features: ['Просмотр предыдущих ходов', 'Отматывание ходов'],
-		preview: [
-			'/abra-cv/images/projects/tic-tac-toe/1.png',
-			'/abra-cv/images/projects/tic-tac-toe/2.png'
-		],
-		link: 'https://github.com/AlexeyAbramovich/tic-tac-toe'
-	},
 	{
 		name: 'Music Player',
 		description: 'Крутой музыкальный плеер с аудио визуализацией',
@@ -39,29 +28,6 @@ export const projects: Project[] = [
 		link: 'https://github.com/AlexeyAbramovich/music-player'
 	},
 	{
-		name: 'Recipes',
-		description: 'Сайт с рецептами',
-		technologies: [
-			'React',
-			'TypeScript',
-			'Redux',
-			'RTK Query',
-			'React Router Dom',
-			'JSON Server',
-			'Vite',
-			'HTML',
-			'CSS'
-		],
-		features: [
-			'Загрузка данных рецептов с json-сервера',
-			'Добавление нового рецепта',
-			'Добавление рецепта в избранное',
-			'Поиск по рецептам'
-		],
-		preview: ['/abra-cv/images/projects/recipes/1.webp'],
-		link: 'https://github.com/AlexeyAbramovich/recipes'
-	},
-	{
 		name: 'Game Store',
 		description: 'Интернет-магазин игр',
 		technologies: [
@@ -71,7 +37,7 @@ export const projects: Project[] = [
 			'React Router Dom',
 			'React Icons',
 			'Classnames',
-			'Vite',
+			'Vite.js',
 			'HTML',
 			'CSS'
 		],
@@ -92,7 +58,7 @@ export const projects: Project[] = [
 		name: 'Обновление остатков CSV',
 		description:
 			'Приложение для автоматического обновления остатков товара в файле .csv с интернет-магазина на InSales, через файл остатков на складе из системы учета товаров так же формата .csv',
-		technologies: ['React', 'JavaScript', 'Vite', 'HTML', 'CSS'],
+		technologies: ['React', 'JavaScript', 'Vite.js', 'HTML', 'CSS'],
 		features: [
 			'Коммерческий проект, deploy на GitHub Pages',
 			'Парсинг содержимого двух файлов формата .csv через Papaparse',
@@ -138,7 +104,7 @@ export const projects: Project[] = [
 			'React Router Dom',
 			'Ant Design',
 			'Axios',
-			'Vite',
+			'Vite.js',
 			'HTML',
 			'SCSS'
 		],
@@ -171,7 +137,7 @@ export const projects: Project[] = [
 			'CSS',
 			'JavaScript',
 			'Node.js',
-			'Express',
+			'Express.js',
 			'Prisma',
 			'SQLite'
 		],
@@ -218,15 +184,15 @@ export const projects: Project[] = [
 		technologies: [
 			'React',
 			'JavaScript',
-			'Vite',
+			'Vite.js',
 			'SCSS',
 			'Axios',
-			'Tanstack Query',
+			'TanStack Query',
 			'React Router Dom',
 			'React Hook Form',
 			'React Select',
 			'Node.js',
-			'Express',
+			'Express.js',
 			'Prisma',
 			'Postgresql'
 		],
@@ -246,5 +212,147 @@ export const projects: Project[] = [
 			'/abra-cv/images/projects/workout-app/5.webp'
 		],
 		link: 'https://github.com/AlexeyAbramovich/workout-app'
+	},
+	{
+		name: 'ABRA сайт-портфолио',
+		description:
+			'Реализовал свой сайт портфолио для демонстрации своих навыков и сделанных проектов, в который внедрил музыкальный плеер для лучшего восприятия информации.',
+		technologies: [
+			'React',
+			'TypeScript',
+			'SCSS Modules',
+			'React Router Dom',
+			'React Hook Form',
+			'Zustand',
+			'Vite.js'
+		],
+		features: [
+			'Разработал весь дизайн с нуля и создал переиспользуемые компоненты.',
+			'Реализовал анимации на transform свойстве для улучшения производительности.',
+			'Сделал роутинг для навигации по сайту через React Router Dom.',
+			'Внедрил плеер с музыкой, в котором есть возможность выбирать плейлисты и перематывать/переключать треки.',
+			'Создал форму для обратной связи через React Hook Form и подключил к ней бота в Telegram для получения сообщений.',
+			'Оптимизировал все ресурсы: картинки, svg иконки, медиа и шрифты.',
+			'Сделал деплой на github-pages.'
+		],
+		preview: [
+			'/abra-cv/images/projects/abra-cv/1.webp',
+			'/abra-cv/images/projects/abra-cv/2.webp',
+			'/abra-cv/images/projects/abra-cv/3.webp',
+			'/abra-cv/images/projects/abra-cv/4.webp'
+		],
+		link: 'https://github.com/AlexeyAbramovich/abra-cv'
+	},
+	{
+		name: 'Onlyjobs-It',
+		description: 'Цель проекта: Помощь в поиске работы в IT.',
+		technologies: [
+			'Next.js',
+			'TypeScript',
+			'SCSS Modules',
+			'Axios',
+			'TanStack Query',
+			'Node.js',
+			'Express.js',
+			'Prisma',
+			'PostgreSQL'
+		],
+		features: [
+			'Frontend: Next.js, Typescript, Axios, TanStack Query, SCSS Modules',
+			'Backend: Node.js(Express.js), Typescript, Prisma, PostrgreSQL',
+			'Сверстал макеты основных страниц приложения из Figma.',
+			'Сделал завершенный адаптивный дизайн.',
+			'Использовал SSR + CSR.',
+			'Интегрировал API через библиотеку Axios и TanStack Query.',
+			'Разработал минимальный backend на Node.js(Express.js)',
+			'Сделал пагинацию как на frontend, так и на backend(при помощи Prisma).'
+		],
+		preview: [
+			'/abra-cv/images/projects/onlyjobs-blog/1.webp',
+			'/abra-cv/images/projects/onlyjobs-blog/2.webp',
+			'/abra-cv/images/projects/onlyjobs-blog/3.webp'
+		]
+	},
+	{
+		name: 'Tic tac toe online',
+		description:
+			'Разработал Fullstack игру крестики-нолики для игры онлайн в режиме реального времени при помощи SSE.',
+		technologies: [
+			'Next.js',
+			'TypeScript',
+			'Tailwind',
+			'Shadcn UI',
+			'FSD Architecture',
+			'Prisma',
+			'PostgreSQL',
+			'RabbitMQ',
+			'Docker'
+		],
+		features: [
+			'Cоздал набор готовых UI компонентов используя библиотеку Shadcn UI.',
+			'Реализовал простой и минималистичный UI для приложения используя Tailwind и набор готовых компонентов.',
+			'Структуру проекта реализовывал на основе FSD архитектуры',
+			'Реализовал аутентификацию и авторизацию через JWT + session и http-only cookies.',
+			'Реализовал api routes для работы с бд.',
+			'Реализовал логику самой игры с обновлениями в режиме реального времени используя SSE(через EventSource) с RabbitMQ, а также оптимистичные обновления.',
+			'Реализовал систему рейтинга игроков и таблицы лидеров, которая также обновляется в режиме реального времени при помощи SSE(EventSource) с RabbitMQ.',
+			'Поднял тестовую базу данных и RabbitMQ сервер в Docker.'
+		],
+		preview: [
+			'/abra-cv/images/projects/tic-tac-toe-online/1.webp',
+			'/abra-cv/images/projects/tic-tac-toe-online/2.webp',
+			'/abra-cv/images/projects/tic-tac-toe-online/3.webp',
+			'/abra-cv/images/projects/tic-tac-toe-online/4.webp',
+			'/abra-cv/images/projects/tic-tac-toe-online/5.webp'
+		],
+		link: 'https://github.com/AlexeyAbramovich/tic-tac-toe-online'
+	},
+	{
+		name: 'Расширение Chrome для блокировки сайтов',
+		description:
+			'Разработал Fullstack приложение для блокировки сайтов по домену и ключевым словам на сайте. Само приложение включает в себя: backend, frontend для администрирования и само расширение для браузера. ',
+		technologies: [
+			'Next.js',
+			'TypeScript',
+			'Tailwind',
+			'React Hook Form',
+			'Axios',
+			'TanStack Query',
+			'Orval',
+			'FSD Architecture',
+			'CRXJS',
+			'Vite.js',
+			'Nest.js',
+			'Swagger',
+			'Prisma',
+			'PostgreSQL',
+			'Docker'
+		],
+		features: [
+			'Backend: Nest.js, TypeScript, Prisma, PostgreSQL, Swagger, Docker',
+			'Frontend: Next.js, TypeScript, Tailwind, axios, react-hook-form, TanStack Query, orval',
+			'Chrome Extension: Vite.js, TypeScript, Tailwind, CRXJS, orval',
+			'Реализовал бэкенд на Nest.js, для управления сессиями/авторизацией, работы с пользователем и его аккаунтом, также изменения списка блокируемых сайтов.',
+			'Сгенерировал работающую Swagger документацию на основе основных маршрутов с помощью пакета @nestjs/swagger.',
+			'Настроил CORS политику для обращения с админки и расширения.',
+			'Реализовал аутентификацию и авторизацию через JWT + session и http-only cookies.',
+			'Синхронизировал авторизацию в админке и самом расширении.',
+			'Структуру админки и расширения строил на основе FSD архитектуры.',
+			'Сделал свой кастомный UI-kit с помощью Tailwind, который переиспользовал для админки и расширения.',
+			'Использовал автоматическую генерацию клиента для запросов и api при помощи orval на основе Swagger схемы с бэкенда.',
+			'Использовал TanStack Query вместо useEffect для работы с запросами на клиенте.',
+			'Реализовал расширение для браузера с помощью плагина CRXJS для Vite.js.',
+			'Реализовал блокировку сайтов по домену при помощи Chrome Api и Service Worker',
+			'Реализовал блокировку сайтов по ключевому слову на сайте при помощи Chrome Api и внедрения context_script в контекст веб-страницы.',
+			'Поднял тестовую базу данных PostgreSQL в Docker.'
+		],
+		preview: [
+			'/abra-cv/images/projects/website-blocker-extension/1.webp',
+			'/abra-cv/images/projects/website-blocker-extension/2.webp',
+			'/abra-cv/images/projects/website-blocker-extension/3.webp',
+			'/abra-cv/images/projects/website-blocker-extension/4.webp',
+			'/abra-cv/images/projects/website-blocker-extension/5.webp'
+		],
+		link: 'https://github.com/AlexeyAbramovich/website-blocker-extension'
 	}
 ].reverse()

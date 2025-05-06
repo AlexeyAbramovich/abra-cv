@@ -17,6 +17,7 @@
 		> img {
 			width: 40px;
 			height: 40px;
+			object-fit: contain;
 
 			@media (min-width: 2000px) {
 				width: 50px;

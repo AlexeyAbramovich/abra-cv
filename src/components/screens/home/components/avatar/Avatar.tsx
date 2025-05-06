@@ -10,7 +10,7 @@ const Avatar = () => {
 		>
 			<article className={styles.avatar}>
 				<img
-					src='/abra-cv/images/photo.jpg'
+					src='/abra-cv/images/photo.webp'
 					className={styles.photo}
 					alt='Photo of Alexey Abramovich, the author of this cv-site'
 				/>
