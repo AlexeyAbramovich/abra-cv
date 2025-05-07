@@ -313,6 +313,7 @@ export const projects: Project[] = [
 			'Разработал Fullstack приложение для блокировки сайтов по домену и ключевым словам на сайте. Само приложение включает в себя: backend, frontend для администрирования и само расширение для браузера. ',
 		technologies: [
 			'Next.js',
+			'React',
 			'TypeScript',
 			'Tailwind',
 			'React Hook Form',
@@ -331,7 +332,7 @@ export const projects: Project[] = [
 		features: [
 			'Backend: Nest.js, TypeScript, Prisma, PostgreSQL, Swagger, Docker',
 			'Frontend: Next.js, TypeScript, Tailwind, axios, react-hook-form, TanStack Query, orval',
-			'Chrome Extension: Vite.js, TypeScript, Tailwind, CRXJS, orval',
+			'Chrome Extension: React, TypeScript, Tailwind, CRXJS, orval, Vite.js',
 			'Реализовал бэкенд на Nest.js, для управления сессиями/авторизацией, работы с пользователем и его аккаунтом, также изменения списка блокируемых сайтов.',
 			'Сгенерировал работающую Swagger документацию на основе основных маршрутов с помощью пакета @nestjs/swagger.',
 			'Настроил CORS политику для обращения с админки и расширения.',
