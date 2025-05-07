@@ -31,17 +31,17 @@ const Avatar = () => {
 				/>
 				<img
 					className={styles.vite}
-					src='/abra-cv/icons/technologies/vite.svg'
+					src='/abra-cv/icons/technologies/next.js.svg'
 					alt='Vite icon'
 				/>
 				<img
 					className={styles.html}
-					src='/abra-cv/icons/technologies/html.svg'
+					src='/abra-cv/icons/technologies/tailwind.svg'
 					alt='Html icon'
 				/>
 				<img
 					className={styles.css}
-					src='/abra-cv/icons/technologies/css.svg'
+					src='/abra-cv/icons/technologies/zustand.svg'
 					alt='Css icon'
 				/>
 				<img
