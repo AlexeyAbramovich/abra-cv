@@ -5,13 +5,13 @@ import ShowPlayerButton from '$ui/show-player-button/ShowPlayerButton'
 import { useMemo, useState } from 'react'
 import { HashRouter } from 'react-router-dom'
 import { useCloseMusicPlayer } from './hooks/useCloseMusicPlayer'
-import { usePreloadFirstCarouselImage } from './hooks/usePreloadFirstCarouselImage'
+import { usePrefetchFirstCarouselImage } from './hooks/usePreloadFirstCarouselImage'
 import Router from './router/Router'
 
 function App() {
 	const [showMusicPlayer, setShowMusicPlayer] = useState(false)
 
-	usePreloadFirstCarouselImage()
+	usePrefetchFirstCarouselImage()
 
 	useCloseMusicPlayer(setShowMusicPlayer)
 
