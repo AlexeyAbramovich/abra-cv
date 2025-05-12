@@ -1,12 +1,18 @@
 import { AnimatePresence } from 'framer-motion'
+import { lazy } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import About from '../components/screens/about/About'
-import Contacts from '../components/screens/contacts/Contacts'
-import Home from '../components/screens/home/Home'
 import NotFound from '../components/screens/not-found/NotFound'
-import Projects from '../components/screens/projects/Projects'
 import { useResetScroll } from '../hooks/useResetScroll'
 import { useUpdateDocumentTitle } from '../hooks/useUpdateDocumentTitle'
+
+const HomePage = lazy(() => import('../components/screens/home/Home'))
+const AboutPage = lazy(() => import('../components/screens/about/About'))
+const ProjectsPage = lazy(
+	() => import('../components/screens/projects/Projects')
+)
+const ContactsPage = lazy(
+	() => import('../components/screens/contacts/Contacts')
+)
 
 const AnimatedRoutes = () => {
 	const path = useLocation()
@@ -18,10 +24,10 @@ const AnimatedRoutes = () => {
 	return (
 		<AnimatePresence>
 			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/about' element={<About />} />
-				<Route path='/projects' element={<Projects />} />
-				<Route path='/contacts' element={<Contacts />} />
+				<Route path='/' element={<HomePage />} />
+				<Route path='/about' element={<AboutPage />} />
+				<Route path='/projects' element={<ProjectsPage />} />
+				<Route path='/contacts' element={<ContactsPage />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
 		</AnimatePresence>
