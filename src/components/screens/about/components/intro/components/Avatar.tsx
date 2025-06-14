@@ -6,10 +6,9 @@ const Avatar = () => {
 			<div className={styles.animationWrapper}>
 				<img src='/abra-cv/images/photo1.webp' alt='Author photo' />
 			</div>
-			<span style={{ color: 'white' }}>Алексей, 21 год.</span>
+			<span style={{ color: 'white' }}>Алексей, 22 года.</span>
 			<span>
-				<span>React</span> <span style={{ color: 'white' }}>Frontend</span>{' '}
-				<span>Developer</span>
+				<span style={{ color: 'white' }}>Frontend</span> <span>Developer</span>
 			</span>
 		</div>
 	)

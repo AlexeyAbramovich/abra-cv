@@ -17,7 +17,7 @@ const Copyright = ({
 			)}
 		>
 			<img src='/abra-cv/icons/copyright.svg' alt='Copyright' />
-			<p>Copyright&nbsp;А.&nbsp;Д.&nbsp;Абрамович,&nbsp;2024</p>
+			<p>Copyright&nbsp;А.&nbsp;Д.&nbsp;Абрамович,&nbsp;2022</p>
 			<GithubLink
 				link='https://github.com/AlexeyAbramovich'
 				size='small'

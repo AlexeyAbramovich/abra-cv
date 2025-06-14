@@ -1,12 +1,12 @@
 import Avatar from './components/Avatar'
-import WayInFrontend from './components/WayInFrontend'
+import Summary from './components/Summary'
 import styles from './Intro.module.scss'
 
 const Intro = () => {
 	return (
 		<section className={styles.intro}>
 			<Avatar />
-			<WayInFrontend />
+			<Summary />
 		</section>
 	)
 }
