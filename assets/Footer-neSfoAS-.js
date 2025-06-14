@@ -1,1 +1,0 @@
-import{j as o}from"./index-D6LdVxns.js";import{C as t}from"./App-DaFyNXqL.js";const r="_footer_1b23g_1",e={footer:r},m=()=>o.jsx("footer",{className:e.footer,children:o.jsx(t,{type:"footer"})});export{m as F};
